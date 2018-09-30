@@ -1,0 +1,54 @@
+{% extends "conversion_base.html" %}
+{% block title %}Consulting Work{% endblock %}
+{% block head %}
+   {{ super() }}
+   <style>
+   </style>
+{% endblock %}
+
+{% block toprowcontent %}
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <article class="jumbotron">
+    <section id="name-email-form">
+      <p>
+        If you'd like me to do some work for you,
+          enter your name and email address in the form below:
+      </p>
+      <form action="" method="post" role="form">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+          <label for="name">{{ form.name.label }}</label>
+          {{ form.name( class="form-control", value=form.name.data ) }}
+          <label for="email">{{ form.email.label }}</label>
+          {{ form.email( class="form-control", value=form.email.data ) }}
+        </div>
+        <button type="submit" class="btn btn-success">Contact Tom W. Hartung
+		  </button>
+      </form>
+    </section><!-- #name-email-form -->
+  </article><!-- .jumbotron -->
+  <article class="thanks">
+    <div class="row">
+      <div class="col-md-8">
+        <section id="thanks">
+          <h3>I will contact you as soon as I can!</h3>
+          <h2>Thanks!</h2>
+        </section><!-- #thanks -->
+      </div><!-- .col-md-8 -->
+    </div><!-- .row -->
+  </article><!-- .thanks -->
+{% endblock %}
+{% block toprowsidebox %}
+  <section id="process">
+    <div class="sidebox">
+      <h3>What to Expect</h3>
+      <ul start="0">
+        <li>
+          I will contact you as soon as I can.</li>
+        <li>
+          We will discuss how I might help you!</li>
+      </ul>
+      <p>Thanks!</p>
+    </div><!-- .sidebox -->
+  </section><!-- #process -->
+{% endblock %}

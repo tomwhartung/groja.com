@@ -1,0 +1,100 @@
+/* ==========================================================================
+ * My CusTOM styles
+ * ==========================================================================
+ * For details, see the README.md file in this directory.
+ */
+
+.jumbotron h2 {
+   font-size: 2.5em;
+   font-weight: bold;
+}
+
+/*
+ * For the "... follow us ..." sidebox
+ * Inspired by code on these pages:
+ *    http://ksloan.net/css-color-definitions-for-font-awesome-social-icons/
+ *    http://www.kodingmadesimple.com/2014/11/create-stylish-bootstrap-3-social-media-icons.html
+ */
+i.fa-2x {
+   margin: 3px;
+}
+i.fa-2x:hover {
+  font-size: 2.5em;
+  margin: 0px;
+  text-shadow: 4px 4px lightgrey;
+}
+.fa-facebook, .fa-facebook-square {
+  color: #3b5998;
+}
+.fa-twitter, .fa-twitter-square {
+  color: #00aced;
+}
+.fa-github, .fa-github-alt {
+  color: #343434;
+}
+.fa-instagram {
+  color: #517fa4;
+}
+.fa-pinterest, .fa-pinterest-square {
+  color: #cb2027;
+}
+.fa-google-plus, .fa-google-plus-square {
+  color: #dd4b39;
+}
+.fa-linkedin, .fa-linkedin-square {
+  color: #007bb6;
+}
+/*
+ * For the Books and Sites Page:
+ */
+img.book-cover-left,
+img.book-cover-right {
+  height: auto;
+  width: 90%;
+}
+figure.book-cover-left {
+  margin: 1em;
+  float: left;
+  width: 25%;
+}
+figure.book-cover-right {
+  margin: 1em;
+  float: right;
+  width: 25%;
+}
+/*
+ * For the Contact Us page:
+ * List of hex codes for html entities:
+ *    https://www.w3schools.com/charsets/ref_html_entities_r.asp
+ */
+ul.social-list,
+ul.old-school-list {
+  list-style: none;
+}
+li.step-title {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/*
+ * Keep images etc. from overflowing their containers
+ * Reference:
+ *   https://developers.google.com/web/fundamentals/design-and-ui/responsive/images#use_relative_sizes_for_images
+ */
+img, embed, object, video {
+  max-width: 100%;
+}
+
+/*
+ * These font-awesome-inspired bullets are interesting but
+ * I decided I hate them.  Keeping the code in comments here
+ * in case I change my mind or want to do something similar
+ * with another character or icon.
+ *
+ * li.social-list:before,
+ * li.old-school-list:before {
+ *    content: '\021AA';   /* &rarrhk; */
+ *    padding: .3em;
+ * }
+ */
+

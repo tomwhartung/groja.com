@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block head %}
+  {{ super() }}
+  <style>
+  </style>
+{% endblock %}
+
+{% block toprowcontent %}
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <article class="jumbotron">
+    <section id="spiritual-portrait-site">
+      <h2>Groja.com: The <span class="air-quotes">Spiritual Portrait</span> Site</h2>
+      <p>
+        Inspired by the work of
+         <a href='https://medium.com/@tomwhartung/the-prophetic-vision-of-piet-mondrian-part-1-equilibrium-in-art-and-life-c2b7ba006fd5'
+            title='Link to a fascinating article about Piet Mondrian at medium.com/@tomwhartung' target='_blank'>Piet Mondrian</a>,
+         <a href='https://www.facebook.com/carl.jung.gustav/'
+            title='Link to the page about Carl Jung at facebook.com' target='_blank'>Carl Jung</a>,
+         <a href='https://medium.com/@tomwhartung/concerning-kandinskys-concerning-the-spiritual-in-art-f2f3d1ca750e'
+            title='Link to a fascinating article about Wassily Kandinsky at medium.com/@tomwhartung' target='_blank'>Wassily Kandinsky</a>,
+         <a href='http://myersbriggs.org/' title='Link to the Home page at myersbriggs.org' target='_blank'>Isabel Briggs Myers</a>, and
+         <a href='http://www.keirsey.com/' title='Link to the Home page at www.keirsey.com' target='_blank'>David Keirsey</a>, the
+         <a href='https://www.groja.com/about'
+            title='Link to a page about the Groja Program at ' target='_blank'>GROJA Program &copy;</a>
+         creates
+         <a href='https://medium.com/@tomwhartung/music-meaning-and-modern-art-part-1-of-3-84fe10f480a2'
+            title='Link to a fascinating series of articles about abstractions at ' target='_blank'>abstract</a>
+         portraits of individuals' personalities based on their score on the
+         the MBTI &reg; or a similar four-letter personality type questionnaire.</p>
+      <p>
+        To see your personality, or that of a friend, loved one, or co-worker,
+         click below to
+         <a href="yourportrait" title="Link to Your Portrait page">
+          get your portrait</a>!</p>
+      <p>
+        <a class="btn btn-primary btn-lg" href="yourportrait" role="button">
+           Get Your Spiritual Portrait &raquo;</a></p>
+    </section><!-- #spiritual-portrait-site -->
+  </article><!-- .jumbotron -->
+  <article id="learn-more">
+    <h3>Want to learn more?</h3>
+    <p>
+      Use the links below to explore this site and check out the
+       <a href="http://www.seeourminds.com/galleries"
+          title="Link to the galleries page at SeeOurMinds.com" target="_blank">galleries</a>
+       at
+       <a href="http://www.seeourminds.com"
+          title="Link to the home page at SeeOurMinds.com" target="_blank">SeeOurMinds.com</a>.</p>
+  </article><!-- #learn-more -->
+{% endblock %}
+{% block toprowsidebox %}
+  {{ super() }}
+  <section id="testimonial">
+    <a name="testimonial"></a>
+    <div class="sidebox">
+      <figure>
+        <img src="{{ url_for('static', filename='images/site/infp-tomh_1987-scaled_200x200.gif') }}" class="sidebox-img">
+        <figcaption>Tom H: INFP</figcaption>
+      </figure>
+      <p>
+        When I first learned that I was an INFP, it was
+         <a href="#can-we-talk" title="Scrolls down to the 'Can We Talk?' section on this page">
+            life-altering.</a>
+        I would like to help you on a similar journey of greater self-awareness!</p>
+    </div><!-- .sidebox -->
+  </section><!-- #testimonial -->
+{% endblock %}
+
+{% block remainder %}
+  <div class="row">
+    <div class="col-md-4">
+      <h2>About</h2>
+      <p>
+       Learn the story behind the Groja Program &copy;, and
+        see a list of the different versions.</p>
+      <p>
+       <a class="btn btn-default" href="about" role="button">
+          About Grojas &raquo;</a></p>
+    </div><!-- .col-md-4 -->
+    <div class="col-md-4">
+      <h2>Books and Sites</h2>
+      <p>
+       The original idea came totally from books,
+        but much of that is now online, waiting for you to check it out!</p>
+      <p>
+       <a class="btn btn-default" href="booksandsites" role="button">
+          Books and Sites &raquo;</a></p>
+    </div><!-- .col-md-4 -->
+    <div class="col-md-4">
+      <h2>Galleries</h2>
+      <p>
+       See examples of many Spiritual Portraits in the Galleries at our sibling site,
+        <a href="http://www.seeourminds.com"
+           title="Link to the home page at SeeOurMinds.com" target="_blank">
+         SeeOurMinds.com</a>.</p>
+      <p>
+       <a class="btn btn-default" href="galleries" role="button">
+          View Galleries &raquo;</a></p>
+    </div><!-- .col-md-4 -->
+  </div><!-- .row -->
+    <hr />
+  <div class="row">
+    <div class="col-md-8">
+      <a name="can-we-talk"></a>
+      <h3><span class="air-quotes">Can we talk?</span></h3>
+      <p>
+        I have always felt like I was on the
+          <span class="air-quotes">wrong planet,</span> &mdash;
+          do you by any chance know what I mean?
+      </p>
+      <p>
+        If you know about these four-letter types, and are Introverted or
+          iNtuitive or both (like me), maybe you know what I mean.
+        Even my parents are my opposites in most ways, which can make things difficult.
+      </p>
+      <p>
+        Either you know what I'm talking about, or you don't.
+      </p>
+      <p>
+        Like everyone else, I have my own ideas and perceptions.
+        I also have my own questionnaire, which wil be back online soon,
+          and ultimately this is my own thing.
+        And this is the site where I share it with you.</p>
+      <p>
+        All of this is based on Carl Jung's theories and Wassily Kandidnsky's
+          observations, so there is a historical precedent.
+        My wish is to honor, carry on, and build on the work of my predecessors without
+          stepping on any toes, legal or otherwise.</p>
+    </div><!-- .col-md-8 -->
+  </div><!-- .row -->
+{% endblock %}

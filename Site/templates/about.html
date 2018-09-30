@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+{% block title %}About{% endblock %}
+{% block head %}
+  {{ super() }}
+  <style>
+  </style>
+{% endblock %}
+
+{% block toprowcontent %}
+  <section id="about">
+    <h1>About Groja.com</h1>
+    <p>
+      GROJA &copy; stands for Graphical Representations of Jungian Archetypes.</p>
+    <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/3DcMVt_h2bo" frameborder="0"
+            allowfullscreen></iframe>
+    <h1>About Spiritual Portraits</h1>
+    <p>
+      Hello, my name is Tom Hartung, and all my life I have tried to see
+       past the surface and into the essence and substance of people.</p>
+    <p>
+      I'd like to share with you a bit of what I've learned over the years and,
+       in the process, help you see past the surface, too.
+      And I'd like to do this by creating your Spiritual Portrait &mdash;
+       your GROJA.
+    </p>
+    <p>
+      Each image is a unique representation of a unique personality,
+        and I want to help you and everyone else see the unique inner beauty
+        that each of us possesses.</p>
+    <p>
+      To find out how you can get your personalized GROJA &copy;, visit the
+       <a href="/yourportrait" title="Link to the Your Portrait page">
+          Your Portrait</a>
+       page.</p>
+  </section><!-- #about -->
+  <section id="growing-up">
+    <h2>Growing up Ain't for Sissies</h2>
+    <p>
+      I believe growing up is difficult for all of us, and I was certainly no exception.
+      Conforming to society's, parents', and our peers' expectations is easier for some
+       than it is for others.
+    </p>
+    <p>
+      It took awhile for me to realize that some of the things that were natural and easy for
+       others to do were unnatural and difficult for me.
+      So I learned early on to respect others' differences, both superficial and otherwise.
+    </p>
+    <p>
+      As I grew into adulthood, I learned about the source of many of the invisible,
+       intangible differences that can pose such a challenge for some of us.
+      For this I give thanks to the lesssons learned from those mentioned on the
+       <a href="booksandsites" title="Link to the Books and Sites page on this site">
+          books and sites page</a>,
+    </p>
+  </section><!-- #growing-up -->
+  <section id="art-history-class">
+    <h2>A Programmer Walks Into an Art History Class...</h2>
+    <p>
+      One day in a History of Modern Painting (Art History) class at
+       Virginia Commonwealth University
+       (<a href="http://www.vcu.edu/" title="VCU.edu home page"
+           target="_blank">VCU</a>)
+       the teacher introduced us to Piet Mondrian.
+      She said that what he did might look easy, but if you try to
+       do it yourself, you will find it is very difficult.</p>
+    <p>
+      The teacher tried to impress upon us how difficult it is to produce
+       something like this.
+      But as someone who was extremely interested in and excited about
+       Artificial Intelligence at the time, I couldn't stop the thought that
+       <span class="air-quotes">maybe a computer could do that!</span>
+       from jumping into my head.</p>
+    <p>
+      By this time I also had some interest in psychology &mdash; and
+        had discovered Carl Jung's, Isabel Briggs Myers', and DavidKeirsey's work.
+    <p>
+      Trying to think of how to write a program to <span class="air-quotes">do that</span>
+       was definitely a challenge.</p>
+    <p>
+      Reading Mondrian's writings increased my admiration for the man.
+      It is amazing &mdash; but not entirely surprising &mdash; to learn that he lived
+       much of his life in poverty.</p>
+  </section><!-- #art-history-class -->
+{% endblock %}
+{% block toprowsidebox %}
+  {{ super() }}
+  <section id="manifesto">
+    <div class="sidebox">
+    <h3>Manifesto: A Statement of Purpose</h3>
+    <p>
+     Does this seem complicated?</p>
+    <p>
+     Is it at all obvious that this idea's roots are in abstract paintings done close to a hundred years ago?
+     I hope so, but if not, let's clear something up right now.</p>
+    <p>
+     At its core, the purpose of this idea is two-fold:</p>
+    <ul class="standalone">
+     <li>
+      To enable us to see the invisible</li>
+     <li>
+      To promote harmony between opposites</li>
+    </ul>
+    <p>
+     See, it's really not that complicated after all!</p>
+    </div><!-- .sidebox -->
+  </section><!-- #manifesto -->
+{% endblock %}
+
+{% block remainder %}
+  <div class="row">
+    <div class="col-md-12">
+      <section id="versions">
+        <h2>Versions</h2>
+        <p>
+         Following is a list of the versions of the Groja Program &copy; I have written:</p>
+        <dl class="standalone">
+          <dt>
+            <em>1989 </em>Grad School IBM 8086 PC version</dt>
+          <dd>
+            Written in LISP for my Interdisciplinary Masters Degree.
+          </dd>
+          <dt>
+            <em>2001 </em>Raw PHP 4 version</dt>
+          <dd>
+            Not Object Oriented and a hellish interface, but it drew images (until the register globals thing).
+          </dd>
+          <dt>
+            <em>2005 </em>PHP Nuke version</dt>
+          <dd>
+            The best thing I can say about PHP Nuke is, it made me willing to try out Joomla, WordPress, and Drupal.
+          </dd>
+          <dt>
+            <em>2008 </em>Joomla 1.x version</dt>
+          <dd>
+            An attempt to create a social, web 2.0, rolling-blog type of site.
+            I am not the type to monitor or even promote this type of site.
+            Now the software but even the basic goals and paradigm of the site is totally obsolete.
+          </dd>
+          <dt>
+            <em>20?? </em>Next version?!?</dt>
+          <dd>
+            Now that there are so many new technologies, and they are all changing so fast,
+             it is difficult to prioritize on how to build on this idea.
+            That is why I am making this personal: talking to users and creating individualized and personal portraits.
+            This will fuel how I decide to continue with this work.
+         </dd>
+        </dl>
+      </section><!-- #versions -->
+    </div><!-- .col-md-12 -->
+  </div><!-- .row -->
+{% endblock %}

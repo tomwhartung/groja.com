@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+{% block title %}Your Portrait{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style>
+    </style>
+{% endblock %}
+
+{% block toprowcontent %}
+  <section class="jumbotron" id="your-portrait">
+    <h2>Your Portrait</h2>
+    <p>
+      I create all Spiritual Portraits by hand, and
+       each one is unique.</p>
+    <p>
+      To order yours today, Contact Us!</p>
+    <p>
+      <a href="conversion/groja" class="btn btn-primary btn-lg" role="button">
+         Contact Us &raquo;</a></p>
+  </section><!-- .jumbotron #your-portrait -->
+  <section id="handmade-portraits">
+    <h3>Handmade Portraits</h3>
+    <p>
+      Although a large part of this process is automated by the
+        Groja Program &copy;, producing high-quality, unique and
+        personalized portraits takes time.
+      Add to that the possibility that I will want to
+        ensure customers understand and appreciate its significance
+        means that each image requires a personal touch.</p>
+    <p>
+      Also, the program contains many options, such as different resolutions and
+      orientations (portrait vs. landscape) and even different compositions.
+      At this time, these options not currently demonstrated in the
+      <a href="http://seeourminds.com/galleries/gallery.html"
+         title="Link to the galleries page on seeourminds.com" target="_blank">
+        galleries</a>.
+      If you are willing to work with me a bit, I can help you determine
+        what sort of image you like the most and
+        ensure it is within your price range before starting on it!</p>
+  </section><!-- #handmade-portraits -->
+  <section id="personalized-portraits">
+    <h3>Your <span class="emphasized">Personalized</span> Portrait</h3>
+    <p>
+      If the generic portrait of your four-letter type is not personalized enough for you, please
+      <a href="conversion/groja" title="Link to contact us page">
+        contact us</a>
+      to discuss what you might want and how much it will cost.</p>
+    <p>
+      Thanks, and <span class="emphasized">have a great day!</span></p>
+  </section><!-- #personalized-portraits -->
+{% endblock %}
+{% block toprowsidebox %}
+  {{ super() }}
+  <section id="cost">
+    <div class="sidebox">
+      <h3>How Much?</h3>
+      <figure>
+        <img src="{{ url_for('static', filename='images/site/ESFJ-light_75_sat_75-blur_20-qms-209x209.jpg') }}"
+             class="sidebox-img">
+      </figure>
+    <p>
+      The cost of each Spiritual Portrait ranges from $0 to $1000,
+      depending on how much work I have to put into making it.
+    </p>
+    <p>
+      If you know your four-letter type, check out the corresponding
+        image (called a <span class="air-quotes">generic portrait</span>)
+        in the
+        <a href="http://www.seeourminds.com/gallery/sixteen_types/"
+           title="Link to the Sixteen Types gallery page on seeourminds.com"
+           target="_blank">
+          Sixteen Types</a>
+         gallery page on
+         <a href="http://www.seeourminds.com/"
+            title="Link to the seeourminds.com Home page" target="_blank">
+          seeourminds.com</a>
+      Although it is not unique &mdash; and does not reflect the degree
+        of your your personal preferences &mdash; technically it
+        <span class="emphasized">is</span> an image of your personality.
+      So feel free to download and enjoy it!
+    </p>
+  </section><!-- #cost -->
+  <section id="factors">
+    <div class="sidebox">
+      <h3>Want Specifics?</h3>
+      <p>
+        For a list of factors affecting the cost, see below for the
+         <a href="#factors-affecting-cost"
+            title="Quick link to the Factors Affecting the Cost section, further down in this page">
+          Factors Affecting the Cost</a>
+         section.</p>
+    </div><!-- .sidebox -->
+  </section><!-- #cost -->
+{% endblock %}
+
+{% block remainder %}
+  <div class="row">
+    <div class="col-md-8">
+      <section id="factors-affecting-cost">
+        <h3>Factors Affecting the Cost</h3>
+        <p>
+          Following is a list of some of the factors affecting the cost of
+            your personalized Spiritual Portrait:</p>
+        <ul>
+          <li>
+            Which version of the quiz you take
+            </li>
+          <li>
+            How much time I have to spend explaining the process to you
+            </li>
+          <li>
+            How much time I spend explaining the underlying theory, and
+              its significance in our day-to-day lives, to you
+            </li>
+          <li>Whether you want any special customizations, such as:
+            </li>
+            <ul>
+              <li>Resolution
+                </li>
+              <li>Aspect ratio
+                </li>
+              <li>An experimental composition
+                </li>
+              <li>
+                </li>
+            </ul>
+          <li>x
+            </li>
+        </ul>
+        <p>
+          I have absolutely no expectation that creating these will make me fabulously rich,
+          and I am certainly not looking to take advantage of anyone here.
+          </p>
+        <p>
+          However, I have put a lot of time &mdash; years, in fact &mdash; into coming up with this idea,
+          writing the
+          <a href="../about/#versions" title="Link to the list of versions on the 'About' page">
+            various versions</a>
+          of the program, building and managing this site and its predecessors and
+          ultimately the (highly unnatural &mdash; for me, anyway) effort required to
+          let people know that this service is available.</p>
+        <p>
+          And of course after all that, there is the time spent creating a personalized image and
+          making sure it meets your satisfaction.
+          </p>
+        <p>
+          So I hope that if you are interested, you will
+          <a href="conversion/groja" target="_blank"
+             title="Link to contact us page.">
+            contact us</a>
+          and give us the opportunity to create a beautiful, unique, and
+          highly personal Spiritual Portrait &mdash; one that you can fully appreciate and enjoy now and for years to come!
+          </p>
+      </section><!-- #factors-affecting-cost -->
+    </div><!-- .col-md-8 -->
+  </div><!-- .row -->
+{% endblock %}

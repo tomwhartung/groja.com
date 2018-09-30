@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% block title %}Get Your Groja{% endblock %}
+{% block head %}
+   {{ super() }}
+   <style>
+   </style>
+{% endblock %}
+
+{% block toprowcontent %}
+  <article class="jumbotron">
+    <section id="name-email-form">
+      <p>
+        For details about how you can get your personalized
+         Spiritual Portrait, enter your name and email address, and
+         we will contact you as soon as we can!
+      </p>
+      <form  action="" method="post" role="form">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+          <label for="name">{{ form.name.label }}</label>
+          {{ form.name( class="form-control", value=form.name.data ) }}
+          <label for="email">{{ form.email.label }}</label>
+          {{ form.email( class="form-control", value=form.email.data ) }}
+        </div>
+        <button type="submit" class="btn btn-success">Get Your Portrait</button>
+      </form>
+    </section><!-- #name-email-form -->
+  </article><!-- .jumbotron -->
+  <article class="other-options">
+    <section id="social-media">
+      <h3>Or &mdash; if you'd prefer to use social networking:</h3>
+      <ul class="social-list">
+        <li class="social-list">
+          <a href="https://www.facebook.com/seeourminds/" target="_blank"
+             title="Link to send us a message on facebook" class="icons-sm">
+            <i class="fa fa-2x fa-facebook"></i>
+            Message us on facebook</a></li>
+        <li class="social-list">
+          <a href="https://twitter.com/getyourgroja" target="_blank"
+             title="Link to tweet to our page on twitter" class="icons-sm">
+            <i class="fa fa-2x fa-twitter"></i>
+            Tweet to our page on twitter</a></li>
+        <li class="social-list">
+          <a href="" target="_blank"
+             title="Link to send us a message on google plus" class="icons-sm">
+            <i class="fa fa-2x fa-google-plus"></i> Google + (link tbd)</a></li>
+        <li class="social-list">
+          <a href="#social-media-sidebox"
+             title="Scroll to the social media icons sidebox" class="icons-sm">
+            <i class="fa fa-2x fa-hand-o-right"></i> </a>
+          Use one of the icons in the side
+          <a href="#social-media-sidebox"
+             title="Scroll to the social media icons sidebox" class="icons-sm">
+            <i class="fa fa-2x fa-hand-o-right"></i> </a>
+          box to follow and contact us
+          <a href="#social-media-sidebox"
+             title="Scroll to the social media icons sidebox" class="icons-sm">
+            <i class="fa fa-2x fa-hand-o-right"></i> </a>
+        </li>
+        <ul class="social-list">
+          <li class="social-list">
+            <a href="#social-media-sidebox"
+               title="Scroll to the social media icons sidebox" class="icons-sm">
+              <i class="fa fa-2x fa-hand-o-down"></i> </a>
+            You may have to scroll down to see the icons on phones
+            <i class="fa fa-sm fa-smile-o"></i>
+            <a href="#social-media-sidebox"
+               title="Scroll to the social media icons sidebox" class="icons-sm">
+              <i class="fa fa-2x fa-hand-o-down"></i> </a>
+          </li>
+        </ul>
+      </ul>
+    </section><!-- #social-media -->
+    <hr>
+    <section id="keep-it-old-school">
+      <h3>Or &mdash; if you'd prefer to keep it old school:</h3>
+      <ul class="old-school-list">
+        <li class="old-school-list">Call us at 303-863-1757.</li>
+        <li class="old-school-list">Send us a letter at Groja.com, 2075 Emerson Street, Denver, CO 80218.</li>
+      </ul>
+    </section><!-- #keep-it-old-school -->
+  </article><!-- .other-options -->
+  <article class="thanks">
+    <div class="row">
+      <div class="col-md-8">
+        <section id="thanks">
+          <h3>Thanks!</h3>
+          <p>And see you soon!</p>
+        </section><!-- #thanks -->
+      </div><!-- .col-md-8 -->
+    </div><!-- .row -->
+  </article><!-- .thanks -->
+{% endblock %}
+{% block toprowsidebox %}
+  <section id="process">
+    <div class="sidebox">
+      <h3>What to Expect</h3>
+      <ol start="0">
+        <li>
+          <span class="step-title">Contact us &mdash;</span>
+          using one of the methods on this page</li>
+        <li>
+          <span class="step-title">Share your score &mdash;</span>
+          if you don't already have your score, we discuss alternatives for getting it</li>
+        <li>
+          <span class="step-title">Portrait creation &mdash;</span>
+          we use the score to create your Spiritual Portrait</li>
+        <li>
+          <span class="step-title">Preliminary portrait &mdash;</span>
+          we deliver a small, water-marked version of your portrait, for your approval</li>
+        <li>
+          <span class="step-title">Invoicing and payment &mdash;</span>
+          when you are happy with the portrait, we send an invoice and appreciate your prompt payment</li>
+        <li>
+          <span class="step-title">Final delivery &mdash;</span>
+          when we receive your payment, we send a full-size, non-water-marked version of your portrait</li>
+      </ol>
+      <p>Thanks!</p>
+    </div><!-- .sidebox -->
+    {{ super() }}
+  </section><!-- #process -->
+{% endblock %}

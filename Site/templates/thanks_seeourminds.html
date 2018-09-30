@@ -1,0 +1,22 @@
+{% extends "conversion_base.html" %}
+{% block title %}Thanks for subscribing!{% endblock %}
+{% block head %}
+   {{ super() }}
+   <style>
+   </style>
+{% endblock %}
+
+{% block toprowcontent %}
+  <h3>Thanks for subscribing,
+    {% if name %}
+      {{ name }}!
+    {% else %}
+      Friend!
+    {% endif %}</h3>
+    <h3>Return to
+      <a href="http://seeourminds.com" title="SeeOurMinds.com home page">
+        SeeOurMinds.com</a></h3>
+{% endblock %}
+{% block toprowsidebox %}
+  {{ super() }}
+{% endblock %}

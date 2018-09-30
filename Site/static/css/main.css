@@ -1,0 +1,139 @@
+/* ==========================================================================
+ * Author's custom styles
+ * ==========================================================================
+ */
+
+/*
+ * Overriding the styles in the header, to get the look and feel I want
+ */
+img.site-header {
+    float: left;
+    margin: .6em;
+}
+
+.navbar-inverse {
+    background-color: rgb( 25, 25, 112);     /* midnightblue = #191970 */
+    background-color: rgba( 25, 25, 112, 0.8);
+    background-image: none;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+    font-size: 2.75em;
+}
+.navbar-tagline {
+    clear: both;
+    color: white;
+    float: left;
+}
+
+/*
+ * We need the content to appear beneath (and not behind) the page header.
+ */
+main {
+    margin-top: 50px;
+}
+/*
+ * This is not how I would normally do things, but
+ * experimentation has led to the conclusion that
+ * we need to set very specific styles to
+ * override the default ones.
+ * (I tried having just one ".menu-item" style but
+ * found I had to specify some in a.menu-item and
+ * some in li.menu-item.)
+ */
+ul.navbar-form,
+ul.navbar-right,
+ul.navbar-form.navbar-right {
+    list-style-type: none;
+    margin-top: 50px;
+    padding: 0;
+    vertical-align: bottom;
+}
+a.menu-item {
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+li.menu-item {
+    display: inline;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0 .5em 0 .5em;
+}
+/*
+ * Unsure why these do not seem to make the menu two lines high...?
+ * Todo: learn more about css in general and bootstrap in particular
+ *
+ * li.menu-item {
+ *     line-height: .5em;
+ *     height: 4em;
+ *     word-wrap: break-word;
+ * }
+ */
+
+/*
+ * Some miscellaneous styles to override the defaults in our effort to
+ * *****************************************
+ * * make everything just exactly perfect. *
+ * *****************************************
+ */
+.sidebox {
+   border: 2px solid midnightblue;
+   border-radius: 1em;
+   margin: 1em;
+   padding: 2em;
+   text-align: left;
+}
+
+figcaption {
+   clear: both;
+	font-weight: bold;
+}
+
+figure,
+figcaption {
+   display: block;
+   text-align: center;
+}
+
+sidebox-img {
+   display: block;
+}
+
+footer {
+   border: 6px double midnightblue;
+   border-radius: 1em;
+   margin: 3em 0;    /* (top, bottom) (left, right) */
+   padding: 1em;
+   text-align: center;
+}
+
+a.selected {            /* main nav menu - current "selected" page */
+   color: lightgrey;
+}
+a.selected:hover {
+   text-decoration: line-through;
+}
+
+a.gallery-title {
+    color: black;
+}
+
+/*
+ * Some "fun" (semantic) styles, copied from my tomwhartung.github.io css file:
+ */
+.air-quotes::before { content: '"'; }
+.air-quotes {
+   font-style: italic;
+}
+.air-quotes::after { content: '"'; }
+
+.disabled, .obsolete {
+   text-decoration: line-through;
+}
+.emphasized {
+   font-style: italic;
+   text-decoration: underline;
+}
+
