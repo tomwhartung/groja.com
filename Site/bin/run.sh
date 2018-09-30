@@ -9,4 +9,4 @@
 export FLASK_DEBUG=1
 export FLASK_APP=groja.py
 
-cd .. && python3 -m flask run
+cd .. && python3 -m flask run --port=5001
