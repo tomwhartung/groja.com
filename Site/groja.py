@@ -59,6 +59,25 @@ def yourportrait():
     )
 
 
+@app.route("/legal/<legal_page>")
+def legal(legal_page):
+
+    """ Display the requested legal page """
+
+    if legal_page == 'privacy_policy':
+        template_name = 'legal/privacy_policy.html'
+    elif legal_page == 'terms_of_service':
+        template_name = 'legal/terms_of_service.html'
+    elif legal_page == 'affiliate_marketing_disclosure':
+        template_name = 'legal/affiliate_marketing_disclosure.html'
+    elif legal_page == 'questionnaire_disclaimer':
+        template_name = 'legal/questionnaire_disclaimer.html'
+    else:
+        template_name = 'home.html'
+
+    return render_template(template_name)
+
+
 @app.route("/conversion/<interest>", methods=['GET', 'POST'])
 def conversion(interest):
 
