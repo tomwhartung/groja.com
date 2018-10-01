@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  {% block head %}
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5C9M49W');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %} - Groja.com</title>
+    <meta name="description" content="">
+    <!-- Font Awesome -->
+    <link href="{{ url_for('static', filename='css/font-awesome.min.css') }}"
+          rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
+          rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="{{ url_for('static', filename='css/mdb.min.css') }}"
+          rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="{{ url_for('static', filename='css/groja.css') }}"
+          rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+  {% endblock %}
+</head>
+<body>
+  {% block navbar %}
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser.
+        Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5C9M49W"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <a href="#">
+        <img class="site-header" src="{{ url_for('static', filename='images/site/estp-generic-scaled-81x81.gif') }}"></a>
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed"
+                  data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#">
+            <span class="navbar-brand">groja.com</span>
+            <span class="navbar-tagline">'Visualizing Personalities Since 1989' &trade;</span></a>
+        </div><!-- .navbar-header -->
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="navbar-form navbar-right">
+            <li class="menu-item">
+              <a class="menu-item {{ homeSelected }}" href="/">Home</a></li>
+            <li class="menu-item">
+              <a class="menu-item {{ aboutSelected }}" href="/about">
+                About</a></li>
+            <li class="menu-item">
+              <a class="menu-item {{ booksandsitesSelected }}"
+                 href="/booksandsites">Books and Sites</a></li>
+            <li class="menu-item">
+              <a class="menu-item {{ yourportraitSelected }}"
+                 href="/yourportrait">Your Portrait</a></li>
+            <li class="menu-item">
+              <a class="menu-item" href="http://seeourminds.com/galleries"
+                 target="_blank">Galleries</a></li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div><!-- .container -->
+    </nav>
+  {% endblock %}
+
+{% block content %}
+  <main>
+    <div class="container">
+     <div class="row">
+      <div class="col-md-8">
+  {% block toprowcontent %}
+  {% endblock %}
+      </div><!-- .col-md-8 -->
+      <div class="col-md-4">
+  {% block toprowsidebox %}
+       <a name="top-row-sidebox"></a>
+       <a name="social-media-sidebox"></a>
+       <section id="social-media">
+        <div class="sidebox">
+          <p>Follow us and...</p>
+           <!--Facebook-->
+          <a href="https://www.facebook.com/seeourminds/" target="_blank"
+             title="Connect with us on facebook!" class="icons-lg">
+            <i class="fa fa-3x fa-facebook-square"> </i></a>
+          <!--Twitter-->
+          <a href="https://twitter.com/seeourminds" target="_blank"
+             title="Connect with us on twitter!" class="icons-lg">
+            <i class="fa fa-3x fa-twitter-square"> </i></a>
+          <!--Github -->
+          <a href="https://github.com/tomwhartung" target="_blank"
+             title="Connect with us on github!" class="icons-lg">
+            <i class="fa fa-3x fa-github-square"> </i></a>
+          <!--Instagram-->
+          <a href="https://www.instagram.com/groja.com8831/" target="_blank"
+             title="Connect with us on instagram!" class="icons-lg">
+            <i class="fa fa-3x fa-instagram"> </i></a>
+          <!--Pinterest-->
+          <a href="https://www.pinterest.com/seeourminds/" target="_blank"
+             title="Connect with us on pinterest!" class="icons-lg">
+            <i class="fa fa-3x fa-pinterest-square"> </i></a>
+          <!--Google +-->
+          <a href="https://plus.google.com/+TomHartung" target="_blank"
+             title="Connect with us on google plus!" class="icons-lg">
+            <i class="fa fa-3x fa-google-plus-square"> </i></a>
+          <!--Linkedin-->
+          <a href="https://www.linkedin.com/company/groja.com" target="_blank"
+             title="Connect with us on linkedin!" class="icons-lg">
+            <i class="fa fa-3x fa-linkedin-square"> </i></a>
+          <p>...we'll follow you!</p>
+        </div><!-- .sidebox -->
+       </section><!-- #social-media -->
+  {% endblock %}
+      </div><!-- .col-md-4 -->
+     </div><!-- .row -->
+  {% block remainder %}
+  {% endblock %}
+  {% block footer %}
+     <hr>
+     <footer>
+       <p>
+        Copyright &copy; 2016&ndash;2018
+         <a href="http://www.TomWHartung.com" class="footer"
+            title="TomWHartung.com home page" target="_blank">
+          Tom W. Hartung</a> and
+         <a href="https://JooMooWebSites.com" class="footer"
+            title="JooMoo WebSites.com home page" target="_blank">
+          JooMoo WebSites LLC</a>.
+        All Rights Reserved.</p>
+        <p>
+          <b>Your use of this site implies you consent to our
+           <a href="http://artsyvisions.com/legal/terms_of_service" class="footer"
+              title="Terms of Service for this site" target="_blank">
+            Terms of Service</a> and
+           <a href="http://artsyvisions.com/legal/privacy_policy" class="footer"
+              title="Privacy Policy for this site" target="_blank">
+            Privacy Policy</a>.</b></p>
+        <p>
+          This site totally designed, created, and maintained by
+           <a href="https://JooMooWebSites.com" class="footer"
+              title="JooMooWebSites.com home page" target="_blank">
+            JooMoo WebSites LLC</a>.</p>
+     </footer>
+  {% endblock %}
+    </div><!-- .container -->
+  </main>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="static/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}
+
+</body>
+</html>
