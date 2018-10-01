@@ -2,6 +2,11 @@
 
 Repo to reorganize current content on groja.com and convert to Material Design Bootstrap (MDB).
 
+# References
+
+- Downloaded Free version from https://mdbootstrap.com/getting-started/ on 2018-10-01
+- MDB Nav bar docs: https://mdbootstrap.com/components/navbar/
+
 # Plan
 
 ## Overview
@@ -23,9 +28,9 @@ Repo to reorganize current content on groja.com and convert to Material Design B
   - [x] 2.3. Add new and commit
   - [x] 2.4. Update head element in base.html with code from the latest downloaded version of index.html
 
-- [ ] 3. Replace Galleries option with drop-down menu for Privacy & Terms pages
-  - [ ] 3.1. Starting point: code from `material_design/05-material_design_bootstrap/03-corporate_website/Site/`
-  - [ ] 3.2. Get all four pages integrated and looking nice.
+- [x] 3. Replace Galleries option with drop-down menu for Privacy & Terms pages
+  - [x] 3.1. Starting point: code from `material_design/05-material_design_bootstrap/03-corporate_website/Site/`
+  - [x] 3.2. Get all four pages integrated and looking nice.
 
 - [ ] 4. Consolidate existing menu options
   - [ ] 4.1. Remove Home menu option
@@ -78,12 +83,19 @@ Repo to reorganize current content on groja.com and convert to Material Design B
 #### 2.4. Update head element in base.html with code from the latest downloaded version of index.html
 
 - Decided to use `groja.css` instead of `style.css` for customizations, for consistency with my other python sites
+- Using local copy of font-awesome.min.css, downloaded from https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
 
 ### 3. Replace Galleries option with drop-down menu for Privacy & Terms pages
 
+- MDB Nav bar docs: https://mdbootstrap.com/components/navbar/
+
 #### 3.1. Starting point: code from `material_design/05-material_design_bootstrap/03-corporate_website/Site/`
 
+- Actually used code from the file `02-landing_page/Site/index-footer_1.html`
+
 #### 3.2. Get all four pages integrated and looking nice.
+
+- Focusing on navigation for now, will add in the actual text later
 
 ### 4. Consolidate existing menu options
 
