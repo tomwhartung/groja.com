@@ -32,22 +32,13 @@ Bootstrap(app)
 @app.route('/')
 def home():
     """ Show the Home page """
-    return render_template('home.html', homeSelected='selected')
+    return render_template('home.html', homeActive='active')
 
 
 @app.route('/about')
 def about():
     """ Show the About page """
-    return render_template('about.html', aboutSelected='selected')
-
-
-@app.route('/booksandsites')
-def booksandsites():
-    """ Show the Books and Sites page """
-    return render_template(
-            'booksandsites.html',
-            booksandsitesSelected='selected'
-    )
+    return render_template('about.html', aboutActive='active')
 
 
 @app.route('/yourportrait')
@@ -55,7 +46,7 @@ def yourportrait():
     """ Show the Your Portrait page """
     return render_template(
             'yourportrait.html',
-            yourportraitSelected='selected'
+            yourportraitActive='active'
     )
 
 
@@ -75,7 +66,7 @@ def legal(legal_page):
     else:
         template_name = 'home.html'
 
-    return render_template(template_name)
+    return render_template(template_name, legalActive='active')
 
 
 @app.route("/conversion/<interest>", methods=['GET', 'POST'])
@@ -176,7 +167,7 @@ def google428ef5aab2bc0870():
 @app.route('/index')
 def index():
     """ Show the index.html template we are using to convert to MDB """
-    return render_template('index.html')
+    return render_template('index.html', homeActive='active')
 
 # =============================================================================
 #
