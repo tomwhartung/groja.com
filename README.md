@@ -17,11 +17,11 @@ Repo to reorganize current content on groja.com and convert to Material Design B
 
 - [x] 1. Create new repo, `groja.com-mdb` , and populate it with the existing code in the `groja.com` repo
 
-- [ ] 2. Replace Bootstrap 3 static files with freshly downloaded MDB static files
-  - [ ] 2.1. Delete old and commit
-  - [ ] 2.2. Download latest MDB code from the site
-  - [ ] 2.3. Add new and commit
-  - [ ] 2.4. Update head element in base.html with code from the latest downloaded version of index.html
+- [x] 2. Replace Bootstrap 3 static files with freshly downloaded MDB static files
+  - [x] 2.1. Delete old and commit
+  - [x] 2.2. Download latest MDB code from the site
+  - [x] 2.3. Add new and commit
+  - [x] 2.4. Update head element in base.html with code from the latest downloaded version of index.html
 
 - [ ] 3. Replace Galleries option with drop-down menu for Privacy & Terms pages
   - [ ] 3.1. Starting point: code from `material_design/05-material_design_bootstrap/03-corporate_website/Site/`
@@ -32,7 +32,12 @@ Repo to reorganize current content on groja.com and convert to Material Design B
   - [ ] 4.2. Consolidate Books and Sites under "About" - or "History of Groja.com" , or "About Grojas" or ...?
   - [ ] 4.3. But consolidate all text into a single page
   - [ ] 4.4. Make menu drop-down with options to take visitor to the desired part of the page
-  - [ ] 4.5. Submenu option suggestions: About, Books, Sites, History (of Groja.com)
+  - [ ] 4.5. Submenu option suggestions:
+    - About
+    - Books
+    - Sites
+    - History of Groja.com
+    - Your portrait
 
 - [ ] 5. Revamp existing home page
   - [ ] 5.1. Use code from `material_design/05-material_design_bootstrap/02-landing_page/Site/` in the `always_learning_google_products` repo
@@ -49,18 +54,30 @@ Repo to reorganize current content on groja.com and convert to Material Design B
 
 ### 2. Replace Bootstrap 3 static files with freshly downloaded MDB static files
 
-#### 2.1. Delete old and commit
+#### 2.1. Delete old and commit - but do not push quite yet
 
-- Commit but do not push quite yet
+- NOT deleting `favicon.ico` , `css/README.md` , `css/groja.css` or `images/*` files
 
 #### 2.2. Download latest MDB code from the site
 
+- Downloaded Free version from https://mdbootstrap.com/getting-started/ on 2018-10-01
 - Compare to what we have in the `always_learning_google_products` repo, in `material_design/05-material_design_bootstrap/00-downloaded/Site/`
-  - Just curious how much it may have changed, if at all
+  - Downloaded the code in `always_learning_...` on Aug 26, 2018 - little over a month ago
+  - Compare briefly - just curious how much it may have changed, if at all
+  - 3 new files - 95 vs. 93
+     - New files: `js/modules/velocity.js` and `scss/free/_switch.scss`
+  - Running `lf | xargs wc -l`
+     - 79022 total lines vs. 80300 total lines in older version
+     - `scss/free/_animations*` files smaller
+- Has changed a bit, but not hugely
 
 #### 2.3. Add new and commit
 
+- Adding files from the css, font, img, js, scss, and parent directories
+
 #### 2.4. Update head element in base.html with code from the latest downloaded version of index.html
+
+- Decided to use `groja.css` instead of `style.css` for customizations, for consistency with my other python sites
 
 ### 3. Replace Galleries option with drop-down menu for Privacy & Terms pages
 
