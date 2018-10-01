@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% block title %}Index{% endblock %}
+
 {% block content %}
 
   <!-- Start your project here-->
@@ -14,6 +16,10 @@
   </div>
   <!-- /Start your project here-->
 
+{% endblock %}
+
+{% block footer %}
+ {{ super() }}
 {% endblock %}
 
 </html>
