@@ -36,9 +36,12 @@
 {% block navbar %}
  <header>
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark indigo">
+   <a href="/index">
+    <img class="site-header"
+         src="{{ url_for('static', filename='images/site/estp-generic-scaled-81x81.gif') }}">
+   </a>
    <div class="container">
-    <!-- Navbar brand -->
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="/index">Groja.com</a>
 
     <!-- Collapse button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
