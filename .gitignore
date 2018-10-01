@@ -3,6 +3,8 @@
 #  --------------------------------------------------------
 #
 tmp/
+unpack/
+unzip/
 
 #
 #  Ignore netbeans work area and vim temporary files
