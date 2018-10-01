@@ -1,16 +1,16 @@
 
-## Html5BoilerPlate - Css File Basics
+## Groja.com - css file notes
 
-* bootstrap*.map files - ok to ignore
-* bootstrap*.css files - DO NOT EDIT
-* main.css - not sure where these styles came from, but the comments look like ones I would make (*)
-* groja.css - new file - PUT NEW STYLES HERE
+- groja.css
+  - Initial version is from original groja.com
+    - **May contain some obsolete styles**
+  - Formerly used with bootstrap 3
+    - I.e., pre-MDB css
+  - **Put new styles here**
+    - Name is consistent with other python sites, e.g., seeourminds.com
 
-(*) Searched through the various directories in the always_learning_python repo for versions of this file.
-When getting started we tried out various options on the html5boilerplate download site.
-Looking at the history, it appears that some of those options would populate this file (main.css).
-However, the comments in the file look like the sort of comments I like to make.
-For example, "make everything exactly perfect." ;-)
-So....
-Therefore we are putting "new" (post-flask) customizations in a new file, main-customizations.css .
+- style.css - removed empty file intended for cusTOMizations
+  - base.html template updated to use groja.css instead
+- style.min.css - removed empty file intended for cusTOMizations
+  - base.html template updated to use groja.css instead
 
