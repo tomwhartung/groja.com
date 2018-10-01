@@ -153,6 +153,12 @@ def google428ef5aab2bc0870():
     """ Show the Google Verification page for my gmail acct """
     return render_template('google428ef5aab2bc0870.html')
 
+
+@app.route('/index')
+def index():
+    """ Show the index.html template we are using to convert to MDB """
+    return render_template('index.html')
+
 # =============================================================================
 #
 # Run the app!
