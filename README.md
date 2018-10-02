@@ -27,29 +27,35 @@ Repo to reorganize current content on groja.com and convert to Material Design B
   - [x] 2.2. Download latest MDB code from the site
   - [x] 2.3. Add new and commit
   - [x] 2.4. Update head element in base.html with code from the latest downloaded version of index.html
+  - [x] 2.5. Use local files rather than CDN - my connection sucks
 
 - [x] 3. Replace Galleries option with drop-down menu for Privacy & Terms pages
   - [x] 3.1. Starting point: code from `material_design/05-material_design_bootstrap/03-corporate_website/Site/`
-  - [x] 3.2. Get all four pages integrated and looking nice.
+  - [x] 3.2. Update `base.html` template
+  - [x] 3.3. Get all four pages integrated and looking nice.
 
-- [ ] 4. Consolidate existing menu options
-  - [ ] 4.1. Remove Home menu option
-  - [ ] 4.2. Consolidate Books and Sites under "About" - or "History of Groja.com" , or "About Grojas" or ...?
-  - [ ] 4.3. But consolidate all text into a single page
-  - [ ] 4.4. Make menu drop-down with options to take visitor to the desired part of the page
-  - [ ] 4.5. Submenu option suggestions:
+- [x] 4. Consolidate existing menu options
+  - [x] 4.1. Remove Home menu option
+  - [x] 4.2. Consolidate Books and Sites under "About" - or "History of Groja.com" , or "About Grojas" or ...?
+  - [x] 4.3. But consolidate all text into a single page
+  - [x] 4.4. Make menu drop-down with options to take visitor to the desired part of the page
+  - [x] 4.5. Submenu option suggestions:
     - About
     - Books
     - Sites
     - History of Groja.com
     - Your portrait
 
-- [ ] 5. Revamp existing home page
-  - [ ] 5.1. Use code from `material_design/05-material_design_bootstrap/02-landing_page/Site/` in the `always_learning_google_products` repo
+- [ ] 5. Move social icons to right side of nav bar
+  - [ ] 5.1. Example code is in `/material_design/05-material_design_bootstrap/02-landing_page/Site/index.html`
   - [ ] 5.2. Update `base.html` template
-  - [ ] 5.3. Replace static files as necessary
-  - [ ] 5.4. Use local files rather than CDN - my connection sucks
-  - [ ] 5.5. Don't care about what the other pages look like right now
+  - [ ] 5.3. Code for existing icons is in a sidebar in the `base_with_nav.html` template
+
+- [ ] 6. Copy content from legal pages on SeeOurMinds.com to the new Legal pages
+- [ ] 7. Update new About page, creating sections as appropriate
+- [ ] 8. Update existing Your Portrait page
+- [ ] 9. Revamp existing Home page
+- [ ] 10. Update existing conversion pages as appropriate
 
 ## Steps - Notes
 
@@ -101,24 +107,18 @@ Repo to reorganize current content on groja.com and convert to Material Design B
 
 #### 4.1. Remove Home menu option
 
+- Replaced it with Site Name
+
 #### 4.2. Consolidate Books and Sites under "About" - or "History of Groja.com" , or "About Grojas" or ...?
 
 #### 4.3. But consolidate all text into a single page
+
+- Focusing on navigation for now
+- Will actually add the text in a later step
 
 #### 4.4. Make menu drop-down with options to take visitor to the desired part of the page
 
 #### 4.5. Submenu option suggestions: About, Books, Sites, History (of Groja.com)
 
-### 5. Revamp existing home page
-
-#### 5.1. Use code from `material_design/05-material_design_bootstrap/02-landing_page/Site/` in the `always_learning_google_products` repo
-
-#### 5.2. Update `base.html` template
-
-#### 5.3. Replace static files as necessary
-
-#### 5.4. Use local files rather than CDN - my connection sucks
-
-#### 5.5. Don't care about what the other pages look like right now
 
 
