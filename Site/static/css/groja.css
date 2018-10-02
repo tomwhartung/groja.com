@@ -88,6 +88,13 @@ li.step-title {
 }
 
 /*
+ * For the legal pages
+ */
+.legal-page {
+  margin: 3em;
+  padding: 3em;
+}
+/*
  * Keep images etc. from overflowing their containers
  * Reference:
  *   https://developers.google.com/web/fundamentals/design-and-ui/responsive/images#use_relative_sizes_for_images
