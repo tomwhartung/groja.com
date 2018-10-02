@@ -24,25 +24,25 @@ i.fa-2x:hover {
   text-shadow: 4px 4px lightgrey;
 }
 .fa-facebook, .fa-facebook-square {
-  color: #3b5998;
+  color: #ffffff;
 }
 .fa-twitter, .fa-twitter-square {
-  color: #00aced;
+  color: #ffffff;
 }
 .fa-github, .fa-github-alt {
-  color: #343434;
+  color: #ffffff;
 }
 .fa-instagram {
-  color: #517fa4;
+  color: #ffffff;
 }
 .fa-pinterest, .fa-pinterest-square {
-  color: #cb2027;
+  color: #ffffff;
 }
 .fa-google-plus, .fa-google-plus-square {
-  color: #dd4b39;
+  color: #ffffff;
 }
 .fa-linkedin, .fa-linkedin-square {
-  color: #007bb6;
+  color: #ffffff;
 }
 /*
  * For the Books and Sites Page:
@@ -97,4 +97,3 @@ img, embed, object, video {
  *    padding: .3em;
  * }
  */
-
