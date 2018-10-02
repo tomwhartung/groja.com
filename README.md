@@ -46,10 +46,10 @@ Repo to reorganize current content on groja.com and convert to Material Design B
     - History of Groja.com
     - Your portrait
 
-- [ ] 5. Move social icons to right side of nav bar
-  - [ ] 5.1. Example code is in `/material_design/05-material_design_bootstrap/02-landing_page/Site/index.html`
-  - [ ] 5.2. Update `base.html` template
-  - [ ] 5.3. Code for existing icons is in a sidebar in the `base_with_nav.html` template
+- [x] 5. Move social icons to right side of nav bar
+  - [x] 5.1. Example code is in `/material_design/05-material_design_bootstrap/02-landing_page/Site/index.html`
+  - [x] 5.2. Update `base.html` template
+  - [x] 5.3. Code for existing icons is in a sidebar in the `base_with_nav.html` template
 
 - [ ] 6. Copy content from legal pages on SeeOurMinds.com to the new Legal pages
 - [ ] 7. Update new About page, creating sections as appropriate
@@ -121,4 +121,17 @@ Repo to reorganize current content on groja.com and convert to Material Design B
 #### 4.5. Submenu option suggestions: About, Books, Sites, History (of Groja.com)
 
 
+### 5. Move social icons to right side of nav bar
+
+- May want to adjust the colors - later
+
+### 6. Copy content from legal pages on SeeOurMinds.com to the new Legal pages
+
+### 7. Update new About page, creating sections as appropriate
+
+### 8. Update existing Your Portrait page
+
+### 9. Revamp existing Home page
+
+### 10. Update existing conversion pages as appropriate
 
