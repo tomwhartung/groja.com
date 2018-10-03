@@ -4,17 +4,6 @@
  * For details, see the README.md file in this directory.
  */
 
-/*
- * Unsure why our content appears behind the navigation
- * It's the same code from the play area, always_learning_google_products
- * It might have something to do with the python templating -
- *   Tried moving the main element to base.html, which changed things,
- *     but shouldn't have....
- * Regardless of the cause, adding a margin to the main tag fixes the issues
- */
-main {
-  margin: 9em 0 3em 0;
-}
 .jumbotron h2 {
    font-size: 2.5em;
    font-weight: bold;
@@ -55,6 +44,19 @@ i.fa-2x:hover {
 .fa-linkedin, .fa-linkedin-square {
   color: #ffffff;
 }
+
+/*
+ * Define margin and padding for all pages, allowing for later customization
+ * Use the class appropriate for the page in a div elt. with a z-depth
+ */
+.home-page,
+.your-portrait-page,
+.about-page,
+.legal-page {
+  margin: 3em;
+  padding: 3em;
+}
+
 /*
  * For the Books and Sites Page:
  */
@@ -88,13 +90,6 @@ li.step-title {
 }
 
 /*
- * For the legal pages
- */
-.legal-page {
-  margin: 3em;
-  padding: 3em;
-}
-/*
  * Keep images etc. from overflowing their containers
  * Reference:
  *   https://developers.google.com/web/fundamentals/design-and-ui/responsive/images#use_relative_sizes_for_images
@@ -103,15 +98,3 @@ img, embed, object, video {
   max-width: 100%;
 }
 
-/*
- * These font-awesome-inspired bullets are interesting but
- * I decided I hate them.  Keeping the code in comments here
- * in case I change my mind or want to do something similar
- * with another character or icon.
- *
- * li.social-list:before,
- * li.old-school-list:before {
- *    content: '\021AA';   /* &rarrhk; */
- *    padding: .3em;
- * }
- */
