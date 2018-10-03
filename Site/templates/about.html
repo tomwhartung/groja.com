@@ -1,14 +1,18 @@
 {% extends "base.html" %}
+
 {% block title %}About{% endblock %}
-{% block head %}
-  {{ super() }}
-  <style>
-  </style>
+
+{% block navbar %}
+ {{ super() }}
 {% endblock %}
 
-{% block toprowcontent %}
-  <section id="about">
-    <h1>About Groja.com</h1>
+{% block content %}
+<main>
+ <div class="container">
+  <a name="about">
+  <div class="row">
+   <div class="col-md-9">
+    <h1 class="text-center">About Groja.com</h1>
     <p>
       GROJA &copy; stands for Graphical Representations of Jungian Archetypes.</p>
     <iframe width="560" height="315"
@@ -33,8 +37,316 @@
        <a href="/yourportrait" title="Link to the Your Portrait page">
           Your Portrait</a>
        page.</p>
-  </section><!-- #about -->
-  <section id="growing-up">
+   </div><!-- .col-md-9 -->
+  </div><!-- .row -->
+
+  <a name="books-and-sites">
+  <div class="row">
+   <div class="col-md-9">
+    <h1>Books and Sites</h1>
+    <p>
+     These books gave me the idea for these Spiritual Portraits, and
+      helped me formulate the logic underlying the Groja &copy; Program.
+     The sites make much of this information available quickly and easily to
+      those interested in learning more.</p>
+   </div><!-- .col-md-9 -->
+  </div><!-- .row -->
+
+  <a name="books">
+  <div class="row">
+   <div class="col-md-9">
+    <h2>Books</h2>
+    <figure class="book-cover-right">
+      <a href="http://psychclassics.yorku.ca/Jung/types.htm" target="_blank"
+         title="Link to Jung's book available for free online at at psychclassics.yorku.ca">
+       <img src="{{ url_for('static', filename='images/site/Carl_Jung-General_Description_of_the_Types.jpg') }}"
+            alt="Cover of General Description of the Types: red stick figure on a black background"
+            class="book-cover-right"></a>
+      <figcaption>General Description of the Types</figcaption>
+    </figure>
+    <p>
+       Each of these books changed my life!</p>
+    <dl class="standalone">
+      <dt>
+        <em>Psychological Types</em> by Carl Jung, 1921.</dt>
+      <dd>
+        You can find Jung's original work for a
+         <a href="https://www.amazon.com/General-Description-Types-Carl-Jung-ebook/dp/B004M8T16K" target="_blank"
+            title="Link to Jung's book for sale at a very reasonable price on amazon.com">reasonable price</a>
+         or even for
+         <a href="http://psychclassics.yorku.ca/Jung/types.htm" target="_blank"
+            title="Link to Jung's book available for free online at at psychclassics.yorku.ca">free online</a>
+        Note however that he originally wrote it in German and
+		    the translation can be a little difficult to read.
+        Someone new to this (and less interested in the theory) may want to
+		    pick up a copy of Isabel Briggs Myers or David Keirsey's books first.</dd>
+      <dt>
+        <em>The New Art, the New Life, the Collected Works of Piet Mondrian</em>,
+        edited and translated by Harry Holtzman and Martin S. James, 1986.</dt>
+      <dd>
+        Like Jung's, Mondrian's writings can be difficult to read sometimes, but
+         it is well worth the effort it takes to read them.
+        Importantly, he believed strongly that the fact that because opposites in form and color
+         can exist in harmony on a canvas, people who manifest opposites in personality
+         can exist in harmony in our society.
+      </dd>
+      <dt>
+        <em>Gifts Differing</em> by Isabel Briggs Myers and Peter Myers, 1980.</dt>
+      <dd>
+        This book by the originator of the Myers-Briggs Type Indicator (MBTI) makes
+         Jung's theories easier to understand &mdash; and even practical in
+         our day-to-day lifes.</dd>
+      <figure class="book-cover-left">
+        <a href="https://archive.org/details/onspiritualinart00kand" target="_blank"
+           title="Link to the copy of Kandinsky's Concerning the Spiritual Art at archive.org">
+         <img src="{{ url_for('static', filename='images/site/Wassily_Kandinsky-Concerning_the_Spiritual_in_Art.jpg') }}"
+              alt="Cover of Concerning the Spiritual in Art: Text with one of Kandinsky's abstract paintings in the center"
+              class="book-cover-left"></a>
+        <figcaption>Concerning the Spiritual in Art</figcaption>
+      </figure>
+      <dt>
+        <em>Concerning the Spiritual in Art</em> by Wassily Kandinsky, 1912.</dt>
+      <dd>
+        In this book Kandinsky examines society as a whole in the context of history, and
+         teaches us to look past the surface of art and examine how works affect us emotionally.
+        To try to summarize this enlightening book in a single sentence is to do it a great disservice.
+        Fortunately for us it's now available at archive.org for free (see the link below).
+      </dd>
+      <dt>
+        <em>Point and Line to Plane</em> by Wassily Kandinsky, 1926.</dt>
+      <dd>
+        This wonderful book makes a science out of art, breaking down the geometric plane of
+         the artist's into its essential elements: points, lines, and planes.
+        Fortunately for us it's now available at archive.org for free (see the link below).
+      </dd>
+      <dt>
+        <em>Please Understand Me</em> by David Keirsey and Marilyn Bates, 1984.</dt>
+      <dd>
+        This book builds on Jung's and Myers' work.
+        He groups the sixteen types into four temperaments, which makes it a lot
+         easier to see these qualities at work in the people we interact with on a daily basis.
+        It is also a good one to have because it starts off with a short yet accurate
+         quiz that can help you determine your four-letter type fairly quickly.</dd>
+      <dt>
+        <em>Please Understand Me II</em> by David Keirsey and Marilyn Bates, 1998.</dt>
+      <dd>
+        This updated edition contains the same quiz as the original, but delves more deeply into
+         the descriptions of the four temperaments and how they interact with each other.</dd>
+    </dl>
+    <p>
+       You can of course find a copy of any of these at
+        <a href="http://www.amazon.com" title="Amazon.com home page" target="_blank">Amazon.com</a>,
+        and probably find most or perhaps even all of them at your local public library.
+    </p>
+   </div><!-- .col-md-9 -->
+  </div><!-- .row -->
+
+  <a name="sites">
+  <div class="row">
+   <div class="col-md-9">
+    <h2>Sites</h2>
+    <p>
+      Much of this information is now online and easily accessible.
+      It helps, though, if you know where to look.</p>
+    <dl class="standalone">
+      <dt>
+        <a href="https://en.wikipedia.org/wiki/Main_Page"
+           title="Home page of the English language wikipedia" target="_blank">Wikipedia.org</a>
+         </dt>
+      <dd>
+        The <a href="https://en.wikipedia.org/wiki/Main_Page"
+               title="Home page of the English language wikipedia" target="_blank">wikipedia</a>
+         is as good a place as any to get started.
+        There are pages on the site about the painters
+         <a href="https://en.wikipedia.org/wiki/Piet_Mondrian"
+            title="Page about Piet Mondrian on wikipedia.org" target="_blank">Piet Mondrian</a> and
+         <a href="https://en.wikipedia.org/wiki/Wassily_Kandinsky"
+            title="Page about Wassily Kandinsky on wikipedia.org" target="_blank">Wassily Kandinsky</a>.
+        And there are pages about the psychologists and their theories of
+         <a href="https://en.wikipedia.org/wiki/Personality_type"
+            title="Page about personality types on wikipedia.org" target="_blank">personality types</a>.
+        There are pages about
+         <a href="https://en.wikipedia.org/wiki/Carl_Jung"
+            title="Page about Carl Jung on wikipedia.org" target="_blank">Carl Jung</a>
+         and his book
+         <a href="https://en.wikipedia.org/wiki/Psychological_Types"
+            title="Page about Psychological Types on wikipedia.org" target="_blank">Psychological Types</a>.
+        There are pages about
+         <a href="https://en.wikipedia.org/wiki/Isabel_Briggs_Myers"
+            title="Page about Isabel Briggs Myers on wikipedia.org" target="_blank">Isabel Briggs Myers</a>,
+         her book
+         <a href="https://en.wikipedia.org/wiki/Gifts_Differing:_Understanding_Personality_Type"
+            title="Page about Gifts Differing on wikipedia.org" target="_blank">Gifts Differing</a>,
+         and the
+         <a href="https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator"
+            title="Page about the MBTI &reg; on wikipedia.org" target="_blank">MBTI &reg;</a>.
+        And there are pages about
+         <a href="https://en.wikipedia.org/wiki/David_Keirsey"
+            title="Page about David Keirsey on wikipedia.org" target="_blank">David Keirsey</a>,
+         his book
+         <a href="https://en.wikipedia.org/wiki/Please_Understand_Me"
+            title="Page about Please Understand Me on wikipedia.org" target="_blank">Please Understand Me</a>,
+         and the
+         <a href="https://en.wikipedia.org/wiki/Keirsey_Temperament_Sorter"
+            title="Page about Keirsey Temperament Sorter on wikipedia.org" target="_blank">Keirsey Temperament Sorter</a>.
+        There's never a dull moment when a curious mind has access to the wikipedia!
+      </dd>
+      <dt>
+        <a href="https://en.wikiquote.org/wiki/Main_Page"
+           title="Home page of the English language Wikiquote.org site" target="_blank">Wikiquote.org</a></dt>
+      <dd>
+        If you'd rather hear <em>from</em> these people than <em>about</em> them, then
+         <a href="https://en.wikiquote.org/wiki/Main_Page"
+           title="Home page of the English language Wikiquote.org site" target="_blank">Wikiquote.org</a>
+         is the site for you!
+        There are quotes from Carl Jung and Isabel Briggs Myers on the
+         <a href="https://en.wikiquote.org/wiki/Psychological_type"
+            title="Page with quotes about Psychological Type on Wikiquote.org" target="_blank">Psychological Type</a>,
+         page.
+        The site also includes pages with quotes by
+         <a href="https://en.wikiquote.org/wiki/Piet_Mondrian"
+            title="Page with quotes by Piet Mondrian on Wikiquote.org" target="_blank">Piet Mondrian</a>,
+         <a href="https://en.wikiquote.org/wiki/Wassily_Kandinsky"
+            title="Page with quotes by Wassily Kandinsky on Wikiquote.org" target="_blank">Wassily Kandinsky</a>,
+         and more from
+         <a href="https://en.wikiquote.org/wiki/Carl_Jung"
+            title="Page with quotes by Carl Jung on Wikiquote.org" target="_blank">Carl Jung</a>.
+      </dd>
+      <dt>
+        <a href="https://archive.org/" title="Archive.org home page" target="_blank">Archive.org</a></dt>
+      <dd>
+        This is where you can find free copies of the two books by Kandinsky mentioned above,
+        <a href="https://archive.org/details/concerningthespi05321gut"
+           title="Free copy of Concerning the Spiritual in Art at archive.org" target="_blank">Concerning the Spiritual in Art</a> and
+        <a href="https://archive.org/details/pointlinetoplane00kand"
+           title="Free copy of Point and Line to Plane at archive.org" target="_blank">Point and Line to Plane</a>.
+      </dd>
+      <dt>
+        <a href="http://www.myersbriggs.org/"
+           title="Myers and Briggs Foundation home page" target="_blank">Myers and Briggs Foundation</a>
+      </dt>
+      <dd>
+        Keeping the spirit of Isabel Briggs Meyers alive, the
+         <a href="http://www.myersbriggs.org/"
+            title="Myers and Briggs Foundation home page" target="_blank">Myers and Briggs Foundation</a>
+         site is full of resources, including information about taking the
+         <a href="http://www.myersbriggs.org/my-mbti-personality-type/take-the-mbti-instrument/"
+            title="Page about how to take the MBTI &reg; instrument" target="_blank">
+          MBTI &reg; Instrument</a>
+         and becoming certified through their
+         <a href="http://www.myersbriggs.org/using-type-as-a-professional/certify-to-administer-the-mbti-tool/"
+            title="Page on myersbrings.org about the MBTI &reg; certification program"
+            target="_blank">MBTI &reg; Certification Program</a>.
+      </dd>
+      <dt>
+        <a href="http://www.keirsey.com/default.aspx" title="Keirsey.com home page" target="_blank">Keirsey.com</a>
+      </dt>
+      <dd>
+        There's plenty to see and learn at
+         <a href="http://www.keirsey.com/default.aspx" title="Keirsey.com home page" target="_blank">Keirsey.com</a>!
+        In addition to descriptions of the four temperaments and copies of his book, he offers assessments, analysis, and coaching.
+      </dd>
+      <dt>
+        <a href="http://www.humanmetrics.com/"
+           title="HumanMetrics.com home page" target="_blank">HumanMetrics.com</a></dt>
+      <dd>
+        Ready to learn what your four-letter type is without further ado?
+        Head on over to the
+         <a href="http://www.humanmetrics.com/cgi-win/jtypes2.asp"
+            title="HumanMetrics.com home page" target="_blank">Jung Typology Test &trade;</a>
+         at
+         <a href="http://www.humanmetrics.com/"
+            title="HumanMetrics.com home page" target="_blank">HumanMetrics.com</a>.
+        This interesting site has additional tests and interesting related resources,
+         such as some that can help you with your marriage and job.
+      </dd>
+      <dt>
+        <a href="http://www.seeourminds.com/"
+           title="SeeOurMinds.com home page" target="_blank">SeeOurMinds.com</a></dt>
+      <dd>
+        Last but not least, groja.com's sibling site,
+         <a href="http://www.seeourminds.com/"
+            title="SeeOurMinds.com home page" target="_blank">SeeOurMinds.com</a></dt>
+         is host to a gallery full of Spiritual Portraits and the
+         <a href="http://www.seeourminds.com/quiz"
+            title="seeourminds.com home page" target="_blank">Groja &copy; Quiz</a>.
+      </dd>
+    </dl>
+   </div><!-- .col-md-9 -->
+  </div><!-- .row -->
+
+  <a name="jungs-book">
+  <div class="row">
+   <div class="col-md-9">
+    <div class="sidebox">
+      <h3>Please Understand Me</h3>
+      <figure>
+        <a href="" target="_blank"
+           title="">
+         <img src="{{ url_for('static', filename='images/site/David_Keirsey-Por_Favor_Comprendeme.jpg') }}"
+              alt="Cover of the Spanish language version of David Keirsey's Please Understand Me: lettering on a dark blue background"
+              class="sidebox-img"></a>
+        <figcaption>Por Favor Comprendeme (Please Understand Me)</figcaption>
+      </figure>
+      <p>
+        I actually have four copies of David Keirsey and Marilyn Bates' book &mdash;
+		    three in English and one in Spanish!</p>
+      <p>
+        The first one got pretty beat up so I bought a replacement.
+		  When he came out with the second edition I of course had to buy that.
+		  Then one day I saw the Spanish version for sale and couldn't
+			 resist picking that up.</p>
+      <p>
+        It should go without saying that I recommend recommend it highly!</p>
+    </div><!-- .sidebox -->
+   </div><!-- .col-md-9 -->
+  </div><!-- .row -->
+
+  <a name="books">
+  <div class="row">
+   <div class="col-md-9">
+   </div><!-- .col-md-9 -->
+  </div><!-- .row -->
+
+  <a name="can-we-talk">
+  <div class="row">
+   <div class="col-md-9">
+    <h3><span class="air-quotes">Can we talk?</span></h3>
+    <p>
+      I have always felt like I was on the
+        <span class="air-quotes">wrong planet,</span> &mdash;
+        do you by any chance know what I mean?
+    </p>
+    <p>
+      If you know about these four-letter types, and are Introverted or
+        iNtuitive or both (like me), maybe you know what I mean.
+      Even my parents are my opposites in most ways, which can make things difficult.
+    </p>
+    <p>
+      Either you know what I'm talking about, or you don't.
+    </p>
+    <p>
+      Like everyone else, I have my own ideas and perceptions.
+      I also have my own questionnaire, which wil be back online soon,
+        and ultimately this is my own thing.
+      And this is the site where I share it with you.</p>
+    <p>
+      All of this is based on Carl Jung's theories and Wassily Kandidnsky's
+        observations, so there is a historical precedent.
+      My wish is to honor, carry on, and build on the work of my predecessors without
+        stepping on any toes, legal or otherwise.</p>
+   </div><!-- .col-md-9 -->
+  </div><!-- .row -->
+
+  <a name="x">
+  <div class="row">
+   <div class="col-md-9">
+   </div><!-- .col-md-9 -->
+  </div><!-- .row -->
+
+  <a name="growing-up">
+  <div class="row">
+   <div class="col-md-9">
     <h2>Growing up Ain't for Sissies</h2>
     <p>
       I believe growing up is difficult for all of us, and I was certainly no exception.
@@ -53,8 +365,12 @@
        <a href="booksandsites" title="Link to the Books and Sites page on this site">
           books and sites page</a>,
     </p>
-  </section><!-- #growing-up -->
-  <section id="art-history-class">
+   </div><!-- .col-md-9 -->
+  </div><!-- .row -->
+
+  <a name="art-history-class">
+  <div class="row">
+   <div class="col-md-9">
     <h2>A Programmer Walks Into an Art History Class...</h2>
     <p>
       One day in a History of Modern Painting (Art History) class at
@@ -81,72 +397,73 @@
       Reading Mondrian's writings increased my admiration for the man.
       It is amazing &mdash; but not entirely surprising &mdash; to learn that he lived
        much of his life in poverty.</p>
-  </section><!-- #art-history-class -->
-{% endblock %}
-{% block toprowsidebox %}
-  {{ super() }}
-  <section id="manifesto">
-    <div class="sidebox">
-    <h3>Manifesto: A Statement of Purpose</h3>
-    <p>
-     Does this seem complicated?</p>
-    <p>
-     Is it at all obvious that this idea's roots are in abstract paintings done close to a hundred years ago?
-     I hope so, but if not, let's clear something up right now.</p>
-    <p>
-     At its core, the purpose of this idea is two-fold:</p>
-    <ul class="standalone">
-     <li>
-      To enable us to see the invisible</li>
-     <li>
-      To promote harmony between opposites</li>
-    </ul>
-    <p>
-     See, it's really not that complicated after all!</p>
-    </div><!-- .sidebox -->
-  </section><!-- #manifesto -->
-{% endblock %}
-
-{% block remainder %}
-  <div class="row">
-    <div class="col-md-12">
-      <section id="versions">
-        <h2>Versions</h2>
-        <p>
-         Following is a list of the versions of the Groja Program &copy; I have written:</p>
-        <dl class="standalone">
-          <dt>
-            <em>1989 </em>Grad School IBM 8086 PC version</dt>
-          <dd>
-            Written in LISP for my Interdisciplinary Masters Degree.
-          </dd>
-          <dt>
-            <em>2001 </em>Raw PHP 4 version</dt>
-          <dd>
-            Not Object Oriented and a hellish interface, but it drew images (until the register globals thing).
-          </dd>
-          <dt>
-            <em>2005 </em>PHP Nuke version</dt>
-          <dd>
-            The best thing I can say about PHP Nuke is, it made me willing to try out Joomla, WordPress, and Drupal.
-          </dd>
-          <dt>
-            <em>2008 </em>Joomla 1.x version</dt>
-          <dd>
-            An attempt to create a social, web 2.0, rolling-blog type of site.
-            I am not the type to monitor or even promote this type of site.
-            Now the software but even the basic goals and paradigm of the site is totally obsolete.
-          </dd>
-          <dt>
-            <em>20?? </em>Next version?!?</dt>
-          <dd>
-            Now that there are so many new technologies, and they are all changing so fast,
-             it is difficult to prioritize on how to build on this idea.
-            That is why I am making this personal: talking to users and creating individualized and personal portraits.
-            This will fuel how I decide to continue with this work.
-         </dd>
-        </dl>
-      </section><!-- #versions -->
-    </div><!-- .col-md-12 -->
+   </div><!-- .col-md-9 -->
   </div><!-- .row -->
+
+  <a name="manifesto">
+  <div class="row">
+   <div class="col-md-9">
+    <div class="sidebox">
+     <h3>Manifesto: A Statement of Purpose</h3>
+     <p>
+      Does this seem complicated?</p>
+     <p>
+      Is it at all obvious that this idea's roots are in abstract paintings done close to a hundred years ago?
+      I hope so, but if not, let's clear something up right now.</p>
+     <p>
+      At its core, the purpose of this idea is two-fold:</p>
+     <ul class="standalone">
+      <li>
+       To enable us to see the invisible</li>
+      <li>
+       To promote harmony between opposites</li>
+     </ul>
+     <p>
+      See, it's really not that complicated after all!</p>
+    </div><!-- .sidebox -->
+   </div><!-- .col-md-9 -->
+  </div><!-- .row -->
+
+  <a name="versions">
+  <div class="row">
+   <div class="col-md-12">
+    <h2>Versions</h2>
+    <p>
+     Following is a list of the versions of the Groja Program &copy; I have written:</p>
+    <dl class="standalone">
+      <dt>
+        <em>1989 </em>Grad School IBM 8086 PC version</dt>
+      <dd>
+        Written in LISP for my Interdisciplinary Masters Degree.
+      </dd>
+      <dt>
+        <em>2001 </em>Raw PHP 4 version</dt>
+      <dd>
+        Not Object Oriented and a hellish interface, but it drew images (until the register globals thing).
+      </dd>
+      <dt>
+        <em>2005 </em>PHP Nuke version</dt>
+      <dd>
+        The best thing I can say about PHP Nuke is, it made me willing to try out Joomla, WordPress, and Drupal.
+      </dd>
+      <dt>
+        <em>2008 </em>Joomla 1.x version</dt>
+      <dd>
+        An attempt to create a social, web 2.0, rolling-blog type of site.
+        I am not the type to monitor or even promote this type of site.
+        Now the software but even the basic goals and paradigm of the site is totally obsolete.
+      </dd>
+      <dt>
+        <em>20?? </em>Next version?!?</dt>
+      <dd>
+        Now that there are so many new technologies, and they are all changing so fast,
+         it is difficult to prioritize on how to build on this idea.
+        That is why I am making this personal: talking to users and creating individualized and personal portraits.
+        This will fuel how I decide to continue with this work.
+     </dd>
+    </dl>
+   </div><!-- .col-md-12 -->
+  </div><!-- .row -->
+ </div><!-- .container -->
+</main>
 {% endblock %}
