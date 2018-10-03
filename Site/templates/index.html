@@ -1,27 +1,23 @@
 {% extends "base.html" %}
 
-{% block title %}Index{% endblock %}
-
-{% block navbar %}
- {{ super() }}
-{% endblock %}
+{% block title %}Template{% endblock %}
 
 {% block content %}
-<main>
- <div class="container">
-  <div class="row justify-content-center">
-   <div class="col-md-9">
-    <h1>Index</h1>
-    <p>
-     Use templates/index.html as the starting point for pages for this site.</p>
-   </div><!-- .col-md-9 -->
-  </div><!-- .row -->
- </div><!-- .container -->
-</main>
-{% endblock %}
-
-{% block footer %}
- {{ super() }}
+ <main>
+  <div class="container">
+   <div class="row justify-content-center">
+    <div class="col-md-9">
+     <h1 class="text-center">Template</h1>
+     <p>Use this file, <b>templates/index.html</b> , as the starting point for
+      new pages for this site.</p>
+     <p>It has the same overall structure as the legal/*.html files.</p>
+     <p>Also note: unlike the legal/*.html files, this file does <b>not</b>
+      reference the <b>navbar</b> and <b>footer</b> blocks &ndash; it works
+      both ways.  Just FYI.</p>
+    </div><!-- .col-md-9 -->
+   </div><!-- .row -->
+  </div><!-- .container -->
+ </main>
 {% endblock %}
 
 </html>
