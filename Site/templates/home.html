@@ -1,15 +1,14 @@
 {% extends "base.html" %}
-{% block title %}Home{% endblock %}
-{% block head %}
-  {{ super() }}
-  <style>
-  </style>
-{% endblock %}
 
-{% block toprowcontent %}
-  <!-- Main jumbotron for a primary marketing message or call to action -->
-  <article class="jumbotron">
-    <section id="spiritual-portrait-site">
+{% block title %}Home{% endblock %}
+
+{% block content %}
+ <main>
+  <div class="container-fluid">
+   <div class="home-page z-depth-1-half">
+    <div class="row">
+     <div class="col-md-9">
+
       <h2>Groja.com: The <span class="air-quotes">Spiritual Portrait</span> Site</h2>
       <p>
         Inspired by the work of
@@ -36,24 +35,19 @@
       <p>
         <a class="btn btn-primary btn-lg" href="yourportrait" role="button">
            Get Your Spiritual Portrait &raquo;</a></p>
-    </section><!-- #spiritual-portrait-site -->
-  </article><!-- .jumbotron -->
-  <article id="learn-more">
-    <h3>Want to learn more?</h3>
-    <p>
-      Use the links below to explore this site and check out the
-       <a href="http://www.seeourminds.com/galleries"
-          title="Link to the galleries page at SeeOurMinds.com" target="_blank">galleries</a>
-       at
-       <a href="http://www.seeourminds.com"
-          title="Link to the home page at SeeOurMinds.com" target="_blank">SeeOurMinds.com</a>.</p>
-  </article><!-- #learn-more -->
-{% endblock %}
-{% block toprowsidebox %}
-  {{ super() }}
-  <section id="testimonial">
+      <h3>Want to learn more?</h3>
+      <p>
+        Use the links below to explore this site and check out the
+         <a href="http://www.seeourminds.com/galleries"
+            title="Link to the galleries page at SeeOurMinds.com" target="_blank">galleries</a>
+         at
+         <a href="http://www.seeourminds.com"
+            title="Link to the home page at SeeOurMinds.com" target="_blank">SeeOurMinds.com</a>.</p>
+     </div><!-- .col-md-9 -->
+    </div><!-- .row -->
     <a name="testimonial"></a>
-    <div class="sidebox">
+    <div class="row">
+     <div class="col-md-9">
       <figure>
         <img src="{{ url_for('static', filename='images/site/infp-tomh_1987-scaled_200x200.gif') }}" class="sidebox-img">
         <figcaption>Tom H: INFP</figcaption>
@@ -63,13 +57,11 @@
          <a href="#can-we-talk" title="Scrolls down to the 'Can We Talk?' section on this page">
             life-altering.</a>
         I would like to help you on a similar journey of greater self-awareness!</p>
-    </div><!-- .sidebox -->
-  </section><!-- #testimonial -->
-{% endblock %}
+     </div><!-- .col-md-9 -->
+    </div><!-- .row -->
 
-{% block remainder %}
-  <div class="row">
-    <div class="col-md-4">
+    <div class="row">
+     <div class="col-md-4">
       <h2>About</h2>
       <p>
        Learn the story behind the Groja Program &copy;, and
@@ -77,8 +69,8 @@
       <p>
        <a class="btn btn-default" href="about" role="button">
           About Grojas &raquo;</a></p>
-    </div><!-- .col-md-4 -->
-    <div class="col-md-4">
+     </div><!-- .col-md-4 -->
+     <div class="col-md-4">
       <h2>Books and Sites</h2>
       <p>
        The original idea came totally from books,
@@ -86,8 +78,8 @@
       <p>
        <a class="btn btn-default" href="booksandsites" role="button">
           Books and Sites &raquo;</a></p>
-    </div><!-- .col-md-4 -->
-    <div class="col-md-4">
+     </div><!-- .col-md-4 -->
+     <div class="col-md-4">
       <h2>Galleries</h2>
       <p>
        See examples of many Spiritual Portraits in the Galleries at our sibling site,
@@ -97,36 +89,9 @@
       <p>
        <a class="btn btn-default" href="galleries" role="button">
           View Galleries &raquo;</a></p>
-    </div><!-- .col-md-4 -->
-  </div><!-- .row -->
-    <hr />
-  <div class="row">
-    <div class="col-md-8">
-      <a name="can-we-talk"></a>
-      <h3><span class="air-quotes">Can we talk?</span></h3>
-      <p>
-        I have always felt like I was on the
-          <span class="air-quotes">wrong planet,</span> &mdash;
-          do you by any chance know what I mean?
-      </p>
-      <p>
-        If you know about these four-letter types, and are Introverted or
-          iNtuitive or both (like me), maybe you know what I mean.
-        Even my parents are my opposites in most ways, which can make things difficult.
-      </p>
-      <p>
-        Either you know what I'm talking about, or you don't.
-      </p>
-      <p>
-        Like everyone else, I have my own ideas and perceptions.
-        I also have my own questionnaire, which wil be back online soon,
-          and ultimately this is my own thing.
-        And this is the site where I share it with you.</p>
-      <p>
-        All of this is based on Carl Jung's theories and Wassily Kandidnsky's
-          observations, so there is a historical precedent.
-        My wish is to honor, carry on, and build on the work of my predecessors without
-          stepping on any toes, legal or otherwise.</p>
-    </div><!-- .col-md-8 -->
-  </div><!-- .row -->
+     </div><!-- .col-md-4 -->
+    </div><!-- .row -->
+   </div><!-- .home-page -->
+  </div><!-- .container-fluid -->
+ </main>
 {% endblock %}
