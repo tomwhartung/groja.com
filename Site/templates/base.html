@@ -119,19 +119,28 @@
 
 {% block footer %}
  <hr>
- <footer class="page-footer font-small indigo">
-  <div class="footer-copyright py-3">
+ <footer class="page-footer font-small indigo {{ fixed_bottom }}">
+  <div class="footer-copyright pt-2">
    <div class="text-center py-1">
     Copyright &copy; 2016&ndash;2018
+    {% if fixed_bottom %}
      <a href="http://www.TomWHartung.com" class="footer"
         title="TomWHartung.com home page" target="_blank">
-      Tom W. Hartung</a> and
+      Tom W. Hartung</a>.
+    {% else %}
+     <a href="http://www.TomWHartung.com" class="footer"
+        title="TomWHartung.com home page" target="_blank">
+      Tom W. Hartung</a>
+     and
      <a href="https://JooMooWebSites.com" class="footer"
         title="JooMoo WebSites.com home page" target="_blank">
       JooMoo WebSites LLC</a>.
+    {% endif %}
    </div><!-- .text-center -->
    <div class="text-center py-1">
-    All Rights Reserved.
+    {% if not fixed_bottom %}
+     All Rights Reserved.
+    {% endif %}
      <b>Your use of this site implies you consent to our
       <a href="/legal/terms_of_service" class="footer"
          title="Terms of Service for this site" target="_blank">
@@ -140,12 +149,14 @@
          title="Privacy Policy for this site" target="_blank">
        Privacy Policy</a>.</b>
    </div><!-- .text-center -->
-   <div class="text-center py-1">
-    This site totally designed, created, and maintained by
-     <a href="https://JooMooWebSites.com" class="footer"
-        title="JooMooWebSites.com home page" target="_blank">
-      JooMoo WebSites LLC</a>.</p>
-   </div><!-- .text-center -->
+   {% if not fixed_bottom %}
+    <div class="text-center py-1">
+     This site totally designed, created, and maintained by
+      <a href="https://JooMooWebSites.com" class="footer"
+         title="JooMooWebSites.com home page" target="_blank">
+       JooMoo WebSites LLC</a>.</p>
+    </div><!-- .text-center -->
+   {% endif %}
   </div><!-- .footer-copyright -->
  </footer>
 {% endblock %}
