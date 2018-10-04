@@ -30,10 +30,13 @@
  <!-- End Google Tag Manager (noscript) -->
 <header>
  {% block navbar %}
-  <nav class="navbar navbar-expand-lg scrolling-navbar navbar-dark indigo">
+  {% if not logo_height %}
+   {% set logo_height = "auto" %}
+  {% endif %}
+  <nav class="navbar navbar-expand-lg scrolling-navbar navbar-dark indigo {{ fixed_top }}">
    <div class="container">
     <a href="/index">
-     <img class="site-header"
+     <img class="site-header mr-3" height="{{ logo_height }}"
           src="{{ url_for('static', filename='images/site/estp-generic-scaled-81x81.gif') }}">
     </a>
     <button class="navbar-toggler" type="button"
