@@ -3,6 +3,9 @@
  * ==========================================================================
  * For details, see the README.md file in this directory.
  */
+.site-header {
+  width: auto;
+}
 
 .jumbotron h2 {
    font-size: 2.5em;
@@ -97,4 +100,3 @@ li.step-title {
 img, embed, object, video {
   max-width: 100%;
 }
-
