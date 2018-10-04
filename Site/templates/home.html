@@ -1,3 +1,5 @@
+{% set fixed_top = "fixed-top" %}
+{% set logo_height = 50 %}
 {% set fixed_bottom = "fixed-bottom" %}
 
 {% extends "base.html" %}
@@ -21,10 +23,10 @@
       <h2 class="h2-responsive font-weight-bold white-text mt-4">
        Visualizing Personalities Since 1989&trade;</h2>
       <hr class="hr-light mt-4">
-      <h4 class="h4-responsive font-weight-bold white-text mt-4">
-       Using color to represent personal preferences, the GROJA &copy; Program
-        draws images of individuals based on their answers to a questionnaire.
-      </h4>
+      <h3 class="h3-responsive font-weight-bold white-text mt-4">
+       <small>Using color to represent personal preferences, the GROJA &copy; Program
+        draws images of individuals based on their answers to a questionnaire.</small>
+      </h3>
       <button type="button" onclick="location.href='/yourportrait'"
               class="btn btn-lg btn-outline-white font-weight-bold btn-rounded waves-effect mt-4">
        Get Your Spiritual Portrait!</button>
