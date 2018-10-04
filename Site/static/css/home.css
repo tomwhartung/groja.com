@@ -1,3 +1,10 @@
+/*
+ * Styles for the home page only
+ * From the MDB Landing Page Tutorial:
+ *   https://mdbootstrap.com/education/bootstrap/landing-page-lesson-1/
+ * Also see material_design/05-material_design_bootstrap/02-landing_page/Site/css/style.css
+ *   in the always_learning_google_products repo.
+ */
 html,
 body,
 header,
@@ -6,7 +13,7 @@ header,
 }
 
 #intro {
-    background: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img%20%283%29.jpg")no-repeat center center fixed;
+    background: url("/static/images/home/Jefferson-background_1.jpg")no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
