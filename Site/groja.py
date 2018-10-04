@@ -32,7 +32,7 @@ Bootstrap(app)
 @app.route('/')
 def home():
     """ Show the Home page """
-    return render_template('home.html', homeActive='active')
+    return render_template('home.html')
 
 
 @app.route('/about')
@@ -167,7 +167,7 @@ def google428ef5aab2bc0870():
 @app.route('/index')
 def index():
     """ Show the index.html template we are using to convert to MDB """
-    return render_template('index.html', homeActive='active')
+    return render_template('index.html')
 
 # =============================================================================
 #
