@@ -1,10 +1,38 @@
 {% extends "base.html" %}
 
-{% block title %}Home{% endblock %}
+{% block head %}
+ {{ super() }}
+ {% block title %}Home{% endblock %}
+ <link href="{{ url_for('static', filename='css/home.css') }}"
+       rel="stylesheet">
+{% endblock %}
+
+{% block navbar %}
+ {{ super() }}
+ <div id="intro" class="view">
+  <div class="mask rgba-black-strong">
+   <div class="container-fluid d-flex align-items-center justify-content-center h-100">
+    <div class="row d-flex justify-content-center text-center">
+     <div class="col-md-10">
+      <!-- Heading -->
+      <h2 class="display-4 font-weight-bold white-text pt-5 mb-2 font-weight-bold">Groja.com</h2>
+      <!-- Divider -->
+      <hr class="hr-light">
+      <!-- Description -->
+      <h4 class="white-text my-4 font-weight-bold">
+       Visualizing Personalities Since 1989&trade;.</h4>
+      <button type="button" class="btn btn-outline-white">
+       Get Your Spiritual Portrait<i class="fa fa-book ml-2"></i></button>
+     </div><!-- .col-md-10 -->
+    </div><!-- .row -->
+   </div><!-- .container-fluid .d-flex -->
+  </div><!-- .mask -->
+ </div><!-- #intro -->
+{% endblock %}
 
 {% block content %}
- <main>
-  <div class="container-fluid">
+ <main class="mt-5">
+  <div class="container">
    <div class="home-page z-depth-1-half">
     <div class="row">
      <div class="col-md-9">
