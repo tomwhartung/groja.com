@@ -61,24 +61,6 @@ i.fa-2x:hover {
 }
 
 /*
- * For the Books and Sites Page:
- */
-img.book-cover-left,
-img.book-cover-right {
-  height: auto;
-  width: 90%;
-}
-figure.book-cover-left {
-  margin: 1em;
-  float: left;
-  width: 25%;
-}
-figure.book-cover-right {
-  margin: 1em;
-  float: right;
-  width: 25%;
-}
-/*
  * For the Contact Us page:
  * List of hex codes for html entities:
  *    https://www.w3schools.com/charsets/ref_html_entities_r.asp
