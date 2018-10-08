@@ -9,6 +9,7 @@ Reference:
 """
 
 from groja_config import *
+from flask import abort
 from flask import Flask, flash
 from flask import redirect, render_template, request, session, url_for
 from flask_bootstrap import Bootstrap
@@ -54,7 +55,7 @@ def yourportrait():
 @app.route("/legal/<legal_page>")
 def legal(legal_page):
 
-    """ Display the requested legal page """
+    """ Display the requested legal page, defaulting to the terms_of_service """
 
     if legal_page == 'privacy_policy':
         template_name = 'legal/privacy_policy.html'
@@ -65,7 +66,7 @@ def legal(legal_page):
     elif legal_page == 'questionnaire_disclaimer':
         template_name = 'legal/questionnaire_disclaimer.html'
     else:
-        template_name = 'home.html'
+        template_name = 'legal/terms_of_service.html'
 
     return render_template(template_name, legalActive='active')
 
@@ -120,7 +121,7 @@ def conversion(interest):
     elif interest == 'tomwhartung':
         template_name = 'conversion/tomwhartung.html'
     else:
-        template_name = 'home.html'
+        abort(404)
 
     return render_template(template_name, form=form)
 
@@ -145,7 +146,8 @@ def thanks():
         template_name = 'thanks_tomwhartung.html'
         interest_text = 'getting me to do some consulting work'
     else:
-        template_name = 'home.html'
+        abort(404)
+
     send_interest_email(
             name + ' (' + email + ') ' +
             'has expressed an interest in ' + interest_text + '!'
@@ -169,6 +171,17 @@ def google428ef5aab2bc0870():
 def index():
     """ Show the index.html template we are using to convert to MDB """
     return render_template('index.html')
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    """
+    Handle 404 errors by showing the 404.html template
+    Found this code here:
+        http://flask.pocoo.org/docs/0.12/patterns/errorpages/
+    """
+    return render_template('404.html'), 404
+
 
 # =============================================================================
 #
