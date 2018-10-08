@@ -30,6 +30,7 @@ Bootstrap(app)
 # -------------------------
 
 @app.route('/')
+@app.route('/home')
 def home():
     """ Show the Home page """
     return render_template('home.html')
@@ -113,11 +114,11 @@ def conversion(interest):
         form.email.data = ''
 
     if interest == 'groja':
-        template_name = 'conversion_groja.html'
+        template_name = 'conversion/groja.html'
     elif interest == 'seeourminds':
-        template_name = 'conversion_seeourminds.html'
+        template_name = 'conversion/seeourminds.html'
     elif interest == 'tomwhartung':
-        template_name = 'conversion_tomwhartung.html'
+        template_name = 'conversion/tomwhartung.html'
     else:
         template_name = 'home.html'
 
