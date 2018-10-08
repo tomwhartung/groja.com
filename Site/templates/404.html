@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Page Not Found{% endblock %}
+
+{% block content %}
+ <main>
+  <div class="container">
+   <div class="row justify-content-center">
+    <div class="col-md-6">
+     <div class="card hoverable m-2">
+      <div class="card-body">
+       <h2 class="card-title h2-responsive font-weight-bold">
+        Page Not Found
+		 </h2>
+       <p class="card-text">
+		  Rats, the page you requested could not be found.
+       </p>
+      </div><!-- .card-body -->
+      <div class="card-footer">
+       <p class="card-text text-center">
+        <a class="btn btn-default" href="/home" role="button">
+         Go Home</a></p>
+      </div><!-- .card-footer -->
+     </div><!-- .card -->
+    </div><!-- .col-md-6 -->
+   </div><!-- .row -->
+  </div><!-- .container -->
+ </main>
+{% endblock %}
+
+{% block footer %}
+ {{ super() }}
+{% endblock %}
