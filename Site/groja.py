@@ -137,13 +137,13 @@ def thanks():
     # print("In thanks, name: ", name, "email: ", email)
 
     if interest == 'groja':
-        template_name = 'thanks_groja.html'
+        template_name = 'thanks/groja.html'
         interest_text = 'buying a spiritual portrait'
     elif interest == 'seeourminds':
-        template_name = 'thanks_seeourminds.html'
+        template_name = 'thanks/seeourminds.html'
         interest_text = 'joining the seeourminds email list'
     elif interest == 'tomwhartung':
-        template_name = 'thanks_tomwhartung.html'
+        template_name = 'thanks/tomwhartung.html'
         interest_text = 'getting me to do some consulting work'
     else:
         abort(404)
@@ -158,13 +158,13 @@ def thanks():
 @app.route('/google203aca4a4dd53796.html')
 def google203aca4a4dd53796():
     """ Show the Google Verification page for my meetups acct """
-    return render_template('google203aca4a4dd53796.html')
+    return render_template('google/google203aca4a4dd53796.html')
 
 
 @app.route('/google428ef5aab2bc0870.html')
 def google428ef5aab2bc0870():
     """ Show the Google Verification page for my gmail acct """
-    return render_template('google428ef5aab2bc0870.html')
+    return render_template('google/google428ef5aab2bc0870.html')
 
 
 @app.route('/index')
@@ -175,11 +175,13 @@ def index():
 
 @app.errorhandler(404)
 def page_not_found(e):
+
     """
     Handle 404 errors by showing the 404.html template
     Found this code here:
         http://flask.pocoo.org/docs/0.12/patterns/errorpages/
     """
+
     return render_template('404.html'), 404
 
 
