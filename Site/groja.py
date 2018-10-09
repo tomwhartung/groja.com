@@ -127,15 +127,26 @@ def conversion(interest):
 
 
 @app.route("/thanks")
-def thanks():
+@app.route("/thanks/<test_interest>")
+def thanks(test_interest = ''):
 
-    """ Thank the visitor for sharing their email address """
+    """
+    Thank the visitor for sharing their email address
+    Note:
+       test_interest allows testing the templates without submitting a form
+    """
 
     name = session.get('name')
     email = session.get('email')
-    interest = session.get('interest')
-    # print("In thanks, name: ", name, "email: ", email)
 
+    if test_interest:
+        interest = test_interest
+        name = 'Testing'
+        email = 'testing@example.com'
+    else:
+        interest = session.get('interest')
+
+    interest_text = ""
     if interest == 'groja':
         template_name = 'thanks/groja.html'
         interest_text = 'buying a spiritual portrait'
@@ -148,10 +159,15 @@ def thanks():
     else:
         abort(404)
 
-    send_interest_email(
-            name + ' (' + email + ') ' +
-            'has expressed an interest in ' + interest_text + '!'
-    )
+    #print("In thanks, name: ", name, "email: ", email)
+    #print("In thanks, interest:", "'" + interest + "'")
+    #print("In thanks, test_interest:", "'" + test_interest + "'")
+    #print("In thanks, interest_text:", "'" + interest_text + "'")
+
+    interest_email = name + ' (' + email + ') ' \
+        + 'has expressed an interest in ' + interest_text + '!'
+    send_interest_email(interest_email)
+
     return render_template(template_name, name=name)
 
 
