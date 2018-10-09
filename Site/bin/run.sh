@@ -9,4 +9,7 @@
 export FLASK_DEBUG=1
 export FLASK_APP=groja.py
 
+GROJA_MAIL_FROM=no_reply@groja.com
+GROJA_MAIL_TO=conversion@groja.com
+
 cd .. && python3 -m flask run --port=5001

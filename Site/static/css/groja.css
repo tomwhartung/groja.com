@@ -51,11 +51,16 @@ i.fa-2x:hover {
 /*
  * Define margin and padding for all pages, allowing for later customization
  * Use the class appropriate for the page in a div elt. with a z-depth
+ * We probably do not need custom styles for this - I set this up before
+ *   coming to really appreciate the various m-* classes - but that's how
+ *   we are doing it for now.  Honestly it's just this one instance...!
  */
 .home-page,
-.your-portrait-page,
 .about-page,
-.legal-page {
+.your-portrait-page,
+.legal-page,
+.conversion-page,
+.thanks-page {
   margin: 3em;
   padding: 3em;
 }
