@@ -1,12 +1,12 @@
-{% extends "base.html" %}
+{% extends "conversion/conversion_base.html" %}
+
 {% block title %}Get Your Groja{% endblock %}
+
 {% block head %}
-   {{ super() }}
-   <style>
-   </style>
+ {{ super() }}
 {% endblock %}
 
-{% block toprowcontent %}
+{% block conversion_content %}
   <article class="jumbotron">
     <section id="name-email-form">
       <p>
@@ -91,7 +91,8 @@
     </div><!-- .row -->
   </article><!-- .thanks -->
 {% endblock %}
-{% block toprowsidebox %}
+
+{% block conversion_sidebox %}
   <section id="process">
     <div class="sidebox">
       <h3>What to Expect</h3>
@@ -117,6 +118,5 @@
       </ol>
       <p>Thanks!</p>
     </div><!-- .sidebox -->
-    {{ super() }}
   </section><!-- #process -->
 {% endblock %}
