@@ -21,11 +21,16 @@ GROJA_MAIL_TO = os.environ.get('GROJA_MAIL_TO')
 
 def send_interest_email(message_text):
 
-    """ Send email, getting TO and FROM values from environment variables """
+    """
+    Send email, getting TO and FROM values from environment variables
+    Note:
+        For apache, set environment variables in:
+            /etc/apache2/envvars
+    """
 
-    # print('send_test_email(): message_text =', message_text)
-    # print('GROJA_MAIL_FROM:', GROJA_MAIL_FROM)
-    # print('GROJA_MAIL_TO:', GROJA_MAIL_TO)
+    #print('send_test_email(): message_text =', message_text)
+    #print('GROJA_MAIL_FROM:', GROJA_MAIL_FROM)
+    #print('GROJA_MAIL_TO:', GROJA_MAIL_TO)
     msg = MIMEText(message_text)
     msg['Subject'] = 'Indication of Interest on Groja.com'
     msg['From'] = GROJA_MAIL_FROM
