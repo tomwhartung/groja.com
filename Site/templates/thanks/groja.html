@@ -1,19 +1,12 @@
-{% extends "base.html" %}
-{% block title %}Thanks!{% endblock %}
-{% block head %}
-   {{ super() }}
-   <style>
-   </style>
-{% endblock %}
+{% extends "thanks/thanks_base.html" %}
 
-{% block toprowcontent %}
+{% block title %}Thanks!{% endblock %}
+
+{% block thanks_content %}
   <h3>Thanks
     {% if name %}
       {{ name }}!
     {% else %}
       Friend!
     {% endif %}</h3>
-{% endblock %}
-{% block toprowsidebox %}
-  {{ super() }}
 {% endblock %}
