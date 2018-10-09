@@ -6,6 +6,9 @@
 .site-logo {
   width: auto;
 }
+.btn-rounded {
+  border-radius: 16px;
+}
 
 .jumbotron h2 {
    font-size: 2.5em;
