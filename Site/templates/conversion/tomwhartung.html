@@ -1,12 +1,11 @@
-{% extends "conversion_base.html" %}
+{% extends "conversion/conversion_base.html" %}
+
 {% block title %}Consulting Work{% endblock %}
-{% block head %}
-   {{ super() }}
-   <style>
-   </style>
+
+{% block navbar %}
 {% endblock %}
 
-{% block toprowcontent %}
+{% block conversion_content %}
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <article class="jumbotron">
     <section id="name-email-form">
@@ -38,7 +37,8 @@
     </div><!-- .row -->
   </article><!-- .thanks -->
 {% endblock %}
-{% block toprowsidebox %}
+
+{% block conversion_sidebox %}
   <section id="process">
     <div class="sidebox">
       <h3>What to Expect</h3>
@@ -51,4 +51,7 @@
       <p>Thanks!</p>
     </div><!-- .sidebox -->
   </section><!-- #process -->
+{% endblock %}
+
+{% block footer %}
 {% endblock %}
