@@ -1,12 +1,11 @@
-{% extends "conversion_base.html" %}
+{% extends "thanks/thanks_base.html" %}
+
 {% block title %}Thanks for your interest!{% endblock %}
-{% block head %}
-   {{ super() }}
-   <style>
-   </style>
+
+{% block navbar %}
 {% endblock %}
 
-{% block toprowcontent %}
+{% block thanks_content %}
   <h3>Thanks for your interest,
     {% if name %}
       {{ name }}!
@@ -17,5 +16,6 @@
     <a href="http://tomwhartung.com" title="TomWHartung.com home page">
       TomWHartung.com</a></h3>
 {% endblock %}
-{% block toprowsidebox %}
+
+{% block footer %}
 {% endblock %}
