@@ -14,17 +14,65 @@
     {% endblock %}
    </p>
 
+   {% block form %}
+    <div class="row align-items-center justify-content-around">
+     <div class="col-md-6">
+      <div class="card hoverable m-2">
+       <div class="card-body">
+        <p class="card-text">
+         <form class="text-center border border-light p-5">
+          <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Name">
+          <input type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="E-mail">
+          <div class="form-group">
+           <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Message"></textarea>
+          </div>
+          <div class="custom-control custom-checkbox mb-4">
+           <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
+           <label class="custom-control-label" for="defaultContactFormCopy">Send me a copy of this message</label>
+          </div>
+          <button class="btn btn-info btn-block" type="submit">Send</button>
+         </form>
+        </p>
+       </div><!-- .card-body -->
+       <div class="card-footer">
+        <p class="card-text text-center">
+         <a class="btn btn-default" href="#" role="button">
+          Button</a></p>
+       </div><!-- .card-footer -->
+      </div><!-- .card -->
+     </div><!-- .col-md-6 -->
+     <div class="col-md-6">
+      <div class="card hoverable m-2">
+       <div class="card-body">
+        <div class="view overlay my-4">
+         <img src="{{ url_for('static', filename='images/conversion/portrait-1396.jpg') }}"
+              class="img-fluid" alt="">
+          <a href="#">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <p class="card-text">
+         Card-text.
+        </p>
+       </div><!-- .card-body -->
+       <div class="card-footer">
+        <p class="card-text text-center">
+         <a class="btn btn-default" href="#" role="button">
+          Button</a></p>
+       </div><!-- .card-footer -->
+      </div><!-- .card -->
+     </div><!-- .col-md-6 -->
+    </div><!-- .row -->
+   {% endblock %}
+
+   {% block thanks %}
+   {% endblock %}
+
    <div class="row align-items-center justify-content-around">
-    <div class="conversion-page z-depth-1-half">
-     <div class="col-md-9">
-      {% block form %}
+     <div class="col-md-12">
+      {% block conversion_process %}
       {% endblock %}
-     </div><!-- .col-md-9 -->
-     <div class="col-md-3">
-      {% block conversion_sidebox %}
-      {% endblock %}
-     </div><!-- .col-md-3 -->
-    </div><!-- .legal-page -->
+     </div><!-- .col-md-12 -->
    </div><!-- .row -->
   </div><!-- .container -->
  </div><!-- .jumbotron -->
