@@ -13,35 +13,41 @@
 {% endblock %}
 
 {% block form %}
-      <form action="" method="post" role="form">
-        {{ form.hidden_tag() }}
-        <div class="form-group">
-          <label for="name">{{ form.name.label }}</label>
-          {{ form.name( class="form-control", value=form.name.data ) }}
-          <label for="email">{{ form.email.label }}</label>
-          {{ form.email( class="form-control", value=form.email.data ) }}
-        </div>
-        <button type="submit" class="btn btn-success">Contact Tom W. Hartung
-		  </button>
-      </form>
-    </section><!-- #name-email-form -->
-  </article><!-- .jumbotron -->
-  <article class="thanks">
-    <div class="row">
-      <div class="col-md-8">
-        <section id="thanks">
-          <h3>I will contact you as soon as I can!</h3>
-          <h2>Thanks!</h2>
-        </section><!-- #thanks -->
-      </div><!-- .col-md-8 -->
-    </div><!-- .row -->
-  </article><!-- .thanks -->
+ {{ super() }}
+ <div class="row align-items-center justify-content-around">
+  <div class="col-md-12">
+
+   <form action="" method="post" role="form">
+     {{ form.hidden_tag() }}
+     <div class="form-group">
+       <label for="name">{{ form.name.label }}</label>
+       {{ form.name( class="form-control", value=form.name.data ) }}
+       <label for="email">{{ form.email.label }}</label>
+       {{ form.email( class="form-control", value=form.email.data ) }}
+     </div>
+     <button type="submit" class="btn btn-success">Contact Tom W. Hartung
+     </button>
+   </form>
+
+  </div><!-- .col-md-12 -->
+ </div><!-- .row -->
 {% endblock %}
 
-{% block conversion_sidebox %}
-  <section id="process">
-    <div class="sidebox">
-      <h3>What to Expect</h3>
+{% block thanks %}
+ <div class="row">
+   <div class="col-md-8">
+     <section id="thanks">
+       <h3>I will contact you as soon as I can!</h3>
+       <h2>Thanks!</h2>
+     </section><!-- #thanks -->
+   </div><!-- .col-md-8 -->
+ </div><!-- .row -->
+{% endblock %}
+
+{% block conversion_process %}
+  <div class="card hoverable m-2">
+    <div class="card-body">
+      <h2 class="card-title h2-responsive font-weight-bold">What to Expect</h2>
       <ul start="0">
         <li>
           I will contact you as soon as I can.</li>
@@ -49,8 +55,8 @@
           We will discuss how I might help you!</li>
       </ul>
       <p>Thanks!</p>
-    </div><!-- .sidebox -->
-  </section><!-- #process -->
+    </div><!-- .card-body -->
+  </div><!-- .card -->
 {% endblock %}
 
 {% block footer %}
