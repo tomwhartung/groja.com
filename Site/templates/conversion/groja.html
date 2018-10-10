@@ -2,18 +2,15 @@
 
 {% block title %}Get Your Groja{% endblock %}
 
-{% block head %}
- {{ super() }}
-{% endblock %}
+{% block jumbotron_title %}Get Your Portrait{% endblock %}
 
 {% block conversion_content %}
-  <article class="jumbotron">
-    <section id="name-email-form">
-      <p>
-        For details about how you can get your personalized
-         Spiritual Portrait, enter your name and email address, and
-         we will contact you as soon as we can!
-      </p>
+ For details about how you can get your personalized Spiritual Portrait,
+  enter your name and email address in the form below and
+  we will contact you as soon as we can!
+{% endblock %}
+
+{% block form %}
       <form  action="" method="post" role="form">
         {{ form.hidden_tag() }}
         <div class="form-group">
