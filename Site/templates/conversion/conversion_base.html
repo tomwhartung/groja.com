@@ -20,9 +20,16 @@
       <div class="card hoverable m-2">
        <div class="card-body">
         <p class="card-text">
-         <form class="text-center border border-light p-5">
-          <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Name">
-          <input type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="E-mail">
+         <form class="text-center border border-light p-5"
+               action="" method="post" role="form">
+          {{ form.hidden_tag() }}
+          <div class="md-form">
+           {{ form.name( class="form-control mb-4", placeholder="Name", type="text", value=form.name.data ) }}
+          </div><!-- .md-form -->
+          <div class="md-form">
+           {{ form.email( class="form-control mb-4", placeholder="Email", type="email", value=form.email.data ) }}
+          </div><!-- .md-form -->
+
           <div class="form-group">
            <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Message"></textarea>
           </div>
