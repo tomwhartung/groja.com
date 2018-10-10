@@ -5,14 +5,14 @@
 {% block navbar %}
 {% endblock %}
 
+{% block jumbotron_title %}How Can I Help You?{% endblock %}
+
 {% block conversion_content %}
-  <!-- Main jumbotron for a primary marketing message or call to action -->
-  <article class="jumbotron">
-    <section id="name-email-form">
-      <p>
-        If you'd like me to do some work for you,
-          enter your name and email address in the form below:
-      </p>
+ If you'd like help with a technical aspect of your website,
+  enter your name and email address in the form below:
+{% endblock %}
+
+{% block form %}
       <form action="" method="post" role="form">
         {{ form.hidden_tag() }}
         <div class="form-group">
