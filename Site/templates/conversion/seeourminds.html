@@ -2,26 +2,25 @@
 
 {% block title %}Email Subscription - SeeOurMinds.com{% endblock %}
 
-{% block head %}
-   {{ super() }}
-{% endblock %}
-
 {% block navbar %}
 {% endblock %}
 
+{% block jumbotron_title %}Join the List{% endblock %}
+
 {% block conversion_content %}
-  <!-- Main jumbotron for a primary marketing message or call to action -->
-  <article class="jumbotron">
-    <section id="name-email-form">
-      <p>
-        To join the email list for
-          <a href="http://www.seeourminds.com" title="SeeOurMinds.com home page">
-            SeeOurMinds.com</a>
-          and
-          <a href="http://www.groja.com" title="Groja.com home page">
-            Groja.com</a>,
-          enter your name and email address in the form below.
-      </p>
+ To join the monthly email list for
+  <a href="https://www.groja.com" title="Groja.com home page">
+     Groja.com</a>
+  &mdash; and learn about new posts on
+  <a href="https://www.ArtsyVisions.com" title="ArtsyVisions.com home page">
+   ArtsyVisions.com</a>
+  and
+  <a href="https://www.seeourminds.com" title="SeeOurMinds.com home page">
+    SeeOurMinds.com</a>
+  &mdash; enter your name and email address in the form below.
+{% endblock %}
+
+{% block form %}
       <form action="" method="post" role="form">
         {{ form.hidden_tag() }}
         <div class="form-group">
