@@ -81,12 +81,15 @@ def conversion(interest):
     if request.method == 'POST':
         name = form.name.data
         email = form.email.data
-        # print("In conversion, name: ", name, "email: ", email)
+        message = form.message.data
+        #print("In conversion, name: ", name, "email: ", email)
+        #print("In conversion, message:", "'" + message + "'")
 
         if form.validate():
             # session variables are used in the thanks page function
             session['name'] = name
             session['email'] = email
+            session['message'] = message
             session['interest'] = interest
             if interest == 'groja':
                 update_or_insert_name_email(name, email, portrait=1)
@@ -108,8 +111,8 @@ def conversion(interest):
             # key = 'email', values = [] (list of error messages)
             #
             for key, value in form.errors.items():
-                for message in value:
-                    flash(message)
+                for err_msg in value:
+                    flash(err_msg)
     else:
         form.name.data = ''
         form.email.data = ''
@@ -138,11 +141,13 @@ def thanks(test_interest = ''):
 
     name = session.get('name')
     email = session.get('email')
+    message = session.get('message')
 
     if test_interest:
         interest = test_interest
         name = 'Testing'
         email = 'testing@example.com'
+        message = 'No form submitted - just testing'
     else:
         interest = session.get('interest')
 
@@ -161,11 +166,14 @@ def thanks(test_interest = ''):
 
     #print("In thanks, name: ", name, "email: ", email)
     #print("In thanks, interest:", "'" + interest + "'")
+    #print("In thanks, message:", "'" + message + "'")
     #print("In thanks, test_interest:", "'" + test_interest + "'")
     #print("In thanks, interest_text:", "'" + interest_text + "'")
 
     interest_email = name + ' (' + email + ') ' \
-        + 'has expressed an interest in ' + interest_text + '!'
+        + 'has expressed an interest in ' + interest_text + '!' + "\n" + "\n" \
+        + "Message:\n" + message + "\n" + '-- ' + "\n" \
+        + 'Sent by method thanks() in program groja.py on website groja.com .'
     send_interest_email(interest_email)
 
     return render_template(template_name, name=name)
