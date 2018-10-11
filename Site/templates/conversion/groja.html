@@ -12,24 +12,14 @@
   We will contact you as soon as we can!
 {% endblock %}
 
-{% block form %}
+{% block message_textarea %}
  {{ super() }}
- <div class="row align-items-center justify-content-around">
-  <div class="col-md-12">
-
-   <form  action="" method="post" role="form">
-     {{ form.hidden_tag() }}
-     <div class="form-group">
-       <label for="name">{{ form.name.label }}</label>
-       {{ form.name( class="form-control", value=form.name.data ) }}
-       <label for="email">{{ form.email.label }}</label>
-       {{ form.email( class="form-control", value=form.email.data ) }}
-     </div>
-     <button type="submit" class="btn btn-success">Get Your Portrait</button>
-   </form>
-
-  </div><!-- .col-md-12 -->
- </div><!-- .row -->
+{% endblock %}
+{% block terms_checkbox %}
+ {{ super() }}
+{% endblock %}
+{% block button_text %}
+ Get Your Portrait
 {% endblock %}
 
 {% block thanks %}
