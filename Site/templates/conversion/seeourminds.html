@@ -20,25 +20,14 @@
   &mdash; enter your name and email address in the form below.
 {% endblock %}
 
-{% block form %}
- {{ super() }}
- <div class="row align-items-center justify-content-around">
-  <div class="col-md-12">
 
-   <form action="" method="post" role="form">
-     {{ form.hidden_tag() }}
-     <div class="form-group">
-       <label for="name">{{ form.name.label }}</label>
-       {{ form.name( class="form-control", value=form.name.data ) }}
-       <label for="email">{{ form.email.label }}</label>
-       {{ form.email( class="form-control", value=form.email.data ) }}
-     </div>
-     <button type="submit" class="btn btn-success">Join List</button>
-   </form>
-
-  </div><!-- .col-md-12 -->
- </div><!-- .row -->
+{% block message_textarea %}
 {% endblock %}
+{% block terms_checkbox %}
+ {{ super() }}
+{% endblock %}
+{% block button_text %}Join the List!{% endblock %}
+
 
 {% block thanks %}
  <div class="row">
