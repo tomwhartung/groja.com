@@ -1,6 +1,10 @@
 {% extends "conversion/conversion_base.html" %}
 
-{% block title %}Get Your Groja{% endblock %}
+{% block title %}Get Your Portrait{% endblock %}
+
+{% block navbar %}
+ {{ super() }}
+{% endblock %}
 
 {% block jumbotron_title %}Get Your Portrait{% endblock %}
 
@@ -12,52 +16,23 @@
   We will contact you as soon as we can!
 {% endblock %}
 
+{% block conversion_image %}
+ <img src="{{ url_for('static', filename='images/conversion/portrait-1397-cropped-1-200x255.jpg') }}"
+      class="img-fluid" alt="">
+{% endblock %}
+
 {% block message_textarea %}
  {{ super() }}
 {% endblock %}
+
 {% block terms_checkbox %}
  {{ super() }}
 {% endblock %}
+
 {% block button_text %}
  Get Your Portrait
 {% endblock %}
 
-{% block thanks %}
- <div class="row">
-   <div class="col-md-8">
-     <section id="thanks">
-       <h3>Thanks!</h3>
-       <p>And see you soon!</p>
-     </section><!-- #thanks -->
-   </div><!-- .col-md-8 -->
- </div><!-- .row -->
-{% endblock %}
-
-{% block conversion_process %}
-  <div class="card hoverable m-2">
-    <div class="card-body">
-      <h2 class="card-title h2-responsive font-weight-bold">What to Expect</h2>
-      <ol start="0">
-        <li>
-          <span class="step-title">Contact us &mdash;</span>
-          using one of the methods on this page</li>
-        <li>
-          <span class="step-title">Share your score &mdash;</span>
-          if you don't already have your score, we discuss alternatives for getting it</li>
-        <li>
-          <span class="step-title">Portrait creation &mdash;</span>
-          we use the score to create your Spiritual Portrait</li>
-        <li>
-          <span class="step-title">Preliminary portrait &mdash;</span>
-          we deliver a small, water-marked version of your portrait, for your approval</li>
-        <li>
-          <span class="step-title">Invoicing and payment &mdash;</span>
-          when you are happy with the portrait, we send an invoice and appreciate your prompt payment</li>
-        <li>
-          <span class="step-title">Final delivery &mdash;</span>
-          when we receive your payment, we send a full-size, non-water-marked version of your portrait</li>
-      </ol>
-      <p>Thanks!</p>
-    </div><!-- .card-body -->
-  </div><!-- .card -->
+{% block footer %}
+ {{ super() }}
 {% endblock %}
