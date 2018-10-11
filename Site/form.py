@@ -11,6 +11,7 @@ References:
 
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
+from wtforms.widgets import TextArea
 from wtforms.validators import Optional, Required, Email
 
 
@@ -24,7 +25,8 @@ class NameEmailForm(FlaskForm):
             [Required("Share your email address so we can contact you."),
                 Email("Please enter a valid email address.")]
     )
-    submit = SubmitField('Get Your Portrait')
+    message = StringField(u'Text', widget=TextArea(), validators=[Optional()])
+    submit = SubmitField('Submit Form')
 
     def reset(self):
         """ Reset the form """
