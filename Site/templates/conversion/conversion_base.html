@@ -7,45 +7,63 @@
  <div class="jumbotron jumbotron-fluid">
   <div class="container">
    <h1 class="display-4">
-    {% block jumbotron_title %}{% endblock %}
+    {% block jumbotron_title %}
+    {% endblock %}
    </h1>
    <p class="lead">
     {% block conversion_content %}
     {% endblock %}
    </p>
-
-   {% block form %}
-    <div class="row align-items-center justify-content-around">
-     <div class="col-md-6">
-      <div class="card hoverable m-2">
-       <div class="card-body">
-        <p class="card-text">
-         <form class="text-center border border-light p-5"
-               action="" method="post" role="form">
-          {{ form.hidden_tag() }}
+   <div class="row align-items-center justify-content-around">
+    <div class="col-md-6">
+     <div class="card hoverable m-2">
+       <form class="text-center border border-light p-5"
+             action="" method="post" role="form">
+        {{ form.hidden_tag() }}
+        <div class="card-body">
+         <p class="card-text">
           <div class="md-form">
            {{ form.name( class="form-control mb-4", placeholder="Name", type="text", value=form.name.data ) }}
           </div><!-- .md-form -->
           <div class="md-form">
            {{ form.email( class="form-control mb-4", placeholder="Email", type="email", value=form.email.data ) }}
           </div><!-- .md-form -->
-
-          <div class="form-group">
-           <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Message"></textarea>
-          </div>
-          <div class="custom-control custom-checkbox mb-4">
-           <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
-           <label class="custom-control-label" for="defaultContactFormCopy">Send me a copy of this message</label>
-          </div>
-          <button class="btn btn-info btn-block" type="submit">Send</button>
-         </form>
-        </p>
-       </div><!-- .card-body -->
-       <div class="card-footer">
-        <p class="card-text text-center">
-         <a class="btn btn-default" href="#" role="button">
-          Button</a></p>
-       </div><!-- .card-footer -->
+          {% block terms_checkbox %}
+           <div class="custom-control custom-checkbox mb-4">
+            <input type="checkbox" class="custom-control-input"
+                   id="terms_checkbox" name="terms_checkbox">
+            <label class="custom-control-label text-left" for="terms_checkbox">
+             By checking this box you confirm your consent to our
+              <b>
+               <a href="/legal/terms_of_service" class="footer"
+                  title="Terms of Service for this site" target="_blank">
+                Terms of Service</a></b>
+              and
+              <b>
+               <a href="/legal/privacy_policy" class="footer"
+                  title="Privacy Policy for this site" target="_blank">
+                Privacy Policy</a>.</b>
+            </label>
+           </div>
+          {% endblock %}
+          {% block message_textarea %}
+           <div class="form-group">
+            <textarea class="form-control rounded-0" rows="3"
+                      id="message" name="message" placeholder="Message">
+            </textarea>
+           </div>
+          {% endblock %}
+         </p>
+        </div><!-- .card-body -->
+        <div class="card-footer">
+         <p class="card-text text-center">
+          <button class="btn btn-primary btn-rounded"
+                  type="submit" role="button">
+           {% block button_text %}{% endblock %}
+          </button>
+         </p>
+        </div><!-- .card-footer -->
+       </form>
       </div><!-- .card -->
      </div><!-- .col-md-6 -->
      <div class="col-md-6">
@@ -84,5 +102,3 @@
   </div><!-- .container -->
  </div><!-- .jumbotron -->
 </main>
-
-{% endblock %}
