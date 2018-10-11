@@ -20,39 +20,20 @@
   &mdash; enter your name and email address in the form below.
 {% endblock %}
 
+{% block conversion_image %}
+ <img src="{{ url_for('static', filename='images/conversion/portrait-1396-200x273.jpg') }}"
+      class="img-fluid" alt="">
+{% endblock %}
 
 {% block message_textarea %}
 {% endblock %}
+
 {% block terms_checkbox %}
  {{ super() }}
 {% endblock %}
-{% block button_text %}Join the List!{% endblock %}
 
-
-{% block thanks %}
- <div class="row">
-   <div class="col-md-8">
-     <section id="thanks">
-       <h3>Thanks!</h3>
-     </section><!-- #thanks -->
-   </div><!-- .col-md-8 -->
- </div><!-- .row -->
-{% endblock %}
-
-{% block conversion_process %}
-  <div class="card hoverable m-2">
-    <div class="card-body">
-      <h2 class="card-title h2-responsive font-weight-bold">What to Expect</h2>
-      <ul start="0">
-        <li>
-          We will send you updates every once in awhile.</li>
-        <li>
-          Keep an eye out for the Spiritual Portrait of
-			   one of your favorite characters!</li>
-      </ul>
-      <p>Thanks!</p>
-    </div><!-- .card-body -->
-  </div><!-- .card -->
+{% block button_text %}
+ Join the List!
 {% endblock %}
 
 {% block footer %}
