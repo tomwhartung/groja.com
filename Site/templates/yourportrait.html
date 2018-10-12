@@ -4,104 +4,126 @@
 
 {% block content %}
  <main>
-  <div class="container-fluid">
-   <div class="your-portrait-page z-depth-1-half">
-    <div class="row">
-     <div class="col-md-9">
-      <h2>Your Portrait</h2>
-      <p>
-       I create all Spiritual Portraits by hand, and
-        each one is unique.</p>
-      <p>
-       To order yours today, Contact Us!</p>
-      <p>
-       <a href="conversion/groja" role="button"
-          class="btn btn-primary btn-lg btn-rounded">
-        Contact Us</a></p>
-      <h3>Handmade Portraits</h3>
-      <p>
-       Although a large part of this process is automated by the
-        Groja Program &copy;, producing high-quality, unique and
-        personalized portraits takes time.
-       Add to that the possibility that I will want to
-        ensure customers understand and appreciate its significance
-        means that each image requires a personal touch.</p>
-      <p>
-       Also, the program contains many options, such as different resolutions and
-        orientations (portrait vs. landscape) and even different compositions.
-       At this time, these options not currently demonstrated in the
-        <a href="http://seeourminds.com/galleries/gallery.html"
-           title="Link to the galleries page on seeourminds.com" target="_blank">
-         galleries</a>.
-       If you are willing to work with me a bit, I can help you determine
-        what sort of image you like the most and
-        ensure it is within your price range before starting on it!</p>
-      <h3>Your <span class="emphasized">Personalized</span> Portrait</h3>
-      <p>
-       If you know your four-letter type, check out the corresponding
-        image (called a <span class="air-quotes">generic portrait</span>)
-        in the
-        <a href="http://www.seeourminds.com/gallery/sixteen_types/"
-           title="Link to the Sixteen Types gallery page on seeourminds.com"
-           target="_blank">
-         Sixteen Types</a>
-        gallery page on
-         <a href="http://www.seeourminds.com/"
-            title="Link to the seeourminds.com Home page" target="_blank">
-          seeourminds.com</a>.
-       Although it is not unique &mdash; and does not reflect the degree
-        of your your personal preferences &mdash; you
-        <em>can</em> consider it to be an image of your personality.
-       So feel free to download and enjoy it!
-      </p>
-      <p>
-       If the generic portrait of your four-letter type is not personalized enough for you, please
-        <a href="conversion/groja" title="Link to contact us page">
-         contact us</a>
-        to discuss what you might want and how much it will cost.</p>
-     </div><!-- .col-md-9 -->
-    </div><!-- .row -->
-    <div class="row">
-     <div class="col-md-9">
-      <h3>How Much?</h3>
-       <img src="{{ url_for('static', filename='images/site/ESFJ-light_75_sat_75-blur_20-qms-209x209.jpg') }}"
-            class="img-fluid hoverable">
-      <p>
-       The cost of each Spiritual Portrait ranges from $0 to $1000,
-        depending on how much work I have to put into making it.
-      </p>
-     </div><!-- .col-md-9 -->
-    </div><!-- .row -->
-    <div class="row">
-     <div class="col-md-9">
-     </div><!-- .col-md-9 -->
-    </div><!-- .row -->
-    <div class="row">
-     <div class="col-md-8">
-      <p>
-       However, I have put a lot of time &mdash; years, in fact &mdash; into coming up with this idea,
-        writing the
-        <a href="../about/#versions" title="Link to the list of versions on the 'About' page">
-          various versions</a>
-        of the program, building and managing this site and its predecessors and
-        ultimately the (highly unnatural &mdash; for me, anyway) effort required to
-        let people know that this service is available.</p>
-      <p>
-       And of course after all that, there is the time spent creating a personalized image and
-        making sure it meets your satisfaction.
-      </p>
-      <p>
-       So I hope that if you are interested, you will
-        <a href="conversion/groja" target="_blank"
-           title="Link to contact us page.">
-         contact us</a>
-        and give us the opportunity to create a beautiful, unique, and
-        highly personal Spiritual Portrait &mdash; one that you can fully
-        appreciate and enjoy now and for years to come!
-      </p>
-     </div><!-- .col-md-9 -->
-    </div><!-- .row -->
-   </div><!-- .your-portrait-page -->
-  </div><!-- .container-fluid -->
+  <div class="jumbotron jumbotron-fluid">
+   <div class="container">
+    <div class="z-depth-1-half m-3 p-2">
+     <div class="row align-items-center justify-content-center">
+      <div class="col-sm-8 m-3 p-4">
+       <div class="card hoverable m-2">
+        <div class="card-body">
+         <h1 class="display-4 font-weight-bold text-center">Your Portrait</h1>
+         <p class="lead">
+          I create all Spiritual Portraits by hand, and
+           each one is unique.</p>
+         <p>
+          Click below to order yours today!</p>
+         <p class="text-center">
+          <a href="conversion/groja" role="button"
+             class="btn btn-primary btn-lg btn-rounded">
+           Get Your Portrait</a></p>
+        </div><!-- .card-body -->
+       </div><!-- .card -->
+      </div><!-- .col-sm-8 -->
+      <div class="col-sm-2 m-2">
+       <div class="card hoverable m-2">
+        <div class="card-body">
+         <div class="view overlay my-4">
+          <img src="{{ url_for('static', filename='images/site/ESFJ-light_75_sat_75-blur_20-qms-209x209.jpg') }}"
+               class="img-fluid hoverable">
+          <a href="#">
+           <div class="mask rgba-white-slight"></div>
+          </a>
+         </div><!-- .view -->
+        </div><!-- .card-body -->
+       </div><!-- .card -->
+      </div><!-- .col-sm-2 -->
+     </div><!-- .row -->
+     <div class="row align-items-center justify-content-around">
+      <div class="col-sm-10">
+
+       <h3>Handmade Portraits</h3>
+       <p>
+        Although a large part of this process is automated by the
+         Groja Program &copy;, producing high-quality, unique and
+         personalized portraits takes time.
+        Add to that the possibility that I will want to
+         ensure customers understand and appreciate its significance
+         means that each image requires a personal touch.</p>
+       <p>
+        Also, the program contains many options, such as different resolutions and
+         orientations (portrait vs. landscape) and even different compositions.
+        At this time, these options not currently demonstrated in the
+         <a href="http://seeourminds.com/galleries/gallery.html"
+            title="Link to the galleries page on seeourminds.com" target="_blank">
+          galleries</a>.
+        If you are willing to work with me a bit, I can help you determine
+         what sort of image you like the most and
+         ensure it is within your price range before starting on it!</p>
+       <h3>Your <span class="emphasized">Personalized</span> Portrait</h3>
+       <p>
+        If you know your four-letter type, check out the corresponding
+         image (called a <span class="air-quotes">generic portrait</span>)
+         in the
+         <a href="http://www.seeourminds.com/gallery/sixteen_types/"
+            title="Link to the Sixteen Types gallery page on seeourminds.com"
+            target="_blank">
+          Sixteen Types</a>
+         gallery page on
+          <a href="http://www.seeourminds.com/"
+             title="Link to the seeourminds.com Home page" target="_blank">
+           seeourminds.com</a>.
+        Although it is not unique &mdash; and does not reflect the degree
+         of your your personal preferences &mdash; you
+         <em>can</em> consider it to be an image of your personality.
+        So feel free to download and enjoy it!
+       </p>
+       <p>
+        If the generic portrait of your four-letter type is not personalized enough for you, please
+         <a href="conversion/groja" title="Link to contact us page">
+          contact us</a>
+         to discuss what you might want and how much it will cost.</p>
+      </div><!-- .col-md-10 -->
+     </div><!-- .row -->
+     <div class="row">
+      <div class="col-md-9">
+       <h3>How Much?</h3>
+       <p>
+        The cost of each Spiritual Portrait ranges from $0 to $1000,
+         depending on how much work I have to put into making it.
+       </p>
+      </div><!-- .col-md-9 -->
+     </div><!-- .row -->
+     <div class="row">
+      <div class="col-md-9">
+      </div><!-- .col-md-9 -->
+     </div><!-- .row -->
+     <div class="row">
+      <div class="col-md-8">
+       <p>
+        However, I have put a lot of time &mdash; years, in fact &mdash; into coming up with this idea,
+         writing the
+         <a href="../about/#versions" title="Link to the list of versions on the 'About' page">
+           various versions</a>
+         of the program, building and managing this site and its predecessors and
+         ultimately the (highly unnatural &mdash; for me, anyway) effort required to
+         let people know that this service is available.</p>
+       <p>
+        And of course after all that, there is the time spent creating a personalized image and
+         making sure it meets your satisfaction.
+       </p>
+       <p>
+        So I hope that if you are interested, you will
+         <a href="conversion/groja" target="_blank"
+            title="Link to contact us page.">
+          contact us</a>
+         and give us the opportunity to create a beautiful, unique, and
+         highly personal Spiritual Portrait &mdash; one that you can fully
+         appreciate and enjoy now and for years to come!
+       </p>
+      </div><!-- .col-md-9 -->
+     </div><!-- .row -->
+    </div><!-- .your-portrait-page -->
+   </div><!-- .container -->
+  </div><!-- .jumbotron -->
  </main>
 {% endblock %}
