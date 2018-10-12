@@ -1,20 +1,36 @@
 {% extends "thanks/thanks_base.html" %}
 
-{% block title %}Thanks for your interest!{% endblock %}
+{% block title %}Thanks {% endblock %}
 
 {% block navbar %}
 {% endblock %}
 
 {% block thanks_content %}
-  <h3>Thanks for your interest,
-    {% if name %}
-      {{ name }}!
-    {% else %}
-      Friend!
-    {% endif %}</h3>
-  <h3>Return to
-    <a href="http://tomwhartung.com" title="TomWHartung.com home page">
-      TomWHartung.com</a></h3>
+ I will contact you soon!
+{% endblock %}
+
+{% block conversion_process %}
+ <div class="card hoverable m-2">
+  <div class="card-body">
+    <h2 class="card-title h2-responsive font-weight-bold">What to Expect</h2>
+    <ul class="list-group">
+      <li class="list-group-item">
+        I will contact you as soon as I can.</li>
+      <li class="list-group-item">
+        We will discuss how I might help you!</li>
+    </ul>
+  </div><!-- .card-body -->
+ </div><!-- .card -->
+{% endblock %}
+
+
+{% block thanks_buttons %}
+ <a class="btn btn-primary btn-rounded" href="http://TomWHartung.com"
+    title="TomWHartung.com home page" role="button">
+  Visit TomWHartung.com</a>
+ <a class="btn btn-primary btn-rounded" href="http://www.JooMooWebSites.com"
+    title="JooMooWebSites.com home page" role="button">
+  Visit JooMooWebSites.com</a>
 {% endblock %}
 
 {% block footer %}
