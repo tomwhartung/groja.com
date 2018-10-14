@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 
-{% block title %}Template{% endblock %}
+{% block title %}Template {% endblock %}
 
 {% block navbar %}
  {{ super() }}
 {% endblock %}
 
 {% block content %}
- <main>
+ <main class="mt-3">
   <div class="container">
    <div class="row justify-content-center">
-    <div class="legal-page z-depth-1-half">
+    <div class="z-depth-1-half m-5 p-5">
      <div class="col-md-9">
       <h1 class="text-center">Template</h1>
       <p>Use this file, <b>templates/index.html</b> , as the starting point for
@@ -20,16 +20,95 @@
        <b>navbar</b> and <b>footer</b> blocks.  It works both ways.
        Just FYI.</p>
      </div><!-- .col-md-9 -->
-    </div><!-- .legal-page -->
+    </div><!-- .z-depth-1-half -->
    </div><!-- .row -->
+
    <div class="w-100"><hr></div>
+
    <a name="x"></a>
-   <div class="row">
-    <div class="col-md-6 mb-3">
-     <div class="card hoverable">
+   <div class="row align-items-center justify-content-around">
+    <div class="col-md-4">
+     <div class="card hoverable m-2">
       <div class="card-body">
-       <h2 class="card-title h2-responsive font-weight-bold">x</h2>
+       <h2 class="card-title h2-responsive font-weight-bold">col-md-4 title</h2>
        <p class="card-text">
+        unordered list</p>
+       <ul class="list-group mb-3">
+        <li class="list-group-item">
+         item</li>
+       </ul>
+      </div><!-- .card-body -->
+      <div class="card-footer">
+       <p class="card-text text-center">
+        <a class="btn btn-default" href="#" role="button">
+         Button</a></p>
+      </div><!-- .card-footer -->
+     </div><!-- .card -->
+    </div><!-- .col-md-4 -->
+    <div class="col-md-4">
+     <div class="card hoverable m-2">
+      <div class="card-body">
+       <h2 class="card-title h2-responsive font-weight-bold">col-md-4 title</h2>
+       <p class="card-text">
+        ordered list</p>
+       <ol class="list-group mb-3">
+         <li class="list-group-item">
+          <span class="badge badge-white badge-pill mr-2">
+           <span class="black-text">1</span></span>
+          Step 1</li>
+         <li class="list-group-item">
+          <span class="badge badge-white badge-pill mr-2">
+           <span class="black-text">2</span></span>
+          Step 2</li>
+         <li class="list-group-item">
+          <span class="badge badge-white badge-pill mr-2">
+           <span class="black-text">3</span></span>
+          Step three.</li>
+       </ol>
+      </div><!-- .card-body -->
+      <div class="card-footer">
+       <p class="card-text text-center">
+        <a class="btn btn-default" href="#" role="button">
+         Button</a></p>
+      </div><!-- .card-footer -->
+     </div><!-- .card -->
+    </div><!-- .col-md-4 -->
+    <div class="col-md-4">
+     <div class="card hoverable m-2">
+      <div class="card-body">
+       <h2 class="card-title h2-responsive font-weight-bold">col-md-4 title</h2>
+       <p class="card-text">
+        description list</p>
+       <dl class="row mb-3">
+        <dt class="col-sm-4">Term</dt>
+        <dd class="col-sm-8">
+         description</dd>
+       </dl>
+      </div><!-- .card-body -->
+      <div class="card-footer">
+       <p class="card-text text-center">
+        <a class="btn btn-default" href="#" role="button">
+         Button</a></p>
+      </div><!-- .card-footer -->
+     </div><!-- .card -->
+    </div><!-- .col-md-4 -->
+   </div><!-- .row -->
+
+   <div class="w-100"></div>
+
+   <div class="row align-items-center justify-content-center">
+    <div class="card-group">
+     <div class="card hoverable m-2">
+      <div class="card-body">
+       <h4 class="card-title h4-responsive font-weight-bold text-center">
+        <i class="fa fa-lg fa-book m-2 p-2" aria-hidden="true"></i><br>
+        card-group - title</h4>
+       <p class="card-text">
+        "Use card groups to render cards as a single, attached element with equal width and height columns."
+         <a href="https://mdbootstrap.com/components/panels/#layout"
+            title="https://mdbootstrap.com/components/panels/#layout"
+            target="_blank">
+          https://mdbootstrap.com/components/panels/#layout</a>
        </p>
       </div><!-- .card-body -->
       <div class="card-footer">
@@ -38,7 +117,89 @@
          Button</a></p>
       </div><!-- .card-footer -->
      </div><!-- .card -->
-    </div><!-- .col-md-6 -->
+     <div class="card hoverable m-2">
+      <div class="card-body">
+       <h4 class="card-title h4-responsive font-weight-bold text-center">
+        <i class="fa fa-lg fa-book m-2 p-2" aria-hidden="true"></i><br>
+        card-group - title</h4>
+       <p class="card-text">
+         "Need a set of equal width and height panel that aren’t
+          attached to one another?  Use decks."
+          <a href="https://mdbootstrap.com/components/panels/#layout"
+             title="https://mdbootstrap.com/components/panels/#layout"
+             target="_blank">
+           https://mdbootstrap.com/components/panels/#layout</a>
+        </p>
+      </div><!-- .card-body -->
+      <div class="card-footer">
+       <p class="card-text text-center">
+        <a class="btn btn-default" href="#" role="button">
+         Button</a></p>
+      </div><!-- .card-footer -->
+     </div><!-- .card -->
+     <div class="card hoverable m-2">
+      <div class="card-body">
+       <h4 class="card-title h4-responsive font-weight-bold text-center">
+        <i class="fa fa-lg fa-book m-2 p-2" aria-hidden="true"></i><br>
+         card-group - title</h4>
+       <p class="card-text">
+        text</p>
+      </div><!-- .card-body -->
+      <div class="card-footer">
+       <p class="card-text text-center">
+        <a class="btn btn-default" href="#" role="button">
+         Button</a></p>
+      </div><!-- .card-footer -->
+     </div><!-- .card -->
+    </div><!-- .card-group -->
+
+    <div class="row align-items-center justify-content-center">
+     <div class="card-deck">
+      <div class="card hoverable m-2">
+       <div class="card-body">
+        <h4 class="card-title h4-responsive font-weight-bold text-center">
+         <i class="fa fa-lg fa-book m-2 p-2" aria-hidden="true"></i><br>
+         card-deck - title</h4>
+        <p class="card-text">
+         text
+        </p>
+       </div><!-- .card-body -->
+       <div class="card-footer">
+        <p class="card-text text-center">
+         <a class="btn btn-default" href="#" role="button">
+          Button</a></p>
+       </div><!-- .card-footer -->
+      </div><!-- .card -->
+      <div class="card hoverable m-2">
+       <div class="card-body">
+        <h4 class="card-title h4-responsive font-weight-bold text-center">
+         <i class="fa fa-lg fa-book m-2 p-2" aria-hidden="true"></i><br>
+         card-deck - title</h4>
+        <p class="card-text">
+        text</p>
+       </div><!-- .card-body -->
+       <div class="card-footer">
+        <p class="card-text text-center">
+         <a class="btn btn-default" href="#" role="button">
+          Button</a></p>
+       </div><!-- .card-footer -->
+      </div><!-- .card -->
+      <div class="card hoverable m-2">
+       <div class="card-body">
+        <h4 class="card-title h4-responsive font-weight-bold text-center">
+         <i class="fa fa-lg fa-book m-2 p-2" aria-hidden="true"></i><br>
+          card-deck - title</h4>
+        <p class="card-text">
+         text</p>
+       </div><!-- .card-body -->
+       <div class="card-footer">
+        <p class="card-text text-center">
+         <a class="btn btn-default" href="#" role="button">
+          Button</a></p>
+       </div><!-- .card-footer -->
+      </div><!-- .card -->
+     </div><!-- .card-deck -->
+
    </div><!-- .row -->
   </div><!-- .container -->
  </main>
