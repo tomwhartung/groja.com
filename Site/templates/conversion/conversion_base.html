@@ -4,12 +4,12 @@
 <main>
  <div class="jumbotron jumbotron-fluid">
   <div class="container">
-   <div class="row justify-content-around">
-    <div class="col-sm-8 hoverable m-2">
-     <h4 class="display-4 font-weight-bold text-center">
+   <div class="row align-items-center justify-content-around">
+    <div class="col-sm-8 hoverable m-2 p-4">
+     <h1 class="display-4 font-weight-bold text-center">
       {% block jumbotron_title %}
       {% endblock %}
-      </h4>
+     </h1>
      <p class="lead">
       {% block conversion_content %}
       {% endblock %}
@@ -31,10 +31,12 @@
             action="" method="post" role="form">
        {{ form.hidden_tag() }}
        <div class="md-form">
-        {{ form.name( class="form-control mb-4", placeholder="Name", type="text", value=form.name.data ) }}
+        {{ form.name( class="form-control mb-4",
+               placeholder="Name", type="text", value=form.name.data ) }}
        </div><!-- .md-form -->
        <div class="md-form">
-        {{ form.email( class="form-control mb-4", placeholder="Email", type="email", value=form.email.data ) }}
+        {{ form.email( class="form-control mb-4",
+               placeholder="Email", type="email", value=form.email.data ) }}
        </div><!-- .md-form -->
        {% block terms_checkbox %}
         <div class="custom-control custom-checkbox mb-4">
@@ -55,13 +57,10 @@
         </div>
        {% endblock %}
        {% block message_textarea %}
-        <div class="form-group">
-         <textarea class="form-control rounded-0" rows="3"
-                   id="message" name="message" placeholder="Message">
-         </textarea>
-        </div>
         <div class="md-form">
-         {{ form.message( class="form-control rounded-0 mb-4", placeholder="Message", type="textarea", rows="3", value=form.message.data ) }}
+         {{ form.message( class="form-control rounded-0 mb-4",
+                placeholder="Optionally Add a Message", type="textarea", rows="5",
+                value=form.message.data ) }}
         </div><!-- .md-form -->
        {% endblock %}
        <div class="text-center">
