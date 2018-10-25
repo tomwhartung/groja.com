@@ -1,0 +1,35 @@
+{% extends "thanks/thanks_base.html" %}
+
+{% block title %}Thanks {% endblock %}
+
+{% block thanks_content %}
+ I will contact you as soon as I can!
+{% endblock %}
+
+{% block conversion_process %}
+  <div class="card hoverable m-2">
+    <div class="card-body">
+      <h2 class="card-title h2-responsive font-weight-bold">What to Expect</h2>
+      <ol class="list-group">
+        <li class="list-group-item">
+          <span class="step-title">Contact us &mdash;</span>
+          using one of the methods on this page</li>
+        <li class="list-group-item">
+          <span class="step-title">Share your score &mdash;</span>
+          if you don't already have your score, we discuss alternatives for getting it</li>
+        <li class="list-group-item">
+          <span class="step-title">Portrait creation &mdash;</span>
+          we use the score to create your Spiritual Portrait</li>
+        <li class="list-group-item">
+          <span class="step-title">Preliminary portrait &mdash;</span>
+          we deliver a small, water-marked version of your portrait, for your approval</li>
+        <li class="list-group-item">
+          <span class="step-title">Invoicing and payment &mdash;</span>
+          when you are happy with the portrait, we send an invoice and appreciate your prompt payment</li>
+        <li class="list-group-item">
+          <span class="step-title">Final delivery &mdash;</span>
+          when we receive your payment, we send a full-size, non-water-marked version of your portrait</li>
+      </ol>
+    </div><!-- .card-body -->
+  </div><!-- .card -->
+{% endblock %}
