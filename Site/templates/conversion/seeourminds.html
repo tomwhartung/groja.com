@@ -21,8 +21,7 @@
 {% endblock %}
 
 {% block conversion_image %}
- <img src="{{ url_for('static', filename='images/conversion/portrait-1396-200x273.jpg') }}"
-      class="img-fluid" alt="">
+ {{ super() }}
 {% endblock %}
 
 {% block message_textarea %}
