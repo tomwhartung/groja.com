@@ -1,0 +1,49 @@
+{% extends "thanks/thanks_base.html" %}
+
+{% block title %}Thanks for subscribing {% endblock %}
+
+{% block navbar %}
+{% endblock %}
+
+{% block thanks_content %}
+  <p class="lead">
+   We send our newsletter monthly.
+  </p>
+  <p>
+   If you ever want to get off the list, just follow the instructions at
+    the bottom of the next email.
+  </p>
+{% endblock %}
+
+{% block conversion_process %}
+  <div class="card hoverable m-2">
+    <div class="card-body">
+      <h2 class="card-title h2-responsive font-weight-bold">What to Expect</h2>
+      <ul class="list-group">
+       <li class="list-group-item">
+        We will send you monthly updates about new posts to
+         <a href="https://www.ArtsyVisions.com" title="ArtsyVisions.com home page">
+          ArtsyVisions.com</a>
+         and
+         <a href="https://www.seeourminds.com" title="SeeOurMinds.com home page">
+          SeeOurMinds.com</a>.</li>
+        <li class="list-group-item">
+         Keep an eye out for the Spiritual Portraits of your favorite people
+          and fictional characters!
+       </li>
+      </ul>
+    </div><!-- .card-body -->
+  </div><!-- .card -->
+{% endblock %}
+
+{% block thanks_buttons %}
+ <a class="btn btn-primary btn-rounded" href="http://ArtsyVisions.com"
+    title="ArtsyVisions.com home page" role="button">
+  Visit ArtsyVisions.com</a>
+ <a class="btn btn-primary btn-rounded" href="http://www.seeourminds.com"
+    title="SeeOurMinds.com home page" role="button">
+  Visit SeeOurMinds.com</a>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
