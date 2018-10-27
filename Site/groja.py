@@ -91,7 +91,10 @@ def conversion(interest):
             session['email'] = email
             session['message'] = message
             session['interest'] = interest
-            if interest == 'free_offer':
+            if interest == 'avmn':
+                update_or_insert_name_email(name, email, newsletter=1)
+                thanks_page_url = url_for('thanks')
+            elif interest == 'free_offer':
                 update_or_insert_name_email(
                     name, email, newsletter=1, portrait=1)
                 thanks_page_url = url_for('thanks')
@@ -121,7 +124,9 @@ def conversion(interest):
         form.name.data = ''
         form.email.data = ''
 
-    if interest == 'free_offer':
+    if interest == 'avmn':
+        template_name = 'conversion/avmn.html'
+    elif interest == 'free_offer':
         template_name = 'conversion/free_offer.html'
     elif interest == 'groja':
         template_name = 'conversion/groja.html'
@@ -158,7 +163,10 @@ def thanks(test_interest = ''):
         interest = session.get('interest')
 
     interest_text = ""
-    if interest == 'free_offer':
+    if interest == 'avmn':
+        template_name = 'thanks/avmn.html'
+        interest_text = 'joining the Artsy Visions Monthly Newsletter list'
+    elif interest == 'free_offer':
         template_name = 'thanks/free_offer.html'
         interest_text = 'joining the seeourminds email list'
     elif interest == 'groja':
@@ -166,7 +174,7 @@ def thanks(test_interest = ''):
         interest_text = 'buying a spiritual portrait'
     elif interest == 'seeourminds':
         template_name = 'thanks/seeourminds.html'
-        interest_text = 'joining the seeourminds email list'
+        interest_text = 'joining the Artsy Visions Monthly Newsletter list'
     elif interest == 'tomwhartung':
         template_name = 'thanks/tomwhartung.html'
         interest_text = 'getting me to do some consulting work'
