@@ -18,6 +18,10 @@
     <div class="col-sm-2 hoverable m-2">
      <div class="view overlay my-4">
       {% block conversion_image %}
+       <img src="{{ url_for('static', filename='images/conversion/entj-john_adams-1-200x200.jpg') }}"
+            class="img-fluid" alt="">
+       <p class="text-center mt-2">
+        John Adams</p>
       {% endblock %}
       <a href="#">
        <div class="mask rgba-white-slight"></div>
