@@ -98,7 +98,7 @@ def conversion(interest):
                 update_or_insert_name_email(
                     name, email, newsletter=1, portrait=1)
                 thanks_page_url = url_for('thanks')
-            elif interest == 'groja':
+            elif interest == 'portrait':
                 update_or_insert_name_email(name, email, portrait=1)
                 thanks_page_url = url_for('thanks')
             elif interest == 'seeourminds':
@@ -128,8 +128,8 @@ def conversion(interest):
         template_name = 'conversion/avmn.html'
     elif interest == 'free_offer':
         template_name = 'conversion/free_offer.html'
-    elif interest == 'groja':
-        template_name = 'conversion/groja.html'
+    elif interest == 'portrait':
+        template_name = 'conversion/portrait.html'
     elif interest == 'seeourminds':
         template_name = 'conversion/seeourminds.html'
     elif interest == 'tomwhartung':
@@ -169,8 +169,8 @@ def thanks(test_interest = ''):
     elif interest == 'free_offer':
         template_name = 'thanks/free_offer.html'
         interest_text = 'joining the seeourminds email list'
-    elif interest == 'groja':
-        template_name = 'thanks/groja.html'
+    elif interest == 'portrait':
+        template_name = 'thanks/portrait.html'
         interest_text = 'buying a spiritual portrait'
     elif interest == 'seeourminds':
         template_name = 'thanks/seeourminds.html'
