@@ -7,36 +7,42 @@
   <div class="container-fluid">
    <div class="your-portrait-page z-depth-1-half">
     <div class="row align-items-center justify-content-center">
-     <div class="col-sm-8 m-3 p-4">
+     <div class="col-sm-12">
       <div class="card hoverable m-2">
-       <div class="card-body">
-        <h1 class="display-4 font-weight-bold text-center">Your Portrait</h1>
-        <p class="lead">
-         I create all Spiritual Portraits by hand, and
-          each one is unique.</p>
-        <p class="card-text">
-         Click below to order yours today!</p>
-        <p class="text-center">
-         <a href="conversion/portrait" class="btn btn-primary btn-lg btn-rounded"
-            title="Link to a page where you can order your personalized portrait"
-            role="button">
-          Get Your Portrait</a></p>
-       </div><!-- .card-body -->
+       <div class="row align-items-center justify-content-center">
+        <div class="col-sm-8">
+         <div class="card hoverable">
+          <div class="card-body hoverable">
+           <h1 class="display-4 font-weight-bold text-center">Your Portrait</h1>
+           <p class="lead">
+            I create all Spiritual Portraits by hand, and
+             each one is unique.</p>
+           <p class="card-text">
+            Click below to order yours today!</p>
+           <p class="text-center">
+            <a href="conversion/portrait" class="btn btn-primary btn-lg btn-rounded"
+               title="Link to a page where you can order your personalized portrait"
+               role="button">
+             Get Your Portrait</a></p>
+          </div><!-- .card-body -->
+         </div><!-- .card -->
+        </div><!-- .col-* -->
+        <div class="col-sm-4">
+         <div class="card hoverable">
+          <div class="card-body">
+           <div class="view overlay my-4">
+            <img src="{{ url_for('static', filename='images/site/ESFJ-light_75_sat_75-blur_20-qms-209x209.jpg') }}"
+                 class="img-fluid hoverable">
+            <a href="#">
+             <div class="mask rgba-white-slight"></div>
+            </a>
+           </div><!-- .view -->
+          </div><!-- .card-body -->
+         </div><!-- .card -->
+        </div><!-- .col-* -->
+       </div><!-- .row -->
       </div><!-- .card -->
-     </div><!-- .col-sm-8 -->
-     <div class="col-sm-2 m-2">
-      <div class="card hoverable m-2">
-       <div class="card-body">
-        <div class="view overlay my-4">
-         <img src="{{ url_for('static', filename='images/site/ESFJ-light_75_sat_75-blur_20-qms-209x209.jpg') }}"
-              class="img-fluid hoverable">
-         <a href="#">
-          <div class="mask rgba-white-slight"></div>
-         </a>
-        </div><!-- .view -->
-       </div><!-- .card-body -->
-      </div><!-- .card -->
-     </div><!-- .col-sm-2 -->
+     </div><!-- .col-* -->
     </div><!-- .row -->
     <div class="row align-items-center justify-content-center">
      <div class="col-sm-7">
