@@ -1,6 +1,6 @@
 {% extends "conversion/conversion_base.html" %}
 
-{% block title %}Consulting Work{% endblock %}
+{% block title %}Consulting Work - {% endblock %}
 
 {% block navbar %}
 {% endblock %}
@@ -8,13 +8,21 @@
 {% block jumbotron_title %}How Can I Help You?{% endblock %}
 
 {% block conversion_content %}
- If you'd like help with a technical aspect of your website,
-  enter your name and email address in the form below:
+ <p class="lead">
+  If you'd like help with a technical aspect of your website,
+   enter your name and email address in the form below:
+ </p>
 {% endblock %}
 
 {% block conversion_image %}
- <img src="{{ url_for('static', filename='images/conversion/portrait-1397-200x255.jpg') }}"
-      class="img-fluid" alt="">
+ <div class="col-md-3 hoverable">
+  <div class="view overlay my-4">
+   <img class="img-fluid mx-auto" alt="Photo of Tom W. Hartung"
+        src="{{ url_for('static', filename='images/conversion/portrait-1397-200x255.jpg') }}">
+   <p class="text-center mt-2">
+    Tom W. Hartung</p>
+  </div><!-- .view -->
+ </div><!-- .col-* -->
 {% endblock %}
 
 {% block message_textarea %}
