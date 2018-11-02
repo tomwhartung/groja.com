@@ -4,27 +4,26 @@
 <main>
  <div class="jumbotron jumbotron-fluid">
   <div class="container">
-   <div class="row align-items-center justify-content-center">
+   <div class="row align-items-center justify-content-around">
     <div class="col-md-8 hoverable">
      <h1 class="display-2 font-weight-bold text-center">
       {% block jumbotron_title %}
       {% endblock %}
      </h1>
-     <p class="lead">
-      {% block conversion_content %}
-      {% endblock %}
-     </p>
-    </div><!-- .col-sm-8 -->
+    </div><!-- .col-* -->
+   </div><!-- .row -->
+   <div class="row align-items-center justify-content-around">
+    <div class="col-md-9 hoverable">
+     {% block conversion_content %}
+     {% endblock %}
+    </div><!-- .col-* -->
     {% block conversion_image %}
-     <div class="col-md-4 hoverable m-2">
+     <div class="col-md-3 hoverable">
       <div class="view overlay my-4">
-        <img src="{{ url_for('static', filename='images/conversion/entj-john_adams-1-200x200.jpg') }}"
-             class="img-fluid" alt="">
-        <p class="text-center mt-2">
-         John Adams</p>
-       <a href="#">
-        <div class="mask rgba-white-slight"></div>
-       </a>
+       <img src="{{ url_for('static', filename='images/conversion/entj-john_adams-1-200x200.jpg') }}"
+            class="img-fluid mx-auto" alt="">
+       <p class="text-center mt-2">
+        John Adams</p>
       </div><!-- .view -->
      </div><!-- .col-* -->
     {% endblock %}
