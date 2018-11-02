@@ -14,7 +14,7 @@ dt{% extends "base.html" %}
     </div><!-- .row -->
 
     <div class="row align-items-center justify-content-center">
-     <div class="col-md-7 col-lg-9">
+     <div class="col-md-8 col-lg-9">
       <div class="row align-items-center justify-content-center my-2">
        <div class="col-sm-12">
         <div class="card hoverable">
@@ -89,7 +89,7 @@ dt{% extends "base.html" %}
           </p>
           <ul class="list-group list-group-flush mb-3">
            <li class="list-group-item m-0">
-            If we are unable to fix what is wrong,
+            If we are unable to promptly fix whatever is wrong,
              we will be happy to grant you a full refund!
            </li>
           </ul>
@@ -101,11 +101,12 @@ dt{% extends "base.html" %}
       </div><!-- .row -->
      </div><!-- .col-* -->
 
-     <div class="col-md-5 col-lg-3">
+     <div class="col-md-4 col-lg-3">
       <div class="card hoverable">
        <div class="card-body hoverable">
-        <h4 class="card-title h4-responsive font-weight-bold text-center">
-         What Will Yours Look Like?</h4>
+        <h3 class="card-title h3-responsive font-weight-bold text-center">
+         <i class="fa fa-lg fa-question-circle m-3" aria-hidden="true"></i><br>
+         What Will Yours Look Like?</h3>
         <div class="view overlay my-4">
          <img src="{{ url_for('static', filename='images/site/ESFJ-light_75_sat_75-blur_20-qms-209x209.jpg') }}"
               class="img-fluid hoverable">
@@ -113,25 +114,24 @@ dt{% extends "base.html" %}
           <div class="mask rgba-white-slight"></div>
          </a>
         </div><!-- .view -->
-        <h4 class="card-title h4-responsive font-weight-bold text-center">
-         Generic Images</h4>
-        <p class="card-text">
-         If you know your four-letter type, check out the corresponding
-          <q>generic</q> image in the
+        <h3 class="card-title h3-responsive font-weight-bold text-center">
+         <i class="fa fa-lg fa-th my-2 py-2" aria-hidden="true"></i><br>
+         Generic Images</h3>
+        <p>
+         If you know your four-letter type, take a look at the corresponding
+          <em>generic</em> image in the
           <a href="http://www.seeourminds.com/gallery/9500-generic_images-original/"
              title="Link to the Sixteen Types gallery page on seeourminds.com"
              target="_blank">
-           Sixteen Types</a>
-          gallery page on
-           <a href="http://www.SeeOurMinds.com/"
-              title="Link to the SeeOurMinds.com Home page" target="_blank">
-            SeeOurMinds.com</a>.
-         Although it is not unique &mdash; and does not reflect the degree
-          of your your personal preferences &mdash; you
-          <em>can</em> consider it to be an image of your personality.
+           SeeOurMinds Sixteen Types Gallery</a>.
+        </p>
+        <p>
+         Although it is not personalized &mdash; because it does not reflect
+          the relative degree of your your personal preferences &mdash; you
+          can, if you like, consider it to be an image of your personality.
          So feel free to download and enjoy it!
         </p>
-        <p class="card-text">
+        <p>
          If the generic portrait of your four-letter type is not personalized enough for you, please
           <a href="conversion/portrait"
              title="Link to a page where you can order your personalized portrait">
