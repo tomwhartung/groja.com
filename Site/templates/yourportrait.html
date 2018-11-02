@@ -6,6 +6,7 @@ dt{% extends "base.html" %}
  <main>
   <div class="container-fluid">
    <div class="your-portrait-page z-depth-1-half">
+
     <div class="row justify-content-center my-2">
      <div class="col-md-9 hoverable">
       <h1 class="display-4 font-weight-bold text-center">
@@ -13,6 +14,7 @@ dt{% extends "base.html" %}
      </div><!-- .col-md-9 -->
     </div><!-- .row -->
 
+    <!-- Top Row -->
     <div class="row align-items-center justify-content-center">
      <div class="col-md-8 col-lg-9">
       <div class="row align-items-center justify-content-center my-2">
@@ -62,6 +64,8 @@ dt{% extends "base.html" %}
         </div><!-- .card -->
        </div><!-- .col-* -->
       </div><!-- .row -->
+
+      <!-- Guaranteed -->
       <div class="row align-items-center justify-content-center my-2">
        <div class="col-sm-12">
         <div class="card hoverable">
@@ -101,6 +105,7 @@ dt{% extends "base.html" %}
       </div><!-- .row -->
      </div><!-- .col-* -->
 
+     <!-- What Will Yours Look Like? -->
      <div class="col-md-4 col-lg-3">
       <div class="card hoverable">
        <div class="card-body hoverable">
@@ -142,6 +147,7 @@ dt{% extends "base.html" %}
      </div><!-- .col-* -->
     </div><!-- .row -->
 
+    <!-- Order Yours Today! -->
     <div class="row align-items-center justify-content-center my-2">
      <div class="col-md-7 col-lg-6">
       <div class="card hoverable">
@@ -157,279 +163,6 @@ dt{% extends "base.html" %}
       </div><!-- .card -->
      </div><!-- .col-* -->
     </div><!-- .row -->
-
-<!-- xxxxxxxxxxxxxxxxxxxxxxx- -->
-<hr>
-SAVE OLD (ul/li in Personalized section fail)
-<hr>
-<!-- xxxxxxxxxxxxxxxxxxxxxxx- -->
-
-    <div class="row align-items-center justify-content-center">
-     <div class="col-md-7 col-lg-9">
-      <div class="row align-items-center justify-content-center my-2">
-       <div class="col-sm-12">
-        <div class="card hoverable">
-         <div class="card-body hoverable">
-          <h2 class="card-title h2-responsive font-weight-bold text-center">
-           <i class="fa fa-lg fa-cogs" aria-hidden="true"></i><br>
-           Handmade, Personalized, and Unique</h2>
-          <p class="lead text-center">
-           All images are handmade, and
-            each one is personalized and unique.
-          </p>
-          <dl class="row">
-           <dt class="col-3 card-title font-weight-bold">
-            Handmade</dt>
-           <dd class="col-9">
-            The Groja &copy; Program automates only part of the creation process.
-            There are parameters that must be set precisely &mdash; and over time
-             I have developed my own personal aesthetic preferences with
-             regards to these portraits.
-           </dd>
-           <dt class="col-3 card-title font-weight-bold">
-            Personalized</dt>
-           <dd class="col-9">
-            Your image is the result of your score on a questionnaire that
-             gauges your personal preferences.
-            It is essential that
-            <ul class="list-group list-group-flush m-0">
-             <li class="list-group-item m-0">
-              <em>You are honest</em> when answering the
-              questionnaire
-             </li>
-             <li class="list-group-item m-0">
-              The results you furnish are precise &mdash;
-               <em>preferably expressed as pairs of percentages</em>
-             </li>
-            </ul>
-            Failure to meet these criteria defeats the purpose of making
-             the portrait, forcing it to be generic and relatively meaningless.
-           </dd>
-           <dt class="col-3 card-title font-weight-bold">
-            Unique</dt>
-           <dd class="col-9">
-            As part of the creation process, the Groja &copy; Program introduces
-             random elements into each portrait.
-            Subjective criteria &mdash; guided by an aesthetic
-             developed over the past 40 years &mdash; also plays a part in
-             this process.
-           </dd>
-          </dl>
-         </div><!-- .card-body -->
-        </div><!-- .card -->
-       </div><!-- .col-* -->
-      </div><!-- .row -->
-      <div class="row align-items-center justify-content-center my-2">
-       <div class="col-sm-12">
-        <div class="card hoverable">
-         <div class="card-body hoverable">
-          <h2 class="card-title h2-responsive font-weight-bold text-center">
-           <i class="fa fa-lg fa-certificate my-2 py-2" aria-hidden="true"></i><br>
-           Guarantee</h2>
-          <p>
-           We guarantee your spiritual portrait will be unique and offer
-            you insight into who you are and how you can better relate to others.
-          </p>
-          <p>
-           Our goal is to create a personalized, beautiful, unique, and
-            enlightening Spiritual Portrait for you &mdash; one that you can fully
-            appreciate and enjoy now and for years to come!
-          </p>
-          <p>
-          </p>
-         </div><!-- .card-body -->
-        </div><!-- .card -->
-       </div><!-- .col-* -->
-      </div><!-- .row -->
-     </div><!-- .col-* -->
-
-     <div class="col-md-5 col-lg-3">
-      <div class="card hoverable">
-       <div class="card-body hoverable">
-        <h4 class="card-title h4-responsive font-weight-bold text-center">
-         What Will Yours Look Like?</h4>
-        <div class="view overlay my-4">
-         <img src="{{ url_for('static', filename='images/site/ESFJ-light_75_sat_75-blur_20-qms-209x209.jpg') }}"
-              class="img-fluid hoverable">
-         <a href="#">
-          <div class="mask rgba-white-slight"></div>
-         </a>
-        </div><!-- .view -->
-        <h4 class="card-title h4-responsive font-weight-bold text-center">
-         Generic Images</h4>
-        <p class="card-text">
-         If you know your four-letter type, check out the corresponding
-          <q>generic</q> image in the
-          <a href="http://www.seeourminds.com/gallery/9500-generic_images-original/"
-             title="Link to the Sixteen Types gallery page on seeourminds.com"
-             target="_blank">
-           Sixteen Types</a>
-          gallery page on
-           <a href="http://www.SeeOurMinds.com/"
-              title="Link to the SeeOurMinds.com Home page" target="_blank">
-            SeeOurMinds.com</a>.
-         Although it is not unique &mdash; and does not reflect the degree
-          of your your personal preferences &mdash; you
-          <em>can</em> consider it to be an image of your personality.
-         So feel free to download and enjoy it!
-        </p>
-        <p class="card-text">
-         If the generic portrait of your four-letter type is not personalized enough for you, please
-          <a href="conversion/portrait"
-             title="Link to a page where you can order your personalized portrait">
-           contact us</a>
-          to discuss what you might want and how much it will cost.</p>
-       </div><!-- .card-body -->
-      </div><!-- .card -->
-     </div><!-- .col-* -->
-    </div><!-- .row -->
-
-    <div class="row align-items-center justify-content-center my-2">
-     <div class="col-md-7 col-lg-5">
-      <div class="card hoverable">
-       <div class="card-body hoverable">
-        <h2 class="card-title h2-responsive font-weight-bold text-center">
-         Order yours today!</h2>
-        <p class="text-center">
-         <a href="conversion/portrait" class="btn btn-primary btn-lg btn-rounded"
-            title="Link to a page where you can order your personalized portrait"
-            role="button">
-          Get Your Portrait</a></p>
-       </div><!-- .card-body -->
-      </div><!-- .card -->
-     </div><!-- .col-* -->
-    </div><!-- .row -->
-
-<!-- xxxxxxxxxxxxxxxxxxxxxxx- -->
-<hr>
-SAVE OLD OLD OLD
-<hr>
-<!-- xxxxxxxxxxxxxxxxxxxxxxx- -->
-
-<div class="row align-items-center justify-content-center">
- <div class="col-md-8">
-  <div class="row align-items-center justify-content-center my-2">
-   <div class="col-sm-12">
-    <div class="card hoverable">
-     <div class="card-body hoverable">
-      <h2 class="card-title h2-responsive font-weight-bold text-center">
-       <i class="fa fa-lg fa-cogs" aria-hidden="true"></i><br>
-       Handmade, Personalized, and Unique</h2>
-      <p class="lead">
-       I create all Spiritual Portraits by hand, and
-        each one is unique.</p>
-      <dl class="row">
-       <dt class="col-3 card-title font-weight-bold">
-        Handmade</dt>
-       <dd class="col-9 card-text">
-        The Groja &copy; Program automates only part of the creation process.
-        Parameters must be set and I have developed my own sort of aesthetic
-         with regards to these images.
-       </dd>
-       <dt class="col-3 card-title font-weight-bold">
-        Personalized</dt>
-       <dd class="col-9 card-text">
-        Your image is the result of your results.
-        It is essential that you furnish a score as percentages, otherwise
-         it would be generic.
-       </dd>
-       <dt class="col-3 card-title font-weight-bold">
-        Unique</dt>
-       <dd class="col-9 card-text">
-        As part of the creation process, the Groja &copy; Program introduces
-         random elements into each portrait.
-       </dd>
-      </dl>
-     </div><!-- .card-body -->
-    </div><!-- .card -->
-   </div><!-- .col-* -->
-  </div><!-- .row -->
-  <div class="row align-items-center justify-content-center my-2">
-   <div class="col-sm-12">
-    <div class="card hoverable">
-     <div class="card-body hoverable">
-      <h2 class="card-title h2-responsive font-weight-bold text-center">
-       <i class="fa fa-lg fa-certificate my-2 py-2" aria-hidden="true"></i><br>
-       Guarantee</h2>
-      <p>
-       We guarantee your spiritual portrait will be unique and offer
-        you insight into who you are and how you can better relate to others.
-      </p>
-      <p>
-       Our goal is to create a personalized, beautiful, unique, and
-        enlightening Spiritual Portrait for you &mdash; one that you can fully
-        appreciate and enjoy now and for years to come!
-      </p>
-      <p>
-      </p>
-     </div><!-- .card-body -->
-    </div><!-- .card -->
-   </div><!-- .col-* -->
-  </div><!-- .row -->
- </div><!-- .col-* -->
-
- <div class="col-md-3">
-  <div class="card hoverable">
-   <div class="card-body hoverable">
-    <h4 class="card-title h4-responsive font-weight-bold text-center">
-     What Will Yours Look Like?</h4>
-    <div class="view overlay my-4">
-     <img src="{{ url_for('static', filename='images/site/ESFJ-light_75_sat_75-blur_20-qms-209x209.jpg') }}"
-          class="img-fluid hoverable">
-     <a href="#">
-      <div class="mask rgba-white-slight"></div>
-     </a>
-    </div><!-- .view -->
-    <h4 class="card-title h4-responsive font-weight-bold text-center">
-     Generic Images</h4>
-    <p class="card-text">
-     If you know your four-letter type, check out the corresponding
-      <q>generic</q> image in the
-      <a href="http://www.seeourminds.com/gallery/9500-generic_images-original/"
-         title="Link to the Sixteen Types gallery page on seeourminds.com"
-         target="_blank">
-       Sixteen Types</a>
-      gallery page on
-       <a href="http://www.SeeOurMinds.com/"
-          title="Link to the SeeOurMinds.com Home page" target="_blank">
-        SeeOurMinds.com</a>.
-     Although it is not unique &mdash; and does not reflect the degree
-      of your your personal preferences &mdash; you
-      <em>can</em> consider it to be an image of your personality.
-     So feel free to download and enjoy it!
-    </p>
-    <p class="card-text">
-     If the generic portrait of your four-letter type is not personalized enough for you, please
-      <a href="conversion/portrait"
-         title="Link to a page where you can order your personalized portrait">
-       contact us</a>
-      to discuss what you might want and how much it will cost.</p>
-   </div><!-- .card-body -->
-  </div><!-- .card -->
- </div><!-- .col-* -->
-</div><!-- .row -->
-
-<div class="row align-items-center justify-content-center my-2">
- <div class="col-md-7 col-lg-5">
-  <div class="card hoverable">
-   <div class="card-body hoverable">
-    <h2 class="card-title h2-responsive font-weight-bold text-center">
-     Order yours today!</h2>
-    <p class="text-center">
-     <a href="conversion/portrait" class="btn btn-primary btn-lg btn-rounded"
-        title="Link to a page where you can order your personalized portrait"
-        role="button">
-      Get Your Portrait</a></p>
-   </div><!-- .card-body -->
-  </div><!-- .card -->
- </div><!-- .col-* -->
-</div><!-- .row -->
-
-<!-- xxxxxxxxxxxxxxxxxxxxxxx- -->
-<hr>
-END OF SAVED VERSION
-<hr>
-<!-- xxxxxxxxxxxxxxxxxxxxxxx- -->
 
    </div><!-- .your-portrait-page -->
   </div><!-- .container -->
