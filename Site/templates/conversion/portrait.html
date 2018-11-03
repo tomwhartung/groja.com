@@ -1,14 +1,20 @@
 {% extends "conversion/conversion_base.html" %}
 
-{% block title %}Your Portrait{% endblock %}
+{% block title %}Your Portrait - {% endblock %}
 
 {% block navbar %}
  {{ super() }}
 {% endblock %}
 
-{% block jumbotron_title %}Your Portrait{% endblock %}
+{% block jumbotron_title %}
+ Your Portrait
+{% endblock %}
+
+{% block page_title %}
+{% endblock %}
 
 {% block conversion_content %}
+<div class="col-md-9 hoverable">
  <p class="lead">
   To learn how you can get your personalized Spiritual Portrait,
    enter your name and email address in the form below.
@@ -19,9 +25,16 @@
  <p class="card-text">
   Prices subject to change without notice.
  </p>
+</div><!-- .col-* -->
 {% endblock %}
 
 {% block conversion_image %}
+{% endblock %}
+
+{% block top_of_form %}
+{% endblock %}
+
+{% block terms_checkbox %}
  {{ super() }}
 {% endblock %}
 
@@ -29,12 +42,14 @@
  {{ super() }}
 {% endblock %}
 
-{% block terms_checkbox %}
- {{ super() }}
+{% block form_above_button %}
 {% endblock %}
 
 {% block button_text %}
  Get Your Portrait
+{% endblock %}
+
+{% block bottom_of_form %}
 {% endblock %}
 
 {% block footer %}
