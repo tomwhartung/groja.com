@@ -5,7 +5,10 @@
 {% block navbar %}
 {% endblock %}
 
-{% block jumbotron_title %}Subscribe{% endblock %}
+{% block jumbotron_title %}
+ <i class="fa fa-envelope-o" aria-hidden="true"></i><br>
+ Subscribe
+{% endblock %}
 
 {% block page_title %}
 <div class="row align-items-center justify-content-center">
@@ -19,24 +22,46 @@
 {% endblock %}
 
 {% block conversion_content %}
- <h2 class="h2-responsive font-weight-bold text-center">
-  <i class="fa fa-envelope-o" aria-hidden="true"></i><br>
- </h2>
  <p class="lead">
-  Use the form below to subscribe to the AVMN &mdash; the one and only
+  Use the form below to subscribe to the AVMN &mdash; the
    Artsy Visions Monthly Newsletter!
  </p>
+ <ul class="list-group mb-3">
+  <li class="list-group-item">
+   The AVMN is sent monthly
+  </li>
+  <li class="list-group-item">
+   The AVMN includes updates for all of these sites:
+   <dl class="row mb-3">
+    <dt class="col-sm-4 col-lg-3 col-xl-2">
+     <a href="https://www.seeourminds.com" title="SeeOurMinds.com home page">
+       SeeOurMinds.com</a>
+    </dt>
+    <dd class="col-sm-8 col-lg-9 col-xl-10">
+     Contains a lot of raw content of inconsisent quality
+    </dd>
+    <dt class="col-sm-4 col-lg-3 col-xl-2">
+     <a href="https://www.ArtsyVisions.com" title="ArtsyVisions.com home page">
+      ArtsyVisions.com</a>
+    </dt>
+    <dd class="col-sm-8 col-lg-9 col-xl-10">
+     Contains highlights and insights from SeeOurMinds.com
+    </dd>
+    <dt class="col-sm-4 col-lg-3 col-xl-2">
+     <a href="https://www.groja.com" title="Groja.com home page">
+       Groja.com</a>
+    </dt>
+    <dd class="col-sm-8 col-lg-9 col-xl-10">
+     Explains and allows purchasing of spiritual portraits
+    </dd>
+   </dl>
+  </li>
+  <li class="list-group-item">
+   Unsubscribe at any time by following the instructions at the bottom of the
+    most recently received email
+  </li>
+ </ul>
  <p>
-  To join the monthly email list for
-   <a href="https://www.groja.com" title="Groja.com home page">
-     Groja.com</a>
-  &mdash; and learn about new posts on
-  <a href="https://www.ArtsyVisions.com" title="ArtsyVisions.com home page">
-   ArtsyVisions.com</a>
-  and
-  <a href="https://www.seeourminds.com" title="SeeOurMinds.com home page">
-    SeeOurMinds.com</a>
-  &mdash; enter your name and email address in the form below.
  </p>
  <ul class="list-group mb-3">
   <li class="list-group-item">
@@ -44,6 +69,23 @@
   <li class="list-group-item">
   </li>
   <li class="list-group-item">
+  </li>
+ </ul>
+ <ul class="list-group mb-3">
+  <li class="list-group-item">
+   <a href="https://www.seeourminds.com" title="SeeOurMinds.com home page">
+     SeeOurMinds.com</a>
+   &mdash;
+  </li>
+  <li class="list-group-item">
+   <a href="https://www.ArtsyVisions.com" title="ArtsyVisions.com home page">
+    ArtsyVisions.com</a>
+   &mdash; contains highlights and insights from SeeOurMinds.com
+  </li>
+  <li class="list-group-item">
+   <a href="https://www.groja.com" title="Groja.com home page">
+     Groja.com</a>
+  &mdash;
   </li>
  </ul>
  <p>
