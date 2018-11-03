@@ -18,14 +18,6 @@
     {% block conversion_content %}
     {% endblock %}
     {% block conversion_image %}
-     <div class="col-md-3 hoverable">
-      <div class="view overlay my-4">
-       <img src="{{ url_for('static', filename='images/conversion/entj-john_adams-1-200x200.jpg') }}"
-            class="img-fluid mx-auto" alt="">
-       <p class="text-center mt-2">
-        John Adams</p>
-      </div><!-- .view -->
-     </div><!-- .col-* -->
     {% endblock %}
    </div><!-- .row -->
    <div class="row align-items-center justify-content-around">
@@ -73,7 +65,8 @@
       <div class="text-center">
        <button class="btn btn-primary btn-rounded"
                type="submit" role="button">
-        {% block button_text %}{% endblock %}
+        {% block button_text %}
+        {% endblock %}
        </button>
       </div>
       {% block bottom_of_form %}
