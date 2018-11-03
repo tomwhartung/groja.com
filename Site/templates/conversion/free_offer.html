@@ -1,14 +1,36 @@
 {% extends "conversion/conversion_base.html" %}
 
-{% block title %}Your Portrait{% endblock %}
+{% block title %}Free Offer - {% endblock %}
 
 {% block navbar %}
- {{ super() }}
 {% endblock %}
 
-{% block jumbotron_title %}Your Portrait{% endblock %}
+{% block jumbotron_title %}
+ Free Offer
+{% endblock %}
+
+{% block page_title %}
+<div class="row align-items-center justify-content-center">
+ <div class="col-md-9 hoverable mt-1 mb-2 pt-1 pb-2">
+  <h2 class="h2-responsive font-weight-bold text-center mt-3">
+   Subscribe
+  </h2>
+  <h4 class="h4-responsive font-weight-bold text-center">
+   to the</h4>
+  <h3 class="h3-responsive font-weight-bold text-center mt-3">
+   Artsy Visions Monthly Newsletter
+  </h3>
+  <h4 class="h4-responsive font-weight-bold text-center">
+   and</h4>
+  <h2 class="h2-responsive font-weight-bold text-center mt-3">
+   Get Your <u>Free</u> Spiritual Portrait
+  </h2>
+ </div><!-- .col-* -->
+</div><!-- .row -->
+{% endblock %}
 
 {% block conversion_content %}
+<div class="col-md-9 hoverable">
  <p class="lead">
   To learn how you can get your personalized Spiritual Portrait,
    enter your name and email address in the form below.
@@ -16,6 +38,7 @@
  <p class="lead">
   We will contact you as soon as we can!
  </p>
+</div><!-- .col-* -->
 {% endblock %}
 
 {% block conversion_image %}
