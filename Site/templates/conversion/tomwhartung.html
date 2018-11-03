@@ -5,13 +5,27 @@
 {% block navbar %}
 {% endblock %}
 
-{% block jumbotron_title %}How Can I Help You?{% endblock %}
+{% block jumbotron_title %}
+ <i class="fa fa-user-o" aria-hidden="true"></i><br>
+ Consulting
+{% endblock %}
+
+{% block page_title %}
+<div class="row align-items-center justify-content-center">
+ <div class="col-md-9 hoverable mt-1 mb-2 pt-1 pb-2">
+  <h2 class="h2-responsive font-weight-bold text-center mt-3">
+   How Can I Help You?
+  </h2>
+ </div><!-- .col-* -->
+</div><!-- .row -->
+{% endblock %}
 
 {% block conversion_content %}
- <p class="lead">
-  If you'd like help with a technical aspect of your website,
-   enter your name and email address in the form below:
+<div class="col-md-9 hoverable pt-3">
+ <p class="lead text-center font-weight-bold">
+  If you'd like help with your website, fill out the form below:
  </p>
+</div><!-- .col-* -->
 {% endblock %}
 
 {% block conversion_image %}
@@ -25,15 +39,26 @@
  </div><!-- .col-* -->
 {% endblock %}
 
-{% block message_textarea %}
- {{ super() }}
+{% block top_of_form %}
 {% endblock %}
 
 {% block terms_checkbox %}
 {% endblock %}
 
+{% block message_textarea %}
+ {{ super() }}
+{% endblock %}
+
+{% block form_above_button %}
+{% endblock %}
+
 {% block button_text %}
+ <i class="fa fa-user-circle mr-2" aria-hidden="true"></i>
  Contact Me
+ <i class="fa fa-user-circle ml-2" aria-hidden="true"></i>
+{% endblock %}
+
+{% block bottom_of_form %}
 {% endblock %}
 
 {% block footer %}
