@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block jumbotron_title %}
- Free Offer
+ <u>Free</u> Offer
 {% endblock %}
 
 {% block page_title %}
@@ -30,19 +30,43 @@
 {% endblock %}
 
 {% block conversion_content %}
-<div class="col-md-9 hoverable">
- <p class="lead">
-  To learn how you can get your personalized Spiritual Portrait,
-   enter your name and email address in the form below.
+<div class="col-md-11 col-lg-10 hoverable p-3">
+ <p class="lead text-center font-weight-bold">
+  Limited Time Offer!
  </p>
- <p class="lead">
-  We will contact you as soon as we can!
+ <p class="lead text-left">
+  To receive your <u>free</u> spiritual portrait:
+ </p>
+ <ol class="list-group mb-3">
+  <li class="list-group-item">
+   <span class="badge badge-white badge-pill mr-2">
+    <span class="black-text">1</span></span>
+   <b>Take</b> the
+    <a href="https://www.seeourminds.com/quiz"
+       title="SeeOurMinds.com Quiz page"
+       class="font-weight-bold" target="_blank">
+     SeeOurMinds Quiz</a>,
+   answering at least 60 questions<sup>1</sup>
+  </li>
+  <li class="list-group-item">
+   <span class="badge badge-white badge-pill mr-2">
+    <span class="black-text">2</span></span>
+   <b>Save</b> your answers on the server
+  </li>
+  <li class="list-group-item">
+   <span class="badge badge-white badge-pill mr-2">
+    <span class="black-text">3</span></span>
+   <b>Specify</b> the email address used to save your results in the form below
+  </li>
+ </ol>
+ <p>
+  <sup>1</sup>The more questions you answer the better
  </p>
 </div><!-- .col-* -->
+
 {% endblock %}
 
 {% block conversion_image %}
- {{ super() }}
 {% endblock %}
 
 {% block top_of_form %}
