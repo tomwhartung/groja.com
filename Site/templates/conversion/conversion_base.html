@@ -12,7 +12,9 @@
      </h1>
     </div><!-- .col-* -->
    </div><!-- .row -->
-   <div class="row align-items-center justify-content-around">
+   {% block page_title %}
+   {% endblock %}
+   <div class="row align-items-center justify-content-center">
     <div class="col-md-9 hoverable">
      {% block conversion_content %}
      {% endblock %}
