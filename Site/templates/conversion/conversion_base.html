@@ -27,20 +27,24 @@
       {{ form.hidden_tag() }}
       {% block top_of_form %}
       {% endblock %}
-      <div class="md-form">
-       {{ form.name( class="form-control mb-4",
-              placeholder="Name", type="text", value=form.name.data ) }}
-      </div><!-- .md-form -->
-      <div class="md-form">
-       {{ form.email( class="form-control mb-4",
-              placeholder="Email", type="email", value=form.email.data ) }}
-      </div><!-- .md-form -->
+      {% block name_input %}
+       <div class="md-form">
+        {{ form.name( class="form-control mb-4",
+               placeholder="Name", type="text", value=form.name.data ) }}
+       </div><!-- .md-form -->
+      {% endblock %}
+      {% block email_input %}
+       <div class="md-form">
+        {{ form.email( class="form-control mb-4",
+               placeholder="Email", type="email", value=form.email.data ) }}
+       </div><!-- .md-form -->
+      {% endblock %}
       {% block terms_checkbox %}
        <div class="custom-control custom-checkbox mb-4">
         <input type="checkbox" class="custom-control-input"
                id="terms_checkbox" name="terms_checkbox">
         <label class="custom-control-label text-left" for="terms_checkbox">
-         By checking this box you confirm your consent to our
+         By checking this box you confirm you consent to our
           <b>
            <a href="/legal/terms_of_service" class="footer"
               title="Terms of Service for this site" target="_blank">
