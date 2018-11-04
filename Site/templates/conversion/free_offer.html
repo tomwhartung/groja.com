@@ -19,6 +19,7 @@
    to the</h4>
   <h2 class="h2-responsive font-weight-bold text-center mt-3">
    Artsy Visions Monthly Newsletter
+   <sup><a href="#footnotes">1</a></sup>
   </h2>
   <h4 class="h4-responsive font-weight-bold text-center">
    and</h4>
@@ -46,13 +47,8 @@
        title="SeeOurMinds.com Quiz page"
        class="font-weight-bold" target="_blank">
      SeeOurMinds Quiz</a>,
-   answering <strong><u>at least 60 questions</u></strong><br>
-   <ul class="list-group list-group-flush ml-2 mb-0 pb-0">
-    <li class="list-group-item mb-0 pt-2 pb-0">
-     <i class="fa fa-arrow-right" aria-hidden="true"></i>
-     The more questions you answer, the better the image
-    </li>
-   </ul>
+   answering <strong><u>at least 60 questions</u></strong>
+   <sup><a href="#footnotes">2</a></sup>
   </li>
   <li class="list-group-item">
    <span class="badge badge-white badge-pill mr-2">
@@ -90,7 +86,6 @@
  <p>
  </p>
 </div><!-- .col-* -->
-
 {% endblock %}
 
 {% block conversion_image %}
@@ -103,6 +98,10 @@
 {% endblock %}
 
 {% block name_input %}
+{% endblock %}
+
+{% block archetype_select %}
+ {{ super() }}
 {% endblock %}
 
 {% block email_input %}
@@ -127,9 +126,57 @@
 {% endblock %}
 
 {% block bottom_of_form %}
+{% endblock %}
+
+{% block under_form %}
+<a name="footnotes"></a>
+<div class="col-md-11 col-lg-10 hoverable p-3">
  <p class="lead text-center font-weight-bold mt-3 mb-0 p-2">
   This offer is subject to change without notice!
  </p>
+ <ul class="list-group list-group-flush mb-3">
+  <li class="list-group-item">
+   1. The Artsy Visions Monthly Newsletter is sent monthly and includes
+    <a href="https://www.SeeOurMinds.com" title="Home page of SeeOurMinds.com">
+     SeeOurMinds.com</a>,
+    <a href="https://www.ArtsyVisions.com"
+       title="ArtsyVisions.com home page" target="_blank">
+     ArtsyVisions.com</a>, and
+    <a href="http://www.Groja.com"
+       title="Groja.com home page" target="_blank">
+     Groja.com</a>.
+  </li>
+  <li class="list-group-item">
+   2. The more questions you answer, the better the image.
+  </li>
+  <li class="list-group-item">
+     Use the email address at which you want to receive the
+      portrait and newsleter
+  </li>
+  <li class="list-group-item">
+   <span class="badge badge-white badge-pill mr-2">
+    <span class="black-text">3</span></span>
+   <strong><u>Select</u></strong> the four-letter type which best conforms
+    to your results
+   <ul class="list-group list-group-flush ml-2 mb-0 pb-0">
+    <li class="list-group-item mb-0 pt-2 pb-0">
+     <i class="fa fa-arrow-right" aria-hidden="true"></i>
+     If your results show you split evenly, 50%/50%, between a pair of
+      opposite traits, you will need to pick one or the other, perhaps by
+      answering more questions or trying a different quiz
+    </li>
+   </ul>
+  </li>
+  <li class="list-group-item">
+   <span class="badge badge-white badge-pill mr-2">
+    <span class="black-text">4</span></span>
+   <strong><u>Fill in</u></strong> the email field in the form below with the
+    email address you saved your quiz results under on SeeOurMinds.com
+  </li>
+ </ul>
+ <p>
+ </p>
+</div><!-- .col-* -->
 {% endblock %}
 
 {% block footer %}
