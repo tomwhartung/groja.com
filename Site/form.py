@@ -10,7 +10,7 @@ References:
 """
 
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField
+from wtforms import StringField, SelectField, SubmitField
 from wtforms.widgets import TextArea
 from wtforms.validators import Optional, Required, Email
 
@@ -19,7 +19,13 @@ class NameEmailForm(FlaskForm):
 
     """ Define a form to get the visitor's name and email address """
 
+    four_letter_types = [
+        'ENFJ', 'ENFP', 'ENTJ', 'ENTP', 'ESFJ', 'ESFP', 'ESTJ', 'ESTP',
+        'INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ', 'ISFP', 'ISTJ', 'ISTP',
+    ]
     name = StringField('Name:', validators=[Optional()])
+    #archetype = SelectField(u'Four-letter type', choices=four_letter_types, validators = [Required()])
+    archetype = SelectField(u'Four-letter type', choices=[('cpp', 'C++'),('x','xxx')])
     email = StringField(
             'Email:',
             [Required("Share your email address so we can contact you."),
