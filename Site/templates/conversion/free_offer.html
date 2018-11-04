@@ -31,36 +31,45 @@
 
 {% block conversion_content %}
 <div class="col-md-11 col-lg-10 hoverable p-3">
- <p class="lead text-center font-weight-bold">
-  Limited Time Offer!
+ <p class="lead text-center font-weight-bold mb-3">
+  <u>Limited Time Free Offer!</u>
  </p>
  <p class="lead text-left">
   To receive your <u>free</u> spiritual portrait:
  </p>
  <ol class="list-group mb-3">
-  <li class="list-group-item">
+  <li class="list-group-item mb-0">
    <span class="badge badge-white badge-pill mr-2">
     <span class="black-text">1</span></span>
-   <b>Take</b> the
+   <strong><u>Take</u></strong> the
     <a href="https://www.seeourminds.com/quiz"
        title="SeeOurMinds.com Quiz page"
        class="font-weight-bold" target="_blank">
      SeeOurMinds Quiz</a>,
-   answering at least 60 questions<sup>1</sup>
+   answering <strong><u>at least 60 questions</u></strong><br>
+   <ul class="list-group list-group-flush ml-2">
+    <li class="list-group-item mb-0 py-0">
+     Note: the more questions you answer, the better the image!
+    </li>
+   </ul>
   </li>
   <li class="list-group-item">
    <span class="badge badge-white badge-pill mr-2">
     <span class="black-text">2</span></span>
-   <b>Save</b> your answers on the server
+   <strong><u>Save</u></strong> your answers on the server, using the email
+   address at which you want to receive the Artsy Visions Monthly Newsleter
   </li>
   <li class="list-group-item">
    <span class="badge badge-white badge-pill mr-2">
     <span class="black-text">3</span></span>
-   <b>Specify</b> the email address used to save your results in the form below
+   <strong><u>Specify</u></strong> the email address used to save your
+   results in the form below
   </li>
  </ol>
+ <p class="text-left">
+  This offer is subject to end without notice!
+ </p>
  <p>
-  <sup>1</sup>The more questions you answer the better
  </p>
 </div><!-- .col-* -->
 
@@ -70,6 +79,16 @@
 {% endblock %}
 
 {% block top_of_form %}
+<p class="lead text-center font-weight-bold">
+ <u>Requests that do not conform to the above rules will be ignored!</u>
+</p>
+{% endblock %}
+
+{% block name_input %}
+{% endblock %}
+
+{% block email_input %}
+ {{ super() }}
 {% endblock %}
 
 {% block terms_checkbox %}
@@ -77,17 +96,20 @@
 {% endblock %}
 
 {% block message_textarea %}
- {{ super() }}
 {% endblock %}
 
 {% block form_above_button %}
 {% endblock %}
 
 {% block button_text %}
- Get Your Portrait
+ Subscribe and Get Your Portrait
 {% endblock %}
 
 {% block bottom_of_form %}
+<p class="lead text-left">
+ Clicking the button subscribes you to the Artsy Visions Monthly Newsletter and
+  orders a copy of your <u>Free</u> spiritual portrait!
+</p>
 {% endblock %}
 
 {% block footer %}
