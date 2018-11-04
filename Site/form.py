@@ -20,12 +20,18 @@ class NameEmailForm(FlaskForm):
     """ Define a form to get the visitor's name and email address """
 
     four_letter_types = [
-        'ENFJ', 'ENFP', 'ENTJ', 'ENTP', 'ESFJ', 'ESFP', 'ESTJ', 'ESTP',
-        'INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ', 'ISFP', 'ISTJ', 'ISTP',
+        ('', ''),
+        ('ENFJ', 'ENFJ'), ('ENFP', 'ENFP'),
+        ('ENTJ', 'ENTJ'), ('ENTP', 'ENTP'),
+        ('ESFJ', 'ESFJ'), ('ESFP', 'ESFP'),
+        ('ESTJ', 'ESTJ'), ('ESTP', 'ESTP'),
+        ('INFJ', 'INFJ'), ('INFP', 'INFP'),
+        ('INTJ', 'INTJ'), ('INTP', 'INTP'),
+        ('ISFJ', 'ISFJ'), ('ISFP', 'ISFP'),
+        ('ISTJ', 'ISTJ'), ('ISTP', 'ISTP'),
     ]
     name = StringField('Name:', validators=[Optional()])
-    #archetype = SelectField(u'Four-letter type', choices=four_letter_types, validators = [Required()])
-    archetype = SelectField(u'Four-letter type', choices=[('cpp', 'C++'),('x','xxx')])
+    archetype = SelectField(u'Four-letter type', choices=four_letter_types, validators = [Required()])
     email = StringField(
             'Email:',
             [Required("Share your email address so we can contact you."),
