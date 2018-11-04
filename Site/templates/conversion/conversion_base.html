@@ -33,6 +33,11 @@
                placeholder="Name", type="text", value=form.name.data ) }}
        </div><!-- .md-form -->
       {% endblock %}
+      {% block archetype_select %}
+       <div class="md-form">
+        {{ form.archetype() }}
+       </div><!-- .md-form -->
+      {% endblock %}
       {% block email_input %}
        <div class="md-form">
         {{ form.email( class="form-control mb-4",
