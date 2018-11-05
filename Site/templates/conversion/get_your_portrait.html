@@ -29,18 +29,17 @@ Sale!
 {% endblock %}
 
 {% block conversion_content %}
-<div class="col-md-11 col-lg-10 hoverable p-4">
+<div class="col-md-11 col-lg-10 hoverable p-5">
  <p class="lead text-left">
   To get your portrait you must provide a 50%
    deposit<sup><a href="#footnotes"><span class="blue-text font-weight-bold">1
     </span></a></sup>
    and share your score on a quiz, such as the one at
-   <a href="https://www.seeourminds.com/quiz"
-      title="SeeOurMinds.com Quiz page"
-      class="font-weight-bold" target="_blank">
+   <a href="https://www.seeourminds.com/quiz" class="font-weight-bold"
+      title="SeeOurMinds.com Quiz page" target="_blank">
     SeeOurMinds.com/quiz</a>.
  </p>
- <p class="text-left">
+ <p class="lead text-center font-weight-bold my-3">
   Follow these steps:
  </p>
  <ol class="list-group mb-3">
@@ -60,7 +59,7 @@ Sale!
   <li class="list-group-item">
    <span class="badge badge-white badge-pill mr-2">
     <span class="black-text">2</span></span>
-   <strong><u>Pick one</u></strong> of these options:
+   <strong><u>Pick one</u></strong> of these options for sharing your score:
    <ul class="list-group list-group-flush ml-2 mb-0 pb-0">
     <li class="list-group-item mb-0 pt-2 pb-0">
      <span class="badge badge-white badge-pill mr-2">
@@ -117,8 +116,6 @@ Sale!
    <span class="badge badge-white badge-pill mr-2">
     <span class="black-text">5</span></span>
    <strong><u>Pay</u></strong> the paypal invoice we send for the 50% deposit
-    <sup><a href="#footnotes">
-     <span class="blue-text font-weight-bold">6</span></a></sup>
   </li>
  </ol>
  <p>
@@ -162,65 +159,79 @@ Sale!
 {% endblock %}
 
 {% block bottom_of_form %}
-<p class="card-text">
- Prices subject to change without notice.
-</p>
 {% endblock %}
 
 {% block under_form %}
 <a name="footnotes"></a>
 <div class="row align-items-center justify-content-around">
  <div class="col-md-11 col-lg-10 hoverable p-3">
-  <p class="lead text-center font-weight-bold mt-3 mb-0 p-2">
-   This offer is subject to change without notice!
+  <p class="lead text-center font-weight-bold my-3 p-2">
+   Prices are temporary and subject to change without notice!
   </p>
   <ul class="list-group list-group-flush mb-3">
    <li class="list-group-item">
     1. We currently accept payment via
-     <a href="https://www.paypal.com" title="Paypal home page" target="_blank">
+     <a href="https://www.paypal.com" class="font-weight-bold"
+        title="Paypal home page" target="_blank">
       paypal</a>
      only.
    </li>
    <li class="list-group-item">
     2. You <strong><u>must</u></strong> provide a percentages-based score
-       in addition to a four-letter type
+       <strong><u>in addition to</u></strong> a four-letter type
    </li>
    <li class="list-group-item">
-    3. It is unimportant whether you use the
-    <a href="https://keirsey.com/" target="_blank"
-       title="Link to the home page at keirsey.com">
-     Keirsey Temperament Sorter</a>,
+    3. Putting aside ease of processing, it is unimportant whether you use the
+     <a href="https://www.seeourminds.com/quiz" class="font-weight-bold"
+        title="SeeOurMinds.com Quiz page" target="_blank">
+      SeeOurMinds.com/quiz</a>,
+     the
+     <a href="https://keirsey.com/" class="font-weight-bold"
+        title="Link to the home page at keirsey.com" target="_blank">
+      Keirsey Temperament Sorter</a>,
+     the
+     <a href="https://www.myersbriggs.org/home.htm" class="font-weight-bold"
+        title="Link to the home page at www.myersbriggs.org" target="_blank">
+      MBTI</a>,
     the
-    <a href="https://www.myersbriggs.org/home.htm?bhcp=1" target="_blank"
-       title="Link to the home page at www.myersbriggs.org">
-     MBTI</a>,
-    the
-    <a href="http://www.humanmetrics.com/personality"
+    <a href="http://www.humanmetrics.com/personality" class="font-weight-bold"
        title="Link to the personality quiz at humanmetrics.com" target="_blank">
      quiz at humanmetrics.com</a>
      or some other questionnaire to determine your four-letter type.
-     What matters is you <strong><u>must</u></strong>
-      give us results in percentages, clearly expressed
-      so that the sum of each pair of opposites totals 100%.
-     <br>
+    <ul class="list-group list-group-flush ml-2 mb-0 pb-0">
+     <li class="list-group-item mb-0 pt-2 pb-0">
+      What matters is you <strong><u>must</u></strong>
+       give us results in percentages, clearly expressed
+       so that the sum of each pair of opposites totals 100%.
+     </li>
+     <li class="list-group-item mb-0 pt-2 pb-0">
       An example of the sort of result we require is
-       E:82%, I:18%; N:33%, S:67%; F:60%, T:40%; J:45%, P:55%.
-      <p class="font-weight-bold mb-0 pb-0">
-       If you do not provide results that meet this requirement, we will not
-        be able to process your request.
-      </p>
+       <strong>E:82%, I:18%; N:33%, S:67%; F:60%, T:40%; J:45%, P:55%.</strong>
+      <br>
+      <i class="fa fa-arrow-circle-right mr-2" aria-hidden="true"></i>
+      Note how the two percentages for each pair of opposing traits
+       add up to 100%.
+     </li>
+     <li class="list-group-item font-weight-bold mb-0 pt-2 pb-0">
+      If you do not provide results that meet this requirement, we will not
+       be able to produce your image.
+     </li>
+    </ul>
    </li>
    <li class="list-group-item">
     4. If your results show you split evenly, 50%/50%, between a pair of
-       opposing traits, you will need to pick one or the other.
+       opposing traits, you must pick one or the other.
     <ul class="list-group list-group-flush ml-2 mb-0 pb-0">
      <li class="list-group-item mb-0 pt-2 pb-0">
-      If you did not answer all 88 of the questions on
-       the SeeourMinds Quiz, try answering more of them.
+      If you did not answer all 88 of the questions on the
+      <a href="https://www.seeourminds.com/quiz" class="font-weight-bold"
+         title="SeeOurMinds.com Quiz page" target="_blank">
+       SeeOurMinds Quiz</a>,
+       try answering more of them.
      </li>
      <li class="list-group-item mb-0 pt-2 pb-0">
       Another option is to try a
-       <a href="http://www.humanmetrics.com/personality"
+       <a href="http://www.humanmetrics.com/personality" class="font-weight-bold"
           title="Link to the quiz at humanmetrics.com" target="_blank">
         different quiz</a>
        and get a second opinion.
@@ -228,12 +239,14 @@ Sale!
     </ul>
    </li>
    <li class="list-group-item">
-    5. We will send the portrait and newsleter to this address.
-    If you want us to get your results off the SeeOurMinds.com server,
-     be sure to specify the email address you saved them under.
-   </li>
-   <li class="list-group-item">
-    6.
+    5. We will send invoices and the portrait to the email address you provide.
+    <ul class="list-group list-group-flush ml-2 mb-0 pb-0">
+     <li class="list-group-item mb-0 pt-2 pb-0">
+      <i class="fa fa-arrow-circle-right mr-2" aria-hidden="true"></i>
+      If you want us to get your results off the SeeOurMinds.com server,
+       be sure to specify the email address you saved them under.
+     </li>
+    </ul>
    </li>
   </ul>
   <p>
