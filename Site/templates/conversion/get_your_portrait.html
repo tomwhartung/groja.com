@@ -1,6 +1,6 @@
 {% extends "conversion/conversion_base.html" %}
 
-{% block title %}Your Portrait - {% endblock %}
+{% block title %}Get Your Portrait - {% endblock %}
 
 {% block navbar %}
 {% endblock %}
@@ -11,16 +11,71 @@
 
 {% block page_title %}
 <div class="row align-items-center justify-content-center">
- <div class="col-md-9 hoverable mt-1 mb-2 pt-1 pb-2">
+ <div class="col-md-9 hoverable mt-1 mb-2 px-5 pt-2 pb-3">
   <h2 class="h2-responsive font-weight-bold text-center mt-3">
    Get Your Spiritual Portrait
   </h2>
+  <p class="lead text-left">
+   Getting your portrait requires you provide a 50% deposit and share your
+    score on a quiz, such as the one at
+    <a href="https://www.seeourminds.com/quiz"
+       title="SeeOurMinds.com Quiz page"
+       class="font-weight-bold" target="_blank">
+     SeeOurMinds.com/quiz</a>.
+  </p>
  </div><!-- .col-* -->
 </div><!-- .row -->
 {% endblock %}
 
 {% block conversion_content %}
-
+<div class="col-md-11 col-lg-10 hoverable p-3">
+ <p class="lead text-left">
+  To get your spiritual portrait, follow these steps:
+ </p>
+ <ol class="list-group mb-3">
+  <li class="list-group-item mb-0">
+   <span class="badge badge-white badge-pill mr-2">
+    <span class="black-text">1</span></span>
+   <strong><u>Answer</u></strong> a questionnaire &mdash; such the
+    <a href="https://www.seeourminds.com/quiz"
+       title="SeeOurMinds.com Quiz page"
+       class="font-weight-bold" target="_blank">
+     SeeOurMinds Quiz</a>
+    &mdash; that gives you your four-letter type
+    <strong><u>in percentages</u></strong>
+   <ul class="list-group list-group-flush ml-2 mb-0 pb-0">
+    <li class="list-group-item mb-0 pt-2 pb-0">
+     You must provide a score in addition to a four-letter type
+     <sup><a href="#footnotes">
+      <span class="blue-text font-weight-bold">1</span></a></sup>
+    </li>
+   </ul>
+  </li>
+  <li class="list-group-item">
+   <span class="badge badge-white badge-pill mr-2">
+    <span class="black-text">2</span></span>
+   <strong><u>Save</u></strong> your answers on the server
+   <sup><a href="#footnotes">
+    <span class="blue-text font-weight-bold">2</span></a></sup>
+  </li>
+  <li class="list-group-item">
+   <span class="badge badge-white badge-pill mr-2">
+    <span class="black-text">3</span></span>
+   <strong><u>Select</u></strong> the four-letter type which best conforms
+    to your results
+    <sup><a href="#footnotes">
+     <span class="blue-text font-weight-bold">3</span></a></sup>
+  </li>
+  <li class="list-group-item">
+   <span class="badge badge-white badge-pill mr-2">
+    <span class="black-text">4</span></span>
+   <strong><u>Fill in</u></strong> the email field in the form below with the
+    email address you saved your quiz results under on SeeOurMinds.com
+  </li>
+ </ol>
+ <p>
+ </p>
+</div><!-- .col-* -->
 {% endblock %}
 
 {% block conversion_image %}
@@ -42,7 +97,6 @@
 {% endblock %}
 
 {% block terms_checkbox %}
- {{ super() }}
 {% endblock %}
 
 {% block message_textarea %}
@@ -63,6 +117,46 @@
 {% endblock %}
 
 {% block under_form %}
+<a name="footnotes"></a>
+<div class="row align-items-center justify-content-around">
+ <div class="col-md-11 col-lg-10 hoverable p-3">
+  <p class="lead text-center font-weight-bold mt-3 mb-0 p-2">
+   This offer is subject to change without notice!
+  </p>
+  <ul class="list-group list-group-flush mb-3">
+   <li class="list-group-item">
+    1. The more questions you answer, the better the image.
+   </li>
+   <li class="list-group-item">
+    2. We will send the portrait and newsleter to this address.
+   </li>
+   <li class="list-group-item">
+    3. If your results show you split evenly, 50%/50%, between a pair of
+       opposing traits, you will need to pick one or the other.
+    If possible, try answering more questions on the SeeourMinds Quiz,
+     or consider trying a
+     <a href="http://www.humanmetrics.com/personality"
+        title="Link to the quiz at humanmetrics.com" target="_blank">
+      different quiz</a>
+     to get a second opinion.
+   </li>
+   <li class="list-group-item">
+    4. The Artsy Visions Monthly Newsletter is sent monthly and includes
+     updates for
+     <a href="https://www.SeeOurMinds.com" title="Home page of SeeOurMinds.com">
+      SeeOurMinds.com</a>,
+     <a href="https://www.ArtsyVisions.com"
+        title="ArtsyVisions.com home page" target="_blank">
+      ArtsyVisions.com</a>, and
+     <a href="http://www.Groja.com"
+        title="Groja.com home page" target="_blank">
+      Groja.com</a>.
+   </li>
+  </ul>
+  <p>
+  </p>
+ </div><!-- .col-* -->
+</div><!-- .row -->
 {% endblock %}
 
 {% block footer %}
