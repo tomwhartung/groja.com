@@ -31,7 +31,10 @@ class NameEmailForm(FlaskForm):
         ('ISTJ', 'ISTJ'), ('ISTP', 'ISTP'),
     ]
     name = StringField('Name:', validators=[Optional()])
-    archetype = SelectField(u'Four-letter type', choices=four_letter_types, validators = [Required()])
+    archetype = SelectField(
+        'Four-letter type',
+        choices=four_letter_types,
+        validators = [Required()] )
     email = StringField(
             'Email:',
             [Required("Share your email address so we can contact you."),
