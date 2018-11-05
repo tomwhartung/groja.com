@@ -80,14 +80,17 @@ def conversion(interest):
 
     if request.method == 'POST':
         name = form.name.data
+        archetype = form.archetype.data
         email = form.email.data
         message = form.message.data
         #print("In conversion, name: ", name, "email: ", email)
+        print("In conversion, archetype:", "'" + archetype + "'")
         #print("In conversion, message:", "'" + message + "'")
 
         if form.validate():
             # session variables are used in the thanks page function
             session['name'] = name
+            session['archetype'] = archetype
             session['email'] = email
             session['message'] = message
             session['interest'] = interest
@@ -128,8 +131,8 @@ def conversion(interest):
         template_name = 'conversion/avmn.html'
     elif interest == 'free_offer':
         template_name = 'conversion/free_offer.html'
-    elif interest == 'portrait':
-        template_name = 'conversion/portrait.html'
+    elif interest == 'get_your_portrait':
+        template_name = 'conversion/get_your_portrait.html'
     elif interest == 'seeourminds':
         template_name = 'conversion/seeourminds.html'
     elif interest == 'tomwhartung':
@@ -169,8 +172,8 @@ def thanks(test_interest = ''):
     elif interest == 'free_offer':
         template_name = 'thanks/free_offer.html'
         interest_text = 'joining the seeourminds email list'
-    elif interest == 'portrait':
-        template_name = 'thanks/portrait.html'
+    elif interest == 'get_your_portrait':
+        template_name = 'thanks/get_your_portrait.html'
         interest_text = 'buying a spiritual portrait'
     elif interest == 'seeourminds':
         template_name = 'thanks/seeourminds.html'
