@@ -78,7 +78,7 @@
    </dl>
   </li>
   <li class="list-group-item">
-   <strong><u>Unsubscribe at any time</u></strong> by following the instructions
+   Unsubscribe at any time by following the instructions
     at the bottom of the most recently received email
   </li>
  </ul>
@@ -94,6 +94,17 @@
 <p class="lead text-center font-weight-bold">
  Subscribe here!
 </p>
+{% endblock %}
+
+{% block name_input %}
+ {{ super() }}
+{% endblock %}
+
+{% block archetype_select %}
+{% endblock %}
+
+{% block email_input %}
+ {{ super() }}
 {% endblock %}
 
 {% block terms_checkbox %}
@@ -115,6 +126,9 @@
 {% endblock %}
 
 {% block bottom_of_form %}
+{% endblock %}
+
+{% block under_form %}
 {% endblock %}
 
 {% block footer %}
