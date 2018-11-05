@@ -21,7 +21,7 @@
     {% endblock %}
    </div><!-- .row -->
    <div class="row align-items-center justify-content-around">
-    <div class="col-sm-10">
+    <div class="col-sm-12 col-md-11 col-lg-10">
      <form class="text-center border border-light hoverable m-2 p-5"
            action="" method="post" role="form">
       {{ form.hidden_tag() }}
@@ -34,9 +34,14 @@
        </div><!-- .md-form -->
       {% endblock %}
       {% block archetype_select %}
-       <div class="md-form">
-        {{ form.archetype() }}
-       </div><!-- .md-form -->
+       <div class="row align-content-center justify-content-start">
+        <div class="col-sm-6 col-md-4 text-left">
+         <label for="archetype">Four-letter Type:</label>
+         <div class="md-form text-left m-0 p-0">
+          {{ form.archetype( class="browser-default custom-select") }}
+         </div><!-- .md-form -->
+        </div><!-- .col-* -->
+       </div><!-- .row -->
       {% endblock %}
       {% block email_input %}
        <div class="md-form">
@@ -81,7 +86,11 @@
       {% block bottom_of_form %}
       {% endblock %}
      </form>
-    </div><!-- .col-sm-10 -->
+    </div><!-- .col-* -->
+   </div><!-- .row -->
+   <div class="row align-items-center justify-content-around">
+    {% block under_form %}
+    {% endblock %}
    </div><!-- .row -->
   </div><!-- .container -->
  </div><!-- .jumbotron -->
