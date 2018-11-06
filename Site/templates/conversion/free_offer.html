@@ -30,13 +30,18 @@
 </div><!-- .row -->
 {% endblock %}
 
+{% block form_errors_top %}
+ {{ super() }}
+{% endblock %}
+
 {% block conversion_content %}
 <div class="col-md-11 col-lg-10 hoverable px-5 py-3">
  <h3 class="h3-responsive text-center font-weight-bold mb-3">
   <u>Limited Time Offer!</u>
  </h3>
  <p class="lead text-left">
-  To receive your <u>free</u> spiritual portrait, follow these steps:
+  To receive your <u>free</u> spiritual portrait,
+   <span class="font-weight-bold">follow these steps:</span>
  </p>
  <ol class="list-group mb-3">
   <li class="list-group-item mb-0">
@@ -87,6 +92,10 @@
 {% block top_of_form %}
 {% endblock %}
 
+{% block form_errors_form %}
+ {{ super() }}
+{% endblock %}
+
 {% block name_input %}
 {% endblock %}
 
@@ -105,6 +114,9 @@
 {% endblock %}
 
 {% block form_above_button %}
+ <p class="text-left red-text">
+  <small>&ast;&nbsp;All fields are required.</small>
+ </p>
  <p class="lead z-depth-1 text-center mt-3 mb-4 p-2">
   Clicking the button subscribes you to the Artsy Visions Monthly
    Newsletter<sup><a href="#footnotes"><span class="blue-text font-weight-bold">4
