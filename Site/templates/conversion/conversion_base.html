@@ -25,7 +25,7 @@
         {% for key, value in conv_form.errors.items() %}
          {% for err_msg in value %}
           <li class="list-group-item font-weight-bold text-danger">
-           <i class="fa fa-arrow-right" aria-hidden="true"></i>
+           <i class="fa fa-arrow-right mr-2" aria-hidden="true"></i>
            {{ err_msg }}
           </li>
          {% endfor %}
@@ -54,11 +54,11 @@
          {% for key, value in conv_form.errors.items() %}
           {% for err_msg in value %}
            <li class="list-group-item text-danger">
-            <i class="fa fa-asterisk" aria-hidden="true"></i>
+            <i class="fa fa-asterisk mr-2" aria-hidden="true"></i>
             <span class="font-weight-bold">
              <u>{{ err_msg }}</u>
             </span>
-            <i class="fa fa-asterisk" aria-hidden="true"></i>
+            <i class="fa fa-asterisk ml-2" aria-hidden="true"></i>
            </li>
           {% endfor %}
          {% endfor %}
@@ -108,7 +108,7 @@
       {% block message_textarea %}
        <div class="md-form">
         {{ conv_form.message( class="form-control rounded-0 mb-4",
-               placeholder="Optionally Add a Message", type="textarea", rows="5",
+               placeholder="Message", type="textarea", rows="5",
                value=conv_form.message.data ) }}
        </div><!-- .md-form -->
       {% endblock %}
