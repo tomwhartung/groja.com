@@ -33,6 +33,40 @@ class SubscribeForm(FlaskForm):
         self.process(blankData)
 
 
+class FreeOfferForm(FlaskForm):
+
+    """ Form to get the visitor's four-letter type and email address """
+
+    four_letter_types = [
+        ('', ''),
+        ('ENFJ', 'ENFJ'), ('ENFP', 'ENFP'),
+        ('ENTJ', 'ENTJ'), ('ENTP', 'ENTP'),
+        ('ESFJ', 'ESFJ'), ('ESFP', 'ESFP'),
+        ('ESTJ', 'ESTJ'), ('ESTP', 'ESTP'),
+        ('INFJ', 'INFJ'), ('INFP', 'INFP'),
+        ('INTJ', 'INTJ'), ('INTP', 'INTP'),
+        ('ISFJ', 'ISFJ'), ('ISFP', 'ISFP'),
+        ('ISTJ', 'ISTJ'), ('ISTP', 'ISTP'),
+    ]
+
+    missing_arch_msg = 'Select a four-letter type from the drop-down list'
+    archetype = SelectField(
+        'Four-letter type',
+        choices=four_letter_types,
+        validators = [Required(missing_arch_msg)] )
+    email = StringField(
+            'Email:',
+            [Required("Share your email address so we can contact you."),
+                Email("Please enter a valid email address.")]
+    )
+    submit = SubmitField('Submit Form')
+
+    def reset(self):
+        """ Reset the form """
+        blankData = MultiDict([('csrf', self.reset_csrf())])
+        self.process(blankData)
+
+
 class NameEmailForm(FlaskForm):
 
     """ *** DEPRECATED *** """
