@@ -79,30 +79,30 @@ def conversion(interest):
 
     if interest == 'avmn':
         from form import SubscribeForm
-        form = SubscribeForm(request.form)
+        conv_form = SubscribeForm(request.form)
     elif interest == 'free_offer':
-        form = NameEmailForm(request.form)
+        conv_form = NameEmailForm(request.form)
     elif interest == 'get_your_portrait':
-        form = NameEmailForm(request.form)
+        conv_form = NameEmailForm(request.form)
     elif interest == 'seeourminds':
         from form import SubscribeForm
-        form = SubscribeForm(request.form)
+        conv_form = SubscribeForm(request.form)
     elif interest == 'tomwhartung':
-        form = NameEmailForm(request.form)
+        conv_form = NameEmailForm(request.form)
     else:
         abort(404)
 
 
     if request.method == 'POST':
-        name = form.name.data
-        archetype = form.archetype.data
-        email = form.email.data
-        message = form.message.data
+        name = conv_form.name.data
+        archetype = conv_form.archetype.data
+        email = conv_form.email.data
+        message = conv_form.message.data
         print("In conversion, name: ", name, "email: ", email)
         print("In conversion, archetype:", "'" + archetype + "'")
         print("In conversion, message:", "'" + message + "'")
 
-        if form.validate():
+        if conv_form.validate():
             # session variables are used in the thanks page function
             session['name'] = name
             session['archetype'] = archetype
@@ -131,16 +131,16 @@ def conversion(interest):
             flash('Thanks, we will be in touch with you soon!')
             return redirect(thanks_page_url)
         else:
-            print("form.errors:", form.errors)
+            print("conv_form.errors:", conv_form.errors)
             #
             # key = 'email', values = [] (list of error messages)
             #
-            for key, value in form.errors.items():
+            for key, value in conv_form.errors.items():
                 for err_msg in value:
                     flash(err_msg)
     else:
-        form.name.data = ''
-        form.email.data = ''
+        conv_form.name.data = ''
+        conv_form.email.data = ''
 
     if interest == 'avmn':
         template_name = 'conversion/avmn.html'
@@ -155,7 +155,7 @@ def conversion(interest):
     else:
         abort(404)
 
-    return render_template(template_name, form=form)
+    return render_template(template_name, conv_form=conv_form)
 
 
 @app.route("/thanks")
