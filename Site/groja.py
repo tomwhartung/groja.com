@@ -130,7 +130,7 @@ def conversion(interest):
                 update_or_insert_name_email(
                     name, email, newsletter=1, portrait=1)
                 thanks_page_url = url_for('thanks')
-            elif interest == 'portrait':
+            elif interest == 'get_your_portrait':
                 update_or_insert_name_email(name, email, portrait=1)
                 thanks_page_url = url_for('thanks')
             elif interest == 'seeourminds':
