@@ -24,13 +24,13 @@
     <div class="col-sm-12 col-md-11 col-lg-10">
      <form class="text-center border border-light hoverable m-2 p-5"
            action="" method="post" role="form">
-      {{ form.hidden_tag() }}
+      {{ conv_form.hidden_tag() }}
       {% block top_of_form %}
       {% endblock %}
       {% block name_input %}
        <div class="md-form">
-        {{ form.name( class="form-control mb-4",
-               placeholder="Name", type="text", value=form.name.data ) }}
+        {{ conv_form.name( class="form-control mb-4",
+               placeholder="Name", type="text", value=conv_form.name.data ) }}
        </div><!-- .md-form -->
       {% endblock %}
       {% block archetype_select %}
@@ -38,15 +38,15 @@
         <div class="col-sm-6 col-md-4 text-left">
          <label for="archetype">Four-letter Type:</label>
          <div class="md-form text-left m-0 p-0">
-          {{ form.archetype( class="browser-default custom-select") }}
+          {{ conv_form.archetype( class="browser-default custom-select") }}
          </div><!-- .md-form -->
         </div><!-- .col-* -->
        </div><!-- .row -->
       {% endblock %}
       {% block email_input %}
        <div class="md-form">
-        {{ form.email( class="form-control mb-4",
-               placeholder="Email", type="email", value=form.email.data ) }}
+        {{ conv_form.email( class="form-control mb-4",
+               placeholder="Email", type="email", value=conv_form.email.data ) }}
        </div><!-- .md-form -->
       {% endblock %}
       {% block terms_checkbox %}
@@ -69,9 +69,9 @@
       {% endblock %}
       {% block message_textarea %}
        <div class="md-form">
-        {{ form.message( class="form-control rounded-0 mb-4",
+        {{ conv_form.message( class="form-control rounded-0 mb-4",
                placeholder="Optionally Add a Message", type="textarea", rows="5",
-               value=form.message.data ) }}
+               value=conv_form.message.data ) }}
        </div><!-- .md-form -->
       {% endblock %}
       {% block form_above_button %}
