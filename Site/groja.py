@@ -180,6 +180,7 @@ def thanks(test_interest = ''):
     """
 
     name = session.get('name')
+    archetype = session.get('archetype')
     email = session.get('email')
     message = session.get('message')
 
@@ -194,19 +195,19 @@ def thanks(test_interest = ''):
     interest_text = ""
     if interest == 'avmn':
         template_name = 'thanks/avmn.html'
-        interest_text = 'joining the Artsy Visions Monthly Newsletter list'
+        interest_text = 'Receiving the Artsy Visions Monthly Newsletter (avmn)'
     elif interest == 'free_offer':
         template_name = 'thanks/free_offer.html'
-        interest_text = 'joining the seeourminds email list'
+        interest_text = 'Getting a free spiritual portrait'
     elif interest == 'get_your_portrait':
         template_name = 'thanks/get_your_portrait.html'
-        interest_text = 'buying a spiritual portrait'
+        interest_text = 'Buying a spiritual portrait'
     elif interest == 'seeourminds':
         template_name = 'thanks/seeourminds.html'
-        interest_text = 'joining the Artsy Visions Monthly Newsletter list'
+        interest_text = 'Receiving the Artsy Visions Monthly Newsletter (seeourminds)'
     elif interest == 'tomwhartung':
         template_name = 'thanks/tomwhartung.html'
-        interest_text = 'getting me to do some consulting work'
+        interest_text = 'Hiring me as a consultant'
     else:
         abort(404)
 
@@ -216,9 +217,12 @@ def thanks(test_interest = ''):
     #print("In thanks, test_interest:", "'" + test_interest + "'")
     #print("In thanks, interest_text:", "'" + interest_text + "'")
 
-    interest_email = name + ' (' + email + ') ' \
-        + 'has expressed an interest in ' + interest_text + '!' + "\n" + "\n" \
-        + "Message:\n" + message + "\n" + '-- ' + "\n" \
+    interest_email = 'Conversion completed on groja.com!' + "\n\n" \
+        + 'interest_text: "' + interest_text + "\"\n" \
+        + 'name: "' + name  + "\"\n" \
+        + 'email: "' + email + "\"\n" \
+        + 'archetype: "' + archetype + "\"\n" \
+        + "Message:\n\"" + message + "\"\n-- \n" \
         + 'Sent by method thanks() in program groja.py on website groja.com .'
     send_interest_email(interest_email)
 
