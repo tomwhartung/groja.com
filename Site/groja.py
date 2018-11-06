@@ -75,29 +75,42 @@ def conversion(interest):
 
     """ Display and process conversion pages that contain a form """
 
-    from form import NameEmailForm
-
     if interest == 'avmn':
         from form import SubscribeForm
         conv_form = SubscribeForm(request.form)
     elif interest == 'free_offer':
-        conv_form = NameEmailForm(request.form)
+        from form import FreeOfferForm
+        conv_form = FreeOfferForm(request.form)
     elif interest == 'get_your_portrait':
+        from form import NameEmailForm
         conv_form = NameEmailForm(request.form)
     elif interest == 'seeourminds':
         from form import SubscribeForm
         conv_form = SubscribeForm(request.form)
     elif interest == 'tomwhartung':
+        from form import NameEmailForm
         conv_form = NameEmailForm(request.form)
     else:
         abort(404)
 
-
     if request.method == 'POST':
-        name = conv_form.name.data
-        archetype = conv_form.archetype.data
-        email = conv_form.email.data
-        message = conv_form.message.data
+        try:
+            name = conv_form.name.data
+        except AttributeError:
+            name = ''
+        try:
+            archetype = conv_form.archetype.data
+        except AttributeError:
+            archetype = ''
+        try:
+            email = conv_form.email.data
+        except AttributeError:
+            email = ''
+        try:
+            message = conv_form.message.data
+        except AttributeError:
+            message = ''
+
         print("In conversion, name: ", name, "email: ", email)
         print("In conversion, archetype:", "'" + archetype + "'")
         print("In conversion, message:", "'" + message + "'")
@@ -139,8 +152,14 @@ def conversion(interest):
                 for err_msg in value:
                     flash(err_msg)
     else:
-        conv_form.name.data = ''
-        conv_form.email.data = ''
+        try:
+            conv_form.name.data = ''
+        except AttributeError:
+            pass
+        try:
+            conv_form.email.data = ''
+        except AttributeError:
+            pass
 
     if interest == 'avmn':
         template_name = 'conversion/avmn.html'
