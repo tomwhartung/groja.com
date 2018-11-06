@@ -1,22 +1,34 @@
 {% extends "thanks/thanks_base.html" %}
 
-{% block title %}Thanks {% endblock %}
+{% block title %}Thank You for Your Purchase - {% endblock %}
 
 {% block thanks_content %}
- I will contact you as soon as I can!
+ <p class="lead text-center font-weight-bold my-4">
+  Thank You for Your Purchase!
+ </p>
+ <ul class="list-group list-group-flush mb-3">
+  <li class="list-group-item">
+   We will send you an invoice for the 50% down payment as soon as we get
+    a chance
+  </li>
+ </ul>
+ <p class="lead text-center my-4">
+  <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
+  Once we receive the down payment, we will create and send your
+   spiritual portrait <u>within a week</u>
+ </p>
 {% endblock %}
 
 {% block conversion_process %}
+<div class="row align-items-center justify-content-center">
+ <div class="col-sm-10">
   <div class="card hoverable m-2">
     <div class="card-body">
-      <h2 class="card-title h2-responsive font-weight-bold">What to Expect</h2>
+      <h2 class="card-title h2-responsive font-weight-bold text-center">
+       What to Expect</h2>
       <ol class="list-group">
         <li class="list-group-item">
-          <span class="step-title">Contact us &mdash;</span>
-          using one of the methods on this page</li>
-        <li class="list-group-item">
-          <span class="step-title">Share your score &mdash;</span>
-          if you don't already have your score, we discuss alternatives for getting it</li>
+        </li>
         <li class="list-group-item">
           <span class="step-title">Portrait creation &mdash;</span>
           we use the score to create your Spiritual Portrait</li>
@@ -32,4 +44,6 @@
       </ol>
     </div><!-- .card-body -->
   </div><!-- .card -->
+ </div><!-- .col-sm-10 -->
+</div><!-- .row -->
 {% endblock %}
