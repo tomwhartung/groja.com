@@ -28,6 +28,10 @@ Sale!
 </div><!-- .row -->
 {% endblock %}
 
+{% block form_errors_top %}
+ {{ super() }}
+{% endblock %}
+
 {% block conversion_content %}
 <div class="col-md-11 col-lg-10 hoverable p-5">
  <p class="lead text-left">
@@ -77,7 +81,7 @@ Sale!
      <span class="badge badge-white badge-pill mr-2">
       <span class="black-text">B</span></span>
       <strong><u>Easiest for us:</u></strong>
-      Copy and paste your score on the
+      Copy and paste your results on the
        <a href="https://www.seeourminds.com/quiz"
           title="SeeOurMinds.com Quiz page"
           class="font-weight-bold" target="_blank">
@@ -88,7 +92,7 @@ Sale!
      <span class="badge badge-white badge-pill mr-2">
       <span class="black-text">C</span></span>
      <strong><u>Using 3rd-party results:</u></strong>
-     Type the
+     Enter the
       <strong><u>percentages-based
         results</u></strong><sup><a href="#footnotes"><span class="blue-text font-weight-bold">2</span></a></sup>
       of a third-party questionnaire
@@ -132,6 +136,10 @@ Sale!
 {% block top_of_form %}
 {% endblock %}
 
+{% block form_errors_form %}
+ {{ super() }}
+{% endblock %}
+
 {% block name_input %}
  {{ super() }}
 {% endblock %}
@@ -155,7 +163,9 @@ Sale!
 {% endblock %}
 
 {% block button_text %}
+ <i class="fa fa-user-circle-o mr-2" aria-hidden="true"></i>
  Get Your Portrait
+ <i class="fa fa-user-circle ml-2" aria-hidden="true"></i>
 {% endblock %}
 
 {% block bottom_of_form %}
@@ -262,7 +272,8 @@ Sale!
         class="font-weight-bold" target="_blank"
         title='Link to a gallery page on SeeOurMinds.com containing spiritual portraits of Tom H.'>
       all</a>
-     of the Jungian Typology tests you can find!
+     of the Jungian Typology tests you can find &mdash; at least until you get
+     consistent results or you understand why the results are inconsistent.
    </li>
   </ul>
   <p>
