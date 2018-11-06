@@ -10,7 +10,7 @@ Reference:
 
 from groja_config import *
 from flask import abort
-from flask import Flask, flash
+from flask import Flask
 from flask import redirect, render_template, request, session, url_for
 from flask_bootstrap import Bootstrap
 from db_access import update_or_insert_name_email
@@ -111,7 +111,8 @@ def conversion(interest):
         except AttributeError:
             message = ''
 
-        print("In conversion, name: ", name, "email: ", email)
+        print("In conversion, name: ", name)
+        print("In conversion, email: ", email)
         print("In conversion, archetype:", "'" + archetype + "'")
         print("In conversion, message:", "'" + message + "'")
 
@@ -141,16 +142,7 @@ def conversion(interest):
             else:
                 update_or_insert_name_email(name, email)
                 thanks_page_url = url_for('home')
-            flash('Thanks, we will be in touch with you soon!')
             return redirect(thanks_page_url)
-        else:
-            print("conv_form.errors:", conv_form.errors)
-            #
-            # key = 'email', values = [] (list of error messages)
-            #
-            for key, value in conv_form.errors.items():
-                for err_msg in value:
-                    flash(err_msg)
     else:
         try:
             conv_form.name.data = ''
