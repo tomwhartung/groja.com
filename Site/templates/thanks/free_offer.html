@@ -1,35 +1,52 @@
 {% extends "thanks/thanks_base.html" %}
 
-{% block title %}Thanks {% endblock %}
+{% block title %}Thanks for your interest - {% endblock %}
+
+{% block navbar %}
+{% endblock %}
 
 {% block thanks_content %}
- I will contact you as soon as I can!
+ <p class="lead text-center my-4">
+  We send our newsletter once a month.
+ </p>
 {% endblock %}
 
 {% block conversion_process %}
+<div class="row align-items-center justify-content-center">
+ <div class="col-sm-10">
   <div class="card hoverable m-2">
-    <div class="card-body">
-      <h2 class="card-title h2-responsive font-weight-bold">What to Expect</h2>
-      <ol class="list-group">
-        <li class="list-group-item">
-          <span class="step-title">Contact us &mdash;</span>
-          using one of the methods on this page</li>
-        <li class="list-group-item">
-          <span class="step-title">Share your score &mdash;</span>
-          if you don't already have your score, we discuss alternatives for getting it</li>
-        <li class="list-group-item">
-          <span class="step-title">Portrait creation &mdash;</span>
-          we use the score to create your Spiritual Portrait</li>
-        <li class="list-group-item">
-          <span class="step-title">Preliminary portrait &mdash;</span>
-          we deliver a small, water-marked version of your portrait, for your approval</li>
-        <li class="list-group-item">
-          <span class="step-title">Invoicing and payment &mdash;</span>
-          when you are happy with the portrait, we send an invoice and appreciate your prompt payment</li>
-        <li class="list-group-item">
-          <span class="step-title">Final delivery &mdash;</span>
-          when we receive your payment, we send a full-size, non-water-marked version of your portrait</li>
-      </ol>
-    </div><!-- .card-body -->
+   <div class="card-body">
+    <h2 class="card-title h2-responsive font-weight-bold text-center">
+     What to Expect</h2>
+    <ul class="list-group mb-3">
+     <li class="list-group-item">
+      We will send you updates about
+       new posts to
+       <a href="https://www.ArtsyVisions.com" title="ArtsyVisions.com home page">
+        ArtsyVisions.com</a>
+       and
+       <a href="https://www.seeourminds.com" title="SeeOurMinds.com home page">
+        SeeOurMinds.com</a>,
+       and let you know about any special offers on
+       <a href="https://www.Groja.com" title="Groja.com home page">
+        Groja.com</a>
+       &mdash; once a month at most.
+     </li>
+    </ul>
+    <p class="lead font-weight-bold text-center m-4">
+     If you saved your answers to at least 60 questions to the SeeOurMinds Quiz
+      on the server under the email provided, you will receive your
+      <u>free</u> spiritual portrait <u>within a week</u>!
+    </p>
+   </div><!-- .card-body -->
   </div><!-- .card -->
+ </div><!-- .col-sm-10 -->
+</div><!-- .row -->
+{% endblock %}
+
+{% block thanks_buttons %}
+ {{ super() }}
+ <a class="btn btn-primary btn-rounded" href="http://www.SeeOurMinds.com"
+    title="SeeOurMinds.com home page" role="button">
+  Visit SeeOurMinds.com</a>
 {% endblock %}
