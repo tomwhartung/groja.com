@@ -82,14 +82,14 @@ def conversion(interest):
         from form import FreeOfferForm
         conv_form = FreeOfferForm(request.form)
     elif interest == 'get_your_portrait':
-        from form import NameEmailForm
-        conv_form = NameEmailForm(request.form)
+        from form import GetYourPortraitForm
+        conv_form = GetYourPortraitForm(request.form)
     elif interest == 'seeourminds':
         from form import SubscribeForm
         conv_form = SubscribeForm(request.form)
     elif interest == 'tomwhartung':
-        from form import NameEmailForm
-        conv_form = NameEmailForm(request.form)
+        from form import NameEmailMessageForm
+        conv_form = NameEmailMessageForm(request.form)
     else:
         abort(404)
 
