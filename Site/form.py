@@ -29,8 +29,9 @@ FOUR_LETTER_TYPES = [
 
 NAME_MISSING_MSG = 'Please share your name or nickname with us'
 EMAIL_MISSING_MSG = 'Please share your email address, so we can contact you'
-EMAIL_INVALID_MSG="You must enter a valid email address"
+EMAIL_INVALID_MSG = 'You must enter a valid email address'
 ARCHETYPE_MISSING_MSG = 'Select a four-letter type from the drop-down list'
+MESSAGE_MISSING_MSG = 'Include a short message about what is on your mind'
 
 
 class SubscribeForm(FlaskForm):
@@ -39,8 +40,8 @@ class SubscribeForm(FlaskForm):
 
     name = StringField('Name:', validators=[Required(NAME_MISSING_MSG)])
     email = StringField(
-            'Email:',
-            [Required(EMAIL_MISSING_MSG), Email(EMAIL_INVALID_MSG)]
+        'Email:',
+        [Required(EMAIL_MISSING_MSG), Email(EMAIL_INVALID_MSG)]
     )
     submit = SubmitField('Submit Form')
 
@@ -59,9 +60,8 @@ class FreeOfferForm(FlaskForm):
         choices=FOUR_LETTER_TYPES,
         validators=[Required(ARCHETYPE_MISSING_MSG)] )
     email = StringField(
-            'Email:',
-            [Required("Share your email address so we can contact you."),
-                Email("Please enter a valid email address.")]
+        'Email:',
+        [Required(EMAIL_MISSING_MSG), Email(EMAIL_INVALID_MSG)]
     )
     submit = SubmitField('Submit Form')
 
@@ -73,17 +73,16 @@ class FreeOfferForm(FlaskForm):
 
 class GetYourPortraitForm(FlaskForm):
 
-    """ Define a form to get the visitor's name and email address """
+    """ Get the visitor's name, archetype, email, and optional message """
 
-    name = StringField('Name:', validators=[Optional()])
+    name = StringField('Name:', validators=[Required(NAME_MISSING_MSG)])
     archetype = SelectField(
         'Four-letter type',
         choices=FOUR_LETTER_TYPES,
         validators=[Required(ARCHETYPE_MISSING_MSG)] )
     email = StringField(
-            'Email:',
-            [Required("Share your email address so we can contact you."),
-                Email("Please enter a valid email address.")]
+        'Email:',
+        [Required(EMAIL_MISSING_MSG), Email(EMAIL_INVALID_MSG)]
     )
     message = StringField(u'Text', widget=TextArea(), validators=[Optional()])
     submit = SubmitField('Submit Form')
@@ -96,15 +95,18 @@ class GetYourPortraitForm(FlaskForm):
 
 class NameEmailMessageForm(FlaskForm):
 
-    """ Form to get the visitor's name, email address, and optional message """
+    """ Form to get the visitor's name, email address, and required message """
 
-    name = StringField('Name:', validators=[Optional()])
+    name = StringField('Name:', validators=[Required(NAME_MISSING_MSG)])
     email = StringField(
-            'Email:',
-            [Required("Share your email address so we can contact you."),
-                Email("Please enter a valid email address.")]
+        'Email:',
+        [Required(EMAIL_MISSING_MSG), Email(EMAIL_INVALID_MSG)]
     )
-    message = StringField(u'Text', widget=TextArea(), validators=[Optional()])
+    message = StringField(
+        u'Text',
+        widget=TextArea(),
+        validators=[Required(MESSAGE_MISSING_MSG)]
+    )
     submit = SubmitField('Submit Form')
 
     def reset(self):
