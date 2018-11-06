@@ -20,6 +20,10 @@
 </div><!-- .row -->
 {% endblock %}
 
+{% block form_errors_top %}
+ {{ super() }}
+{% endblock %}
+
 {% block conversion_content %}
 <div class="col-md-9 hoverable pt-3">
  <p class="lead text-center font-weight-bold">
@@ -42,6 +46,10 @@
 {% block top_of_form %}
 {% endblock %}
 
+{% block form_errors_form %}
+ {{ super() }}
+{% endblock %}
+
 {% block name_input %}
  {{ super() }}
 {% endblock %}
@@ -61,6 +69,9 @@
 {% endblock %}
 
 {% block form_above_button %}
+ <p class="text-left red-text">
+  <small>&ast;&nbsp;All fields are required.</small>
+ </p>
 {% endblock %}
 
 {% block button_text %}
