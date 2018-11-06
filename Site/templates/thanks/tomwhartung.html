@@ -1,26 +1,33 @@
 {% extends "thanks/thanks_base.html" %}
 
-{% block title %}Thanks {% endblock %}
+{% block title %}Thank you for contacting me - {% endblock %}
 
 {% block navbar %}
 {% endblock %}
 
 {% block thanks_content %}
- I will contact you soon!
+ <p class="lead text-center my-4">
+  I will contact you soon!
+ </p>
 {% endblock %}
 
 {% block conversion_process %}
- <div class="card hoverable m-2">
-  <div class="card-body">
-    <h2 class="card-title h2-responsive font-weight-bold">What to Expect</h2>
+<div class="row align-items-center justify-content-center">
+ <div class="col-sm-10">
+  <div class="card hoverable m-2">
+   <div class="card-body">
+    <h2 class="card-title h2-responsive font-weight-bold text-center">
+     What to Expect</h2>
     <ul class="list-group">
-      <li class="list-group-item">
-        I will contact you as soon as I can.</li>
-      <li class="list-group-item">
-        We will discuss how I might help you!</li>
+     <li class="list-group-item">
+      I will contact you as soon as I can.</li>
+     <li class="list-group-item">
+      We will discuss how I might help you!</li>
     </ul>
-  </div><!-- .card-body -->
- </div><!-- .card -->
+   </div><!-- .card-body -->
+  </div><!-- .card -->
+ </div><!-- .col-sm-10 -->
+</div><!-- .row -->
 {% endblock %}
 
 
