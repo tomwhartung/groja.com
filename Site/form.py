@@ -15,7 +15,27 @@ from wtforms.widgets import TextArea
 from wtforms.validators import Optional, Required, Email
 
 
+class SubscribeForm(FlaskForm):
+
+    """ Form allowing the visitor to subscribe to the email newsletter """
+
+    name = StringField('Name:', validators=[Optional()])
+    email = StringField(
+            'Email:',
+            [Required("Share your email address so we can contact you."),
+                Email("Please enter a valid email address.")]
+    )
+    submit = SubmitField('Submit Form')
+
+    def reset(self):
+        """ Reset the form """
+        blankData = MultiDict([('csrf', self.reset_csrf())])
+        self.process(blankData)
+
+
 class NameEmailForm(FlaskForm):
+
+    """ *** DEPRECATED *** """
 
     """ Define a form to get the visitor's name and email address """
 
