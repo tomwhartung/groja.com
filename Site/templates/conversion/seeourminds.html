@@ -22,6 +22,10 @@
 </div><!-- .row -->
 {% endblock %}
 
+{% block form_errors_top %}
+ {{ super() }}
+{% endblock %}
+
 {% block conversion_content %}
 <div class="col-md-11 col-lg-10 hoverable p-3">
  <p class="lead text-center font-weight-bold">
@@ -94,6 +98,10 @@
 <p class="lead text-center font-weight-bold">
  Subscribe here!
 </p>
+{% endblock %}
+
+{% block form_errors_form %}
+ {{ super() }}
 {% endblock %}
 
 {% block name_input %}
