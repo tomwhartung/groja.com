@@ -13,7 +13,6 @@ from flask import abort
 from flask import Flask, flash
 from flask import redirect, render_template, request, session, url_for
 from flask_bootstrap import Bootstrap
-from form import NameEmailForm
 from db_access import update_or_insert_name_email
 from send_email import send_interest_email
 
@@ -76,16 +75,32 @@ def conversion(interest):
 
     """ Display and process conversion pages that contain a form """
 
-    form = NameEmailForm(request.form)
+    from form import NameEmailForm
+
+    if interest == 'avmn':
+        from form import SubscribeForm
+        form = SubscribeForm(request.form)
+    elif interest == 'free_offer':
+        form = NameEmailForm(request.form)
+    elif interest == 'get_your_portrait':
+        form = NameEmailForm(request.form)
+    elif interest == 'seeourminds':
+        from form import SubscribeForm
+        form = SubscribeForm(request.form)
+    elif interest == 'tomwhartung':
+        form = NameEmailForm(request.form)
+    else:
+        abort(404)
+
 
     if request.method == 'POST':
         name = form.name.data
         archetype = form.archetype.data
         email = form.email.data
         message = form.message.data
-        #print("In conversion, name: ", name, "email: ", email)
+        print("In conversion, name: ", name, "email: ", email)
         print("In conversion, archetype:", "'" + archetype + "'")
-        #print("In conversion, message:", "'" + message + "'")
+        print("In conversion, message:", "'" + message + "'")
 
         if form.validate():
             # session variables are used in the thanks page function
@@ -116,7 +131,7 @@ def conversion(interest):
             flash('Thanks, we will be in touch with you soon!')
             return redirect(thanks_page_url)
         else:
-            # print("form.errors:", form.errors)
+            print("form.errors:", form.errors)
             #
             # key = 'email', values = [] (list of error messages)
             #
