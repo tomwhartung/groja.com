@@ -31,7 +31,7 @@ NAME_MISSING_MSG = 'Please share your name or nickname with us'
 EMAIL_MISSING_MSG = 'Please share your email address, so we can contact you'
 EMAIL_INVALID_MSG = 'You must enter a valid email address'
 ARCHETYPE_MISSING_MSG = 'Select a four-letter type from the drop-down list'
-MESSAGE_MISSING_MSG = 'Include a short message about what is on your mind'
+MESSAGE_MISSING_MSG = 'Please specify the type of help you need'
 
 
 class SubscribeForm(FlaskForm):
