@@ -30,20 +30,17 @@
       <div class="card hoverable m-2">
        <div class="card-body text-center">
         {% block thanks_buttons %}
-         <a class="btn btn-primary btn-rounded" href="javascript:close_window();"
-            title="Close this window or tab" role="button">
-          Close Window</a>
+         <a class="btn btn-primary btn-rounded" href="http://ArtsyVisions.com"
+            title="ArtsyVisions.com home page" role="button">
+          Visit ArtsyVisions.com</a>
         {% endblock %}
        </div><!-- .card-body -->
       </div><!-- .card -->
      </div><!-- .col-sm-8 -->
     </div><!-- .row -->
+    {% block conversion_footnotes %}
+    {% endblock %}
    </div><!-- .container -->
   </div><!-- .jumbotron -->
  </main>
- <script>
-  function close_window() {
-   window.close();
-  }
- </script>
 {% endblock %}
