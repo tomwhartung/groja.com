@@ -77,10 +77,6 @@ ul.social-list,
 ul.old-school-list {
   list-style: none;
 }
-li.step-title {
-  font-weight: bold;
-  text-decoration: underline;
-}
 
 /*
  * Keep images etc. from overflowing their containers
