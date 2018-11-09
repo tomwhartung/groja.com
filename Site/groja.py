@@ -42,12 +42,17 @@ def about():
     return render_template('about.html', aboutActive='active')
 
 
-@app.route('/yourportrait')
+@app.route('/yourportrait')     # deprecated
+@app.route('/your_portrait')    # preferred route - matches template name
 def yourportrait():
-    """ Show the Your Portrait page """
+
+    """
+    Show the Your Portrait page
+    """
+
     return render_template(
-            'yourportrait.html',
-            yourportraitActive='active'
+            'your_portrait.html',
+            your_portraitActive='active'
     )
 
 
