@@ -51,11 +51,11 @@ Repo to reorganize current content on groja.com and convert to Material Design B
   - [x] 5.2. Update `base.html` template
   - [x] 5.3. Code for existing icons is in a sidebar in the `base_with_nav.html` template
 
-- [ ] 6. Copy content from legal pages on SeeOurMinds.com to the new Legal pages
-- [ ] 7. Update new About page, creating sections as appropriate
-- [ ] 8. Update existing Your Portrait page
-- [ ] 9. Revamp existing Home page
-- [ ] 10. Update existing conversion pages as appropriate
+- [x] 6. Copy content from legal pages on SeeOurMinds.com to the new Legal pages
+- [x] 7. Update new About page, creating sections as appropriate
+- [x] 8. Update existing Your Portrait page
+- [x] 9. Revamp existing Home page
+- [x] 10. Update existing conversion pages as appropriate
 
 ## Steps - Notes
 
@@ -120,6 +120,7 @@ Repo to reorganize current content on groja.com and convert to Material Design B
 
 #### 4.5. Submenu option suggestions: About, Books, Sites, History (of Groja.com)
 
+- This took some playing around and experimenting with the various section titles, but I am very happy with the result.
 
 ### 5. Move social icons to right side of nav bar
 
@@ -129,9 +130,19 @@ Repo to reorganize current content on groja.com and convert to Material Design B
 
 ### 7. Update new About page, creating sections as appropriate
 
+- Leaving the affiliate marketing buttons on this page alone for now
+- Finish artsyvisions, and add the links there, then come back to this - then deploy
+- This took some effort, but I am very happy with the result.
+
 ### 8. Update existing Your Portrait page
+
+- This took some effort, but I am very happy with the result.
 
 ### 9. Revamp existing Home page
 
+- This took some effort, but I am very happy with the result.
+
 ### 10. Update existing conversion pages as appropriate
+
+- This took some effort, but I am very happy with the result.
 
