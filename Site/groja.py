@@ -252,6 +252,23 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/v')
+def versions():
+    """ Show the versions.html template to see what versions we are using """
+
+    import platform
+    python_version = platform.python_version()
+    import flask
+    flask_version = flask.__version__
+
+    template_name = 'versions.html'
+    return render_template(
+        template_name,
+        python_version=python_version,
+        flask_version=flask_version
+    )
+
+
 @app.errorhandler(404)
 def page_not_found(e):
 
