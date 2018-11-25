@@ -15,11 +15,20 @@ unzip/
 .*~
 *~
 
+#### #
+#### #  Put files we do not want to commit to github in our gitignored directory, and
+#### #  link them back into the site code (it's ok to check in the links).
+#### #
+#### /gitignored/
 #
-#  Put files we do not want to commit to github in our gitignored directory, and
-#  link them back into the site code (it's ok to check in the links).
+# Changing how we handle confidential flask files, by using an empty
+# hidden placeholder file so we do not have to mkdir so much.
 #
-/gitignored/
+gitignored/Site/RCS
+gitignored/Site/config.py
+gitignored/Site/groja_config.py
+gitignored/db/*.db
+gitignored/db/*.sql
 
 ################################################################################
 #
