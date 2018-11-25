@@ -1,4 +1,4 @@
-# groja.com-mdb
+# groja.com
 
 Repo to reorganize current content on groja.com and convert to Material Design Bootstrap (MDB).
 
@@ -145,4 +145,9 @@ Repo to reorganize current content on groja.com and convert to Material Design B
 ### 10. Update existing conversion pages as appropriate
 
 - This took some effort, but I am very happy with the result.
+
+### 11. Deployment
+
+- Changed the name of this repo!
+- See details in the `README.md` file for the `artsyvisions.com` repo
 
