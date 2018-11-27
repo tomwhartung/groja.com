@@ -6,6 +6,10 @@
 .site-logo {
   width: auto;
 }
+.nav-item {
+  font-weight: bold;
+}
+
 .btn-rounded {
   border-radius: 16px;
 }
