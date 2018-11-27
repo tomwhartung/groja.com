@@ -68,8 +68,8 @@ i.fa-2x:hover {
 .legal-page,
 .conversion-page,
 .thanks-page {
-  margin: 3em;
-  padding: 3em;
+  margin: 3em 0 3em 0;
+  padding: 3em 0 3em 0;
 }
 
 /*
