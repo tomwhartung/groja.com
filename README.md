@@ -151,3 +151,72 @@ Repo to reorganize current content on groja.com and convert to Material Design B
 - Changed the name of this repo!
 - See details in the `README.md` file for the `artsyvisions.com` repo
 
+### 11.1. Deployment Issue - Solved!
+
+**Symptoms:**
+
+- All conversions failed with Internal Server Error
+
+**The Problem:**
+
+- Apache unable to write to DB due to permissions on file system.
+- Error Message:
+  - "sqlite3.OperationalError: attempt to write a readonly database"
+
+**Researching how to fix:**
+
+```
+cd /var/www/groja.com/htdocs/groja.com/gitignored
+groups                  # groups I am in:
+# tomh adm cdrom sudo dip plugdev lpadmin sambashare libvirtd
+groups www-data         # groups www-data is in
+# www-data : www-data
+getent group  www-data  # who is in www-data's group
+# www-data:x:33:
+getent group  tomh      # who is in my group
+# tomh:x:1000:
+```
+
+**Solution**
+
+[x] 1. change group on db directory and files to www-data
+[x] 2. change permissions on db directory to 775
+[x] 3. change permissions on db files to 664
+
+
+```
+ $ ls -al db/
+total 20
+drwxr-xr-x 2 tomh tomh 4096 Nov 24 17:51 .
+drwxr-xr-x 4 tomh tomh 4096 Nov 24 17:51 ..
+-rw-r--r-- 1 tomh tomh    0 Nov 24 17:51 .this_dir_intentionally_left_empty
+-rw-r--r-- 1 tomh tomh 5120 Oct  3 10:38 NameEmail.db
+-rw-r--r-- 1 tomh tomh  669 Oct  3 10:38 NameEmailSchema.sql
+ $ sudo chgrp -R www-data db
+[sudo] password for tomh:
+ $ ls -al db/
+total 20
+drwxr-xr-x 2 tomh www-data 4096 Nov 24 17:51 .
+drwxr-xr-x 4 tomh tomh     4096 Nov 24 17:51 ..
+-rw-r--r-- 1 tomh www-data    0 Nov 24 17:51 .this_dir_intentionally_left_empty
+-rw-r--r-- 1 tomh www-data 5120 Oct  3 10:38 NameEmail.db
+-rw-r--r-- 1 tomh www-data  669 Oct  3 10:38 NameEmailSchema.sql
+ $ chmod 775 db
+ $ ls -al db/
+total 20
+drwxrwxr-x 2 tomh www-data 4096 Nov 24 17:51 .
+drwxr-xr-x 4 tomh tomh     4096 Nov 24 17:51 ..
+-rw-r--r-- 1 tomh www-data    0 Nov 24 17:51 .this_dir_intentionally_left_empty
+-rw-r--r-- 1 tomh www-data 5120 Oct  3 10:38 NameEmail.db
+-rw-r--r-- 1 tomh www-data  669 Oct  3 10:38 NameEmailSchema.sql
+ $ chmod 664 db/NameEmail*
+ $ ls -al db/
+total 20
+drwxrwxr-x 2 tomh www-data 4096 Nov 24 17:51 .
+drwxr-xr-x 4 tomh tomh     4096 Nov 24 17:51 ..
+-rw-r--r-- 1 tomh www-data    0 Nov 24 17:51 .this_dir_intentionally_left_empty
+-rw-rw-r-- 1 tomh www-data 5120 Oct  3 10:38 NameEmail.db
+-rw-rw-r-- 1 tomh www-data  669 Oct  3 10:38 NameEmailSchema.sql
+ $
+```
+
