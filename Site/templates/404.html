@@ -1,19 +1,25 @@
+
+{% set navbar_color = "navbar-dark indigo" %}
+{% set fixed_top = "fixed-top" %}
+{% set logo_height = "30px" %}
+{% set fixed_bottom = "fixed-bottom" %}
+
 {% extends "base.html" %}
 
 {% block title %}Page Not Found{% endblock %}
 
 {% block content %}
- <main>
-  <div class="container">
+ <main class="mt-5 mb-5">
+  <div class="container mt-5 mb-5">
    <div class="row justify-content-center">
-    <div class="col-md-6">
+    <div class="col-md-6 mt-5 mb-5">
      <div class="card hoverable m-2">
       <div class="card-body">
-       <h2 class="card-title h2-responsive font-weight-bold">
+       <h2 class="card-title h2-responsive font-weight-bold text-center">
         Page Not Found
-		 </h2>
+       </h2>
        <p class="card-text">
-		  Rats, the page you requested could not be found.
+        Rats, the page you requested could not be found.
        </p>
       </div><!-- .card-body -->
       <div class="card-footer">
