@@ -1,0 +1,46 @@
+{% extends "thanks/thanks_base.html" %}
+
+{% block title %}Thanks for your interest - {% endblock %}
+
+{% block navbar %}
+{% endblock %}
+
+{% block thanks_content %}
+ <p class="lead text-center my-4">
+  Thanks for your interest!  We will contact you soon!
+ </p>
+{% endblock %}
+
+{% block conversion_process %}
+<div class="row align-items-center justify-content-center">
+ <div class="col-sm-10">
+  <div class="card hoverable m-2">
+   <div class="card-body">
+    <h2 class="card-title h2-responsive font-weight-bold text-center">
+     What to Expect</h2>
+    <ul class="list-group">
+     <li class="list-group-item">
+      We will contact you as soon as we can.</li>
+     <li class="list-group-item">
+      We will discuss how we can help you!</li>
+    </ul>
+   </div><!-- .card-body -->
+  </div><!-- .card -->
+ </div><!-- .col-sm-10 -->
+</div><!-- .row -->
+{% endblock %}
+
+{% block thanks_buttons %}
+ <a class="btn btn-primary btn-rounded" href="http://www.JooMooWebSites.com"
+    title="JooMooWebSites.com home page" role="button">
+  Visit JooMooWebSites.com</a>
+ <a class="btn btn-primary btn-rounded" href="http://TomWHartung.com"
+    title="TomWHartung.com home page" role="button">
+  Visit TomWHartung.com</a>
+{% endblock %}
+
+{% block conversion_footnotes %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
