@@ -92,6 +92,9 @@ def conversion(interest):
     elif interest == 'seeourminds':
         from form import SubscribeForm
         conv_form = SubscribeForm(request.form)
+    elif interest == 'joomoowebsites':
+        from form import NameEmailMessageForm
+        conv_form = NameEmailMessageForm(request.form)
     elif interest == 'tomwhartung':
         from form import NameEmailMessageForm
         conv_form = NameEmailMessageForm(request.form)
@@ -141,6 +144,9 @@ def conversion(interest):
             elif interest == 'seeourminds':
                 update_or_insert_name_email(name, email, newsletter=1)
                 thanks_page_url = url_for('thanks')
+            elif interest == 'joomoowebsites':
+                update_or_insert_name_email(name, email, consulting=1)
+                thanks_page_url = url_for('thanks')
             elif interest == 'tomwhartung':
                 update_or_insert_name_email(name, email, consulting=1)
                 thanks_page_url = url_for('thanks')
@@ -166,6 +172,8 @@ def conversion(interest):
         template_name = 'conversion/get_your_portrait.html'
     elif interest == 'seeourminds':
         template_name = 'conversion/seeourminds.html'
+    elif interest == 'joomoowebsites':
+        template_name = 'conversion/joomoowebsites.html'
     elif interest == 'tomwhartung':
         template_name = 'conversion/tomwhartung.html'
     else:
@@ -210,6 +218,9 @@ def thanks(test_interest = ''):
     elif interest == 'seeourminds':
         template_name = 'thanks/seeourminds.html'
         interest_text = 'Receiving the Artsy Visions Monthly Newsletter (seeourminds)'
+    elif interest == 'joomoowebsites':
+        template_name = 'thanks/joomoowebsites.html'
+        interest_text = 'Hiring me as a consultant'
     elif interest == 'tomwhartung':
         template_name = 'thanks/tomwhartung.html'
         interest_text = 'Hiring me as a consultant'
