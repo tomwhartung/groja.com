@@ -25,15 +25,16 @@ class AffiliateLinks:
         'gifts_differing': '',
     }
 
+    #
+    # Active Link Dictionaries:
+    #
+    afl_button = {}
+
     def __init__(self):
 
         """
         Assign source links to active links
         """
-        #
-        # Active Link Dictionaries:
-        #
-        self.afl_button = {}
 
         self.afl_button['concerning'] = afl_none['concerning']
         self.afl_button['psychological_types'] = afl_none['psychological_types']
