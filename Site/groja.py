@@ -14,6 +14,7 @@ from flask import Flask
 from flask import redirect, render_template, request, session, url_for
 from flask_bootstrap import Bootstrap
 from db_access import update_or_insert_name_email
+from affiliate_marketing import AffiliateLinks
 from send_email import send_interest_email
 
 app = Flask(__name__)
@@ -38,8 +39,18 @@ def home():
 
 @app.route('/about')
 def about():
-    """ Show the About page """
-    return render_template('about.html', aboutActive='active')
+
+    """
+    Show the About page, passing in the current dictionary of affiliate links
+    """
+
+    afl_button = AffiliateLinks.afl_button
+
+    return render_template(
+        'about.html',
+        aboutActive='active',
+        afl_button=afl_button,
+    )
 
 
 @app.route('/yourportrait')     # deprecated
