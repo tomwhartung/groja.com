@@ -44,7 +44,9 @@ def about():
     Show the About page, passing in the current dictionary of affiliate links
     """
 
-    afl_button = AffiliateLinks.afl_button
+    my_links = AffiliateLinks
+    afl_button = my_links.afl_button
+    print( 'groja.py - about: afl_button[concerning] = ', afl_button['concerning'])
 
     return render_template(
         'about.html',
@@ -91,7 +93,10 @@ def conversion(interest):
 
     """ Display and process conversion pages that contain a form """
 
-    if interest == 'avmn':
+    if interest == 'afl_default':
+        from form import NameEmailMessageForm
+        conv_form = NameEmailMessageForm(request.form)
+    elif interest == 'avmn':
         from form import SubscribeForm
         conv_form = SubscribeForm(request.form)
     elif interest == 'free_offer':
@@ -142,7 +147,10 @@ def conversion(interest):
             session['email'] = email
             session['message'] = message
             session['interest'] = interest
-            if interest == 'avmn':
+            if interest == 'afl_default':
+                update_or_insert_name_email(name, email, consulting=1)
+                thanks_page_url = url_for('thanks')
+            elif interest == 'avmn':
                 update_or_insert_name_email(name, email, newsletter=1)
                 thanks_page_url = url_for('thanks')
             elif interest == 'free_offer':
@@ -175,7 +183,9 @@ def conversion(interest):
         except AttributeError:
             pass
 
-    if interest == 'avmn':
+    if interest == 'afl_default':
+        template_name = 'conversion/afl_default.html'
+    elif interest == 'avmn':
         template_name = 'conversion/avmn.html'
     elif interest == 'free_offer':
         template_name = 'conversion/free_offer.html'
@@ -217,7 +227,10 @@ def thanks(test_interest = ''):
         interest = session.get('interest')
 
     interest_text = ""
-    if interest == 'avmn':
+    if interest == 'afl_default':
+        template_name = 'thanks/afl_default.html'
+        interest_text = 'Affiliate advertising on my sites'
+    elif interest == 'avmn':
         template_name = 'thanks/avmn.html'
         interest_text = 'Receiving the Artsy Visions Monthly Newsletter (avmn)'
     elif interest == 'free_offer':
