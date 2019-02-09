@@ -1,0 +1,90 @@
+{% extends "conversion/conversion_base.html" %}
+
+{% block title %}Consulting Work - {% endblock %}
+
+{% block navbar %}
+{% endblock %}
+
+{% block jumbotron_title %}
+ <i class="fa fa-user-o" aria-hidden="true"></i><br>
+ Consulting
+{% endblock %}
+
+{% block page_title %}
+<div class="row align-items-center justify-content-center">
+ <div class="col-md-9 hoverable mt-1 mb-2 pt-1 pb-2">
+  <h2 class="h2-responsive font-weight-bold text-center mt-3">
+   How Can I Help You?
+  </h2>
+ </div><!-- .col-* -->
+</div><!-- .row -->
+{% endblock %}
+
+{% block form_errors_top %}
+ {{ super() }}
+{% endblock %}
+
+{% block conversion_content %}
+<div class="col-md-9 hoverable pt-3">
+ <p class="lead text-center font-weight-bold">
+  If you'd like help with your website, fill out the form below!
+ </p>
+</div><!-- .col-* -->
+{% endblock %}
+
+{% block conversion_image %}
+ <div class="col-md-3 hoverable">
+  <div class="view overlay my-4">
+   <img class="img-fluid mx-auto" alt="Photo of Tom W. Hartung"
+        src="{{ url_for('static', filename='images/conversion/portrait-1397-200x255.jpg') }}">
+   <p class="text-center mt-2">
+    Tom W. Hartung</p>
+  </div><!-- .view -->
+ </div><!-- .col-* -->
+{% endblock %}
+
+{% block top_of_form %}
+{% endblock %}
+
+{% block form_errors_form %}
+ {{ super() }}
+{% endblock %}
+
+{% block name_input %}
+ {{ super() }}
+{% endblock %}
+
+{% block archetype_select %}
+{% endblock %}
+
+{% block email_input %}
+ {{ super() }}
+{% endblock %}
+
+{% block terms_checkbox %}
+{% endblock %}
+
+{% block message_textarea %}
+ {{ super() }}
+{% endblock %}
+
+{% block form_above_button %}
+ <p class="text-left red-text">
+  <small>&ast;&nbsp;All fields are required.</small>
+ </p>
+{% endblock %}
+
+{% block button_text %}
+ <i class="fa fa-user-circle mr-2" aria-hidden="true"></i>
+ Contact Me
+ <i class="fa fa-user-circle ml-2" aria-hidden="true"></i>
+{% endblock %}
+
+{% block bottom_of_form %}
+{% endblock %}
+
+{% block under_form %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
