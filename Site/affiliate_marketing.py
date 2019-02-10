@@ -19,15 +19,15 @@ class AffiliateLinks:
     # Source Link Dictionaries:
     #
     afl_default = {
-        'concerning': 'https://groja.com/conversion/afl_default',
-        'psychological_types': 'https://groja.com/conversion/afl_default',
-        'point_and_line': 'https://groja.com/conversion/afl_default',
-        'gifts_differing': 'https://groja.com/conversion/afl_default',
-        'understand_1': 'https://groja.com/conversion/afl_default',
-        'new_art_life': 'https://groja.com/conversion/afl_default',
-        'understand_spanish': 'https://groja.com/conversion/afl_default',
-        'understand_2': 'https://groja.com/conversion/afl_default',
-        'presidents': 'https://groja.com/conversion/afl_default',
+        'concerning': '/conversion/afl_default',
+        'psychological_types': '/conversion/afl_default',
+        'point_and_line': '/conversion/afl_default',
+        'gifts_differing': '/conversion/afl_default',
+        'understand_1': '/conversion/afl_default',
+        'new_art_life': '/conversion/afl_default',
+        'understand_spanish': '/conversion/afl_default',
+        'understand_2': '/conversion/afl_default',
+        'presidents': '/conversion/afl_default',
     }
 
     afl_none = {
