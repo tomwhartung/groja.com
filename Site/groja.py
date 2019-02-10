@@ -44,9 +44,9 @@ def about():
     Show the About page, passing in the current dictionary of affiliate links
     """
 
-    my_links = AffiliateLinks
-    afl_button = my_links.afl_button
-    print( 'groja.py - about: afl_button[concerning] = ', afl_button['concerning'])
+    afl_links = AffiliateLinks()
+    afl_button = afl_links.afl_button
+    #print('afl_links.afl_button[concerning]:', afl_links.afl_button['concerning'])
 
     return render_template(
         'about.html',
