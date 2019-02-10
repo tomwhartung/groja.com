@@ -18,6 +18,18 @@ class AffiliateLinks:
     #
     # Source Link Dictionaries:
     #
+    afl_default = {
+        'concerning': 'https://groja.com/conversion/afl_default',
+        'psychological_types': 'https://groja.com/conversion/afl_default',
+        'point_and_line': 'https://groja.com/conversion/afl_default',
+        'gifts_differing': 'https://groja.com/conversion/afl_default',
+        'understand_1': 'https://groja.com/conversion/afl_default',
+        'new_art_life': 'https://groja.com/conversion/afl_default',
+        'understand_spanish': 'https://groja.com/conversion/afl_default',
+        'understand_2': 'https://groja.com/conversion/afl_default',
+        'presidents': 'https://groja.com/conversion/afl_default',
+    }
+
     afl_none = {
         'concerning': '',
         'psychological_types': '',
@@ -41,12 +53,12 @@ class AffiliateLinks:
         Assign source links to active links
         """
 
-        self.afl_button['concerning'] = afl_none['concerning']
-        self.afl_button['psychological_types'] = afl_none['psychological_types']
-        self.afl_button['point_and_line'] = afl_none['point_and_line']
-        self.afl_button['gifts_differing'] = afl_none['gifts_differing']
-        self.afl_button['understand_1'] = afl_none['understand_1']
-        self.afl_button['new_art_life'] = afl_none['new_art_life']
-        self.afl_button['understand_spanish'] = afl_none['understand_spanish']
-        self.afl_button['understand_2'] = afl_none['understand_2']
-        self.afl_button['presidents'] = afl_none['presidents']
+        self.afl_button['concerning'] = self.afl_default['concerning']
+        self.afl_button['psychological_types'] = self.afl_default['psychological_types']
+        self.afl_button['point_and_line'] = self.afl_default['point_and_line']
+        self.afl_button['gifts_differing'] = self.afl_default['gifts_differing']
+        self.afl_button['understand_1'] = self.afl_default['understand_1']
+        self.afl_button['new_art_life'] = self.afl_default['new_art_life']
+        self.afl_button['understand_spanish'] = self.afl_default['understand_spanish']
+        self.afl_button['understand_2'] = self.afl_default['understand_2']
+        self.afl_button['presidents'] = self.afl_default['presidents']
