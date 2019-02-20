@@ -105,6 +105,9 @@ def conversion(interest):
     elif interest == 'get_your_portrait':
         from form import GetYourPortraitForm
         conv_form = GetYourPortraitForm(request.form)
+    elif interest == 'politicians_challenge':
+        from form import GetYourPortraitForm
+        conv_form = GetYourPortraitForm(request.form)
     elif interest == 'seeourminds':
         from form import SubscribeForm
         conv_form = SubscribeForm(request.form)
@@ -160,6 +163,9 @@ def conversion(interest):
             elif interest == 'get_your_portrait':
                 update_or_insert_name_email(name, email, portrait=1)
                 thanks_page_url = url_for('thanks')
+            elif interest == 'politicians_challenge':
+                update_or_insert_name_email(name, email, portrait=1)
+                thanks_page_url = url_for('thanks')
             elif interest == 'seeourminds':
                 update_or_insert_name_email(name, email, newsletter=1)
                 thanks_page_url = url_for('thanks')
@@ -191,6 +197,8 @@ def conversion(interest):
         template_name = 'conversion/free_offer.html'
     elif interest == 'get_your_portrait':
         template_name = 'conversion/get_your_portrait.html'
+    elif interest == 'politicians_challenge':
+        template_name = 'conversion/politicians_challenge.html'
     elif interest == 'seeourminds':
         template_name = 'conversion/seeourminds.html'
     elif interest == 'joomoowebsites':
@@ -239,6 +247,9 @@ def thanks(test_interest = ''):
     elif interest == 'get_your_portrait':
         template_name = 'thanks/get_your_portrait.html'
         interest_text = 'Buying a spiritual portrait'
+    elif interest == 'politicians_challenge':
+        template_name = 'thanks/politicians_challenge.html'
+        interest_text = 'Getting a spiritual portrait for a politician'
     elif interest == 'seeourminds':
         template_name = 'thanks/seeourminds.html'
         interest_text = 'Receiving the Artsy Visions Monthly Newsletter (seeourminds)'
