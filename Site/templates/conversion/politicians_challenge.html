@@ -1,0 +1,287 @@
+{% extends "conversion/conversion_base.html" %}
+
+{% block title %}Get Your Portrait - {% endblock %}
+
+{% block navbar %}
+{% endblock %}
+
+{% block jumbotron_title %}
+<i class="fa fa-user-circle-o mr-2" aria-hidden="true"></i>
+Sale!
+<i class="fa fa-user-circle ml-2" aria-hidden="true"></i>
+{% endblock %}
+
+{% block page_title %}
+<div class="row align-items-center justify-content-around">
+ <div class="col-md-10 hoverable">
+  <h1 class="display-3 font-weight-bold text-center my-4">
+   Grand Opening Special!
+  </h1>
+  <h2 class="h2-responsive font-weight-bold text-center my-2">
+   For a Limited Time You Can</h2>
+  <h2 class="h2-responsive font-weight-bold text-center my-2">
+   Get Your Spiritual Portrait</h2>
+  <h1 class="display-3 font-weight-bold text-center my-4">
+   For Just $10
+  </h1>
+ </div><!-- .col-* -->
+</div><!-- .row -->
+{% endblock %}
+
+{% block form_errors_top %}
+ {{ super() }}
+{% endblock %}
+
+{% block conversion_content %}
+<div class="col-md-11 col-lg-10 hoverable p-5">
+ <p class="lead text-left">
+  To get your portrait you must provide a 50%
+   deposit<sup><a href="#footnotes"><span class="blue-text font-weight-bold">1</span></a></sup>
+   and share your score on a Jungian Typology
+   questionnaire<sup><a href="#footnotes"><span class="blue-text font-weight-bold">2</span></a></sup>,
+    such as the one at
+   <a href="https://www.seeourminds.com/quiz" class="font-weight-bold"
+      title="SeeOurMinds.com Quiz page" target="_blank">
+    SeeOurMinds.com/quiz</a>.
+ </p>
+ <p class="lead text-center font-weight-bold my-3">
+  Follow these steps:
+ </p>
+ <ol class="list-group mb-3">
+  <li class="list-group-item mb-0">
+   <span class="badge badge-white badge-pill mr-2">
+    <span class="black-text">1</span></span>
+   <strong><u>Answer</u></strong> a questionnaire &mdash; such the
+    <a href="https://www.seeourminds.com/quiz"
+       title="SeeOurMinds.com Quiz page"
+       class="font-weight-bold" target="_blank">
+     SeeOurMinds Quiz</a>
+    &mdash; that provides your four-letter type
+    <strong><u>in
+     percentages</u></strong><sup><a href="#footnotes"><span class="blue-text font-weight-bold">2</span></a></sup>
+  </li>
+  <li class="list-group-item">
+   <span class="badge badge-white badge-pill mr-2">
+    <span class="black-text">2</span></span>
+   <strong><u>Pick one</u></strong> of these options for sharing your score:
+   <ul class="list-group list-group-flush ml-2 mb-0 pb-0">
+    <li class="list-group-item mb-0 pt-2 pb-0">
+     <span class="badge badge-white badge-pill mr-2">
+      <span class="black-text">A</span></span>
+      <strong><u>Easiest for you:</u></strong>
+      Save your answers to the
+      <a href="https://www.seeourminds.com/quiz"
+         title="SeeOurMinds.com Quiz page"
+         class="font-weight-bold" target="_blank">
+       SeeOurMinds Quiz</a>
+      on the server and specify the email address you used to save them
+      in the form below
+    </li>
+    <li class="list-group-item mb-0 pt-2 pb-0">
+     <span class="badge badge-white badge-pill mr-2">
+      <span class="black-text">B</span></span>
+      <strong><u>Easiest for us:</u></strong>
+      Copy and paste your results on the
+       <a href="https://www.seeourminds.com/quiz"
+          title="SeeOurMinds.com Quiz page"
+          class="font-weight-bold" target="_blank">
+        SeeOurMinds Quiz</a>
+       into the message box below, and send that to us
+    </li>
+    <li class="list-group-item mb-0 pt-2 pb-0">
+     <span class="badge badge-white badge-pill mr-2">
+      <span class="black-text">C</span></span>
+     <strong><u>Using 3rd-party results:</u></strong>
+     Enter the
+      <strong><u>percentages-based
+        results</u></strong><sup><a href="#footnotes"><span class="blue-text font-weight-bold">2</span></a></sup>
+      of a third-party questionnaire
+      into the message box below, and send that to us
+    </li>
+   </ul>
+  </li>
+  <li class="list-group-item">
+   <span class="badge badge-white badge-pill mr-2">
+    <span class="black-text">3</span></span>
+   <strong><u>Select</u></strong> the four-letter type which best conforms
+    to your
+    results<sup><a href="#footnotes"><span class="blue-text font-weight-bold">3</span></a></sup>
+  </li>
+  <li class="list-group-item">
+   <span class="badge badge-white badge-pill mr-2">
+    <span class="black-text">4</span></span>
+   <strong><u>Fill in</u></strong> the name and email fields in the form
+    below<sup><a href="#footnotes"><span class="blue-text font-weight-bold">4</span></a></sup>
+  </li>
+  <li class="list-group-item">
+   <span class="badge badge-white badge-pill mr-2">
+    <span class="black-text">5</span></span>
+   <strong><u>Pay</u></strong> the paypal invoice we send for the 50% deposit
+  </li>
+ </ol>
+ <p class="lead my-4">
+  <strong><u>Within a week</u></strong> of receiving of your deposit,
+   we will create your portrait and send it to the email address you provide,
+   along with a paypal invoice for the remaining 50%.
+ </p>
+ <p class="lead text-center font-weight-bold my-3">
+  Thank you for your business, and we hope you enjoy your portrait!
+ </p>
+</div><!-- .col-* -->
+{% endblock %}
+
+{% block conversion_image %}
+{% endblock %}
+
+{% block top_of_form %}
+{% endblock %}
+
+{% block form_errors_form %}
+ {{ super() }}
+{% endblock %}
+
+{% block name_input %}
+ {{ super() }}
+{% endblock %}
+
+{% block archetype_select %}
+ {{ super() }}
+{% endblock %}
+
+{% block email_input %}
+ {{ super() }}
+{% endblock %}
+
+{% block terms_checkbox %}
+{% endblock %}
+
+{% block message_textarea %}
+ {{ super() }}
+{% endblock %}
+
+{% block form_above_button %}
+{% endblock %}
+
+{% block button_text %}
+ <i class="fa fa-user-circle-o mr-2" aria-hidden="true"></i>
+ Get Your Portrait
+ <i class="fa fa-user-circle ml-2" aria-hidden="true"></i>
+{% endblock %}
+
+{% block bottom_of_form %}
+{% endblock %}
+
+{% block under_form %}
+<a name="footnotes"></a>
+<div class="row align-items-center justify-content-around">
+ <div class="col-md-11 col-lg-10 hoverable p-3">
+  <p class="lead text-center font-weight-bold my-3 p-2">
+   Prices are temporary and subject to change without notice!
+  </p>
+  <ul class="list-group list-group-flush mb-3">
+   <li class="list-group-item">
+    1. We currently accept payment via
+     <a href="https://www.paypal.com" class="font-weight-bold"
+        title="Paypal home page" target="_blank">
+      paypal</a>
+     only.
+   </li>
+   <li class="list-group-item">
+    2. You <strong><u>must</u></strong> provide a percentages-based score
+       <strong><u>in addition to</u></strong> a four-letter type.
+    <ul class="list-group list-group-flush ml-2 mb-0 pb-0">
+     <li class="list-group-item mb-0 pt-2 pb-0">
+      Putting aside ease of processing, it doesn't matter whether you use the
+       <a href="https://www.seeourminds.com/quiz" class="font-weight-bold"
+          title="SeeOurMinds.com Quiz page" target="_blank">
+        SeeOurMinds.com Quiz</a>,
+       the
+       <a href="https://keirsey.com/" class="font-weight-bold"
+          title="Link to the home page at keirsey.com" target="_blank">
+        Keirsey Temperament Sorter</a><sup>&ast;</sup>,
+       the
+       <a href="https://www.myersbriggs.org/home.htm" class="font-weight-bold"
+          title="Link to the home page at www.myersbriggs.org" target="_blank">
+        MBTI</a>,
+       the
+       <a href="http://www.humanmetrics.com/personality" class="font-weight-bold"
+          title="Link to the personality quiz at humanmetrics.com" target="_blank">
+        personality quiz at humanmetrics.com</a>
+        or some other questionnaire to determine your four-letter
+   		 type<sup><a href="#footnotes"><span class="blue-text font-weight-bold">5</span></a></sup>.
+     </li>
+     <li class="list-group-item mb-0 pt-2 pb-0">
+      What matters is you <strong><u>must</u><sup>&ast;</sup></strong>
+       give us results in percentages, clearly expressed
+       so that the sum of each pair of opposites totals 100%.
+     </li>
+     <li class="list-group-item mb-0 pt-2 pb-0">
+      An example of the sort of result we require is
+       <strong>E:82%, I:18%; N:33%, S:67%; F:60%, T:40%; J:45%, P:55%.</strong>
+      <br>
+      <i class="fa fa-arrow-circle-right mr-2" aria-hidden="true"></i>
+      Note how the two percentages for each pair of opposing traits
+       add up to 100%.
+     </li>
+     <li class="list-group-item mb-0 pt-2 pb-0">
+      &ast;&nbsp;If you take the
+       <a href="https://keirsey.com/" class="font-weight-bold"
+          title="Link to the home page at keirsey.com" target="_blank">
+        Keirsey Temperament Sorter</a>,
+       just send the 8 numbers and letters at the bottom of the answer sheet.
+     </li>
+     <li class="list-group-item font-weight-bold mb-0 pt-2 pb-0">
+      If you do not provide results that meet this requirement, we will not
+       be able to produce your image.
+     </li>
+    </ul>
+   </li>
+   <li class="list-group-item">
+    3. If your results show you split evenly, 50%/50%, between a pair of
+       opposing traits, you must pick one or the other.
+    <ul class="list-group list-group-flush ml-2 mb-0 pb-0">
+     <li class="list-group-item mb-0 pt-2 pb-0">
+      If you did not answer all 88 of the questions on the
+      <a href="https://www.seeourminds.com/quiz" class="font-weight-bold"
+         title="SeeOurMinds.com Quiz page" target="_blank">
+       SeeOurMinds Quiz</a>,
+       try answering more of them.
+     </li>
+     <li class="list-group-item mb-0 pt-2 pb-0">
+      Another option is to try a
+       <a href="http://www.humanmetrics.com/personality" class="font-weight-bold"
+          title="Link to the quiz at humanmetrics.com" target="_blank">
+        different quiz</a><sup><a href="#footnotes"><span class="blue-text font-weight-bold">5</span></a></sup>
+       and get a second &mdash; or third or fourth &mdash; opinion.
+     </li>
+    </ul>
+   </li>
+   <li class="list-group-item">
+    4. We will send invoices and the portrait to the email address you provide.
+    <ul class="list-group list-group-flush ml-2 mb-0 pb-0">
+     <li class="list-group-item mb-0 pt-2 pb-0">
+      <i class="fa fa-arrow-circle-right mr-2" aria-hidden="true"></i>
+      If you want us to get your results off the SeeOurMinds.com server,
+       be sure to specify the email address you saved them under.
+     </li>
+    </ul>
+   </li>
+   <li class="list-group-item">
+    5. Personally, I recommend taking
+     <a href='https://www.seeourminds.com/gallery/9100-real-self_portraits/'
+        class="font-weight-bold" target="_blank"
+        title='Link to a gallery page on SeeOurMinds.com containing spiritual portraits of Tom H.'>
+      all</a>
+     of the Jungian Typology tests you can find &mdash; at least until you get
+     consistent results or you understand why the results are inconsistent.
+   </li>
+  </ul>
+  <p>
+  </p>
+ </div><!-- .col-* -->
+</div><!-- .row -->
+{% endblock %}
+
+{% block footer %}
+ {{ super() }}
+{% endblock %}
