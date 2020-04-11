@@ -111,9 +111,9 @@ def conversion(interest):
     elif interest == 'seeourminds':
         from form import SubscribeForm
         conv_form = SubscribeForm(request.form)
-    elif interest == 'joomoowebsites':
-        from form import NameEmailMessageForm
-        conv_form = NameEmailMessageForm(request.form)
+### elif interest == 'joomoowebsites':
+###     from form import NameEmailMessageForm
+###     conv_form = NameEmailMessageForm(request.form)
     elif interest == 'tomwhartung':
         from form import NameEmailMessageForm
         conv_form = NameEmailMessageForm(request.form)
