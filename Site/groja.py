@@ -93,10 +93,11 @@ def conversion(interest):
 
     """ Display and process conversion pages that contain a form """
 
-    if interest == 'afl_default':
-        from form import NameEmailMessageForm
-        conv_form = NameEmailMessageForm(request.form)
-    elif interest == 'avmn':
+### if interest == 'afl_default':
+###     from form import NameEmailMessageForm
+###     conv_form = NameEmailMessageForm(request.form)
+### elif interest == 'avmn':
+    if interest == 'avmn':
         from form import SubscribeForm
         conv_form = SubscribeForm(request.form)
     elif interest == 'free_offer':
