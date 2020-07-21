@@ -93,16 +93,16 @@ def conversion(interest):
 
     """ Display and process conversion pages that contain a form """
 
-### if interest == 'afl_default':
-###     from form import NameEmailMessageForm
-###     conv_form = NameEmailMessageForm(request.form)
-### elif interest == 'avmn':
-    if interest == 'avmn':
+#
+#   Notes:
+#   (1) interest == 'avmn' is deprecated
+#   (2) If we want to reinstate a message box such as that used for interest == 'tomwhartung',
+#       we will need to figure out some way, e.g., use ReCaptcha, to prevent spam messages.
+#       For info about ReCaptcha see https://www.google.com/recaptcha/intro/v3.html
+#
+    if interest == 'avmn' or interest == 'avin':
         from form import SubscribeForm
         conv_form = SubscribeForm(request.form)
-    elif interest == 'free_offer':
-        from form import FreeOfferForm
-        conv_form = FreeOfferForm(request.form)
     elif interest == 'get_your_portrait':
         from form import GetYourPortraitForm
         conv_form = GetYourPortraitForm(request.form)
@@ -112,10 +112,7 @@ def conversion(interest):
     elif interest == 'seeourminds':
         from form import SubscribeForm
         conv_form = SubscribeForm(request.form)
-### elif interest == 'joomoowebsites':
-###     from form import NameEmailMessageForm
-###     conv_form = NameEmailMessageForm(request.form)
-### elif interest == 'tomwhartung':
+### elif interest == 'tomwhartung': # See Note (2) above!!
 ###     from form import NameEmailMessageForm
 ###     conv_form = NameEmailMessageForm(request.form)
     else:
@@ -151,15 +148,8 @@ def conversion(interest):
             session['email'] = email
             session['message'] = message
             session['interest'] = interest
-            if interest == 'afl_default':
-                update_or_insert_name_email(name, email, consulting=1)
-                thanks_page_url = url_for('thanks')
-            elif interest == 'avmn':
+            if interest == 'avmn' or interest == 'avin':
                 update_or_insert_name_email(name, email, newsletter=1)
-                thanks_page_url = url_for('thanks')
-            elif interest == 'free_offer':
-                update_or_insert_name_email(
-                    name, email, newsletter=1, portrait=1)
                 thanks_page_url = url_for('thanks')
             elif interest == 'get_your_portrait':
                 update_or_insert_name_email(name, email, portrait=1)
@@ -170,12 +160,9 @@ def conversion(interest):
             elif interest == 'seeourminds':
                 update_or_insert_name_email(name, email, newsletter=1)
                 thanks_page_url = url_for('thanks')
-            elif interest == 'joomoowebsites':
-                update_or_insert_name_email(name, email, consulting=1)
-                thanks_page_url = url_for('thanks')
-            elif interest == 'tomwhartung':
-                update_or_insert_name_email(name, email, consulting=1)
-                thanks_page_url = url_for('thanks')
+     ###    elif interest == 'tomwhartung':
+     ###        update_or_insert_name_email(name, email, consulting=1)
+     ###        thanks_page_url = url_for('thanks')
             else:
                 update_or_insert_name_email(name, email)
                 thanks_page_url = url_for('home')
@@ -190,22 +177,16 @@ def conversion(interest):
         except AttributeError:
             pass
 
-    if interest == 'afl_default':
-        template_name = 'conversion/afl_default.html'
-    elif interest == 'avmn':
+    if interest == 'avmn' or interest == 'avin':
         template_name = 'conversion/avmn.html'
-    elif interest == 'free_offer':
-        template_name = 'conversion/free_offer.html'
     elif interest == 'get_your_portrait':
         template_name = 'conversion/get_your_portrait.html'
     elif interest == 'politicians_challenge':
         template_name = 'conversion/politicians_challenge.html'
     elif interest == 'seeourminds':
         template_name = 'conversion/seeourminds.html'
-    elif interest == 'joomoowebsites':
-        template_name = 'conversion/joomoowebsites.html'
-    elif interest == 'tomwhartung':
-        template_name = 'conversion/tomwhartung.html'
+### elif interest == 'tomwhartung':
+###     template_name = 'conversion/tomwhartung.html'
     else:
         abort(404)
 
@@ -236,15 +217,9 @@ def thanks(test_interest = ''):
         interest = session.get('interest')
 
     interest_text = ""
-    if interest == 'afl_default':
-        template_name = 'thanks/afl_default.html'
-        interest_text = 'Affiliate advertising on my sites'
-    elif interest == 'avmn':
+    if interest == 'avmn' or interest == 'avin':
         template_name = 'thanks/avmn.html'
-        interest_text = 'Receiving the Artsy Visions Monthly Newsletter (avmn)'
-    elif interest == 'free_offer':
-        template_name = 'thanks/free_offer.html'
-        interest_text = 'Getting a free spiritual portrait'
+        interest_text = 'Receiving the Artsy Visions Intermittent Newsletter (avin)'
     elif interest == 'get_your_portrait':
         template_name = 'thanks/get_your_portrait.html'
         interest_text = 'Buying a spiritual portrait'
@@ -253,13 +228,10 @@ def thanks(test_interest = ''):
         interest_text = 'Getting a spiritual portrait for a politician'
     elif interest == 'seeourminds':
         template_name = 'thanks/seeourminds.html'
-        interest_text = 'Receiving the Artsy Visions Monthly Newsletter (seeourminds)'
-    elif interest == 'joomoowebsites':
-        template_name = 'thanks/joomoowebsites.html'
-        interest_text = 'Hiring me as a consultant'
-    elif interest == 'tomwhartung':
-        template_name = 'thanks/tomwhartung.html'
-        interest_text = 'Hiring me as a consultant'
+        interest_text = 'Receiving the Artsy Visions Intermittent Newsletter (seeourminds)'
+### elif interest == 'tomwhartung':
+###     template_name = 'thanks/tomwhartung.html'
+###     interest_text = 'Hiring me as a consultant'
     else:
         abort(404)
 
