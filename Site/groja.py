@@ -95,12 +95,13 @@ def conversion(interest):
 
 #
 #   Notes:
-#   (1) interest == 'avmn' is deprecated
+#   (1) interest == 'avmn' is deprecated in favor of interest == 'avin'
+#       This is because the newsletter is not Monthly but Intermittent.
 #   (2) If we want to reinstate a message box such as that used for interest == 'tomwhartung',
 #       we will need to figure out some way, e.g., use ReCaptcha, to prevent spam messages.
 #       For info about ReCaptcha see https://www.google.com/recaptcha/intro/v3.html
 #
-    if interest == 'avmn' or interest == 'avin':
+    if interest == 'avin' or interest == 'avmn':
         from form import SubscribeForm
         conv_form = SubscribeForm(request.form)
     elif interest == 'get_your_portrait':
@@ -178,7 +179,7 @@ def conversion(interest):
             pass
 
     if interest == 'avmn' or interest == 'avin':
-        template_name = 'conversion/avmn.html'
+        template_name = 'conversion/avin.html'
     elif interest == 'get_your_portrait':
         template_name = 'conversion/get_your_portrait.html'
     elif interest == 'politicians_challenge':
@@ -218,7 +219,7 @@ def thanks(test_interest = ''):
 
     interest_text = ""
     if interest == 'avmn' or interest == 'avin':
-        template_name = 'thanks/avmn.html'
+        template_name = 'thanks/avin.html'
         interest_text = 'Receiving the Artsy Visions Intermittent Newsletter (avin)'
     elif interest == 'get_your_portrait':
         template_name = 'thanks/get_your_portrait.html'
