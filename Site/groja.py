@@ -137,10 +137,10 @@ def conversion(interest):
         except AttributeError:
             message = ''
 
-        print("In conversion, name: ", name)
-        print("In conversion, email: ", email)
-        print("In conversion, archetype:", "'" + archetype + "'")
-        print("In conversion, message:", "'" + message + "'")
+        ### print("In conversion, name: ", name)
+        ### print("In conversion, email: ", email)
+        ### print("In conversion, archetype:", "'" + archetype + "'")
+        ### print("In conversion, message:", "'" + message + "'")
 
         if conv_form.validate():
             # session variables are used in the thanks page function
