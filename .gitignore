@@ -7,13 +7,14 @@ unpack/
 unzip/
 
 #
-#  Ignore netbeans work area and vim temporary files
+#  Ignore vim, kate, netbeans, and other temporary editor files
 #
-/nbproject/
 *.swp
+*.kate-swp
 .~lock.*
 .*~
 *~
+/nbproject/
 
 #### #
 #### #  Put files we do not want to commit to github in our gitignored directory, and
@@ -29,6 +30,8 @@ gitignored/Site/config.py
 gitignored/Site/groja_config.py
 gitignored/db/*.db
 gitignored/db/*.sql
+gitignored/db/*/*.db
+gitignored/db/*/*.sql
 
 ################################################################################
 #
