@@ -39,19 +39,22 @@ i.fa-2x:hover {
 .fa-twitter, .fa-twitter-square {
   color: #ffffff;
 }
-.fa-github, .fa-github-alt {
-  color: #ffffff;
-}
-.fa-instagram {
+.fa-linkedin, .fa-linkedin-square {
   color: #ffffff;
 }
 .fa-pinterest, .fa-pinterest-square {
   color: #ffffff;
 }
-.fa-google-plus, .fa-google-plus-square {
+.fa-tumblr, .fa-tumblr-square {
   color: #ffffff;
 }
-.fa-linkedin, .fa-linkedin-square {
+.fa-instagram {
+  color: #ffffff;
+}
+.fa-reddit, .fa-reddit-square {
+  color: #ffffff;
+}
+.fa-github, .fa-github-alt {
   color: #ffffff;
 }
 
