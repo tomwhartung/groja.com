@@ -28,15 +28,17 @@ def send_interest_email(message_text):
             /etc/apache2/envvars
     """
 
-    #print('send_test_email(): message_text =', message_text)
-    #print('GROJA_MAIL_FROM:', GROJA_MAIL_FROM)
-    #print('GROJA_MAIL_TO:', GROJA_MAIL_TO)
+    ### print('send_test_email(): message_text =', message_text)
+    ### print('GROJA_MAIL_FROM:', GROJA_MAIL_FROM)
+    ### print('GROJA_MAIL_TO:', GROJA_MAIL_TO)
     msg = MIMEText(message_text)
     msg['Subject'] = 'Indication of Interest on Groja.com'
     msg['From'] = GROJA_MAIL_FROM
     msg['To'] = GROJA_MAIL_TO
+    ### print('msg["Subject"] = ', msg['Subject'])
+    ### print('msg["From"] = ', msg['From'])
+    ### print('msg["To"] = ', msg['To'])
     server = smtplib.SMTP('localhost')
     server.send_message(msg)
     server.quit()
-    # print('Message sent!')
     return True
