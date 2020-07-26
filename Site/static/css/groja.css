@@ -1,0 +1,95 @@
+/* ==========================================================================
+ * My CusTOM styles
+ * ==========================================================================
+ * For details, see the README.md file in this directory.
+ */
+.site-logo {
+  width: auto;
+}
+.nav-item {
+  font-weight: bold;
+}
+
+.btn-rounded {
+  border-radius: 16px;
+}
+
+.jumbotron h2 {
+   font-size: 2.5em;
+   font-weight: bold;
+}
+
+/*
+ * For the "... follow us ..." sidebox
+ * Inspired by code on these pages:
+ *    http://ksloan.net/css-color-definitions-for-font-awesome-social-icons/
+ *    http://www.kodingmadesimple.com/2014/11/create-stylish-bootstrap-3-social-media-icons.html
+ */
+i.fa-2x {
+   margin: 3px;
+}
+i.fa-2x:hover {
+  font-size: 2.5em;
+  margin: 0px;
+  text-shadow: 4px 4px lightgrey;
+}
+.fa-facebook, .fa-facebook-square {
+  color: #ffffff;
+}
+.fa-twitter, .fa-twitter-square {
+  color: #ffffff;
+}
+.fa-linkedin, .fa-linkedin-square {
+  color: #ffffff;
+}
+.fa-pinterest, .fa-pinterest-square {
+  color: #ffffff;
+}
+.fa-tumblr, .fa-tumblr-square {
+  color: #ffffff;
+}
+.fa-instagram {
+  color: #ffffff;
+}
+.fa-reddit, .fa-reddit-square {
+  color: #ffffff;
+}
+.fa-github, .fa-github-alt {
+  color: #ffffff;
+}
+
+/*
+ * Define margin and padding for all pages, allowing for later customization
+ * Use the class appropriate for the page in a div elt. with a z-depth
+ * We probably do not need custom styles for this - I set this up before
+ *   coming to really appreciate the various m-* classes - but that's how
+ *   we are doing it for now.  Honestly it's just this one instance...!
+ */
+.home-page,
+.about-page,
+.your-portrait-page,
+.legal-page,
+.conversion-page,
+.thanks-page {
+  margin: 3em 0 3em 0;
+  padding: 3em 0 3em 0;
+}
+
+/*
+ * For the Contact Us page:
+ * List of hex codes for html entities:
+ *    https://www.w3schools.com/charsets/ref_html_entities_r.asp
+ */
+ul.social-list,
+ul.old-school-list {
+  list-style: none;
+}
+
+/*
+ * Keep images etc. from overflowing their containers
+ * Reference:
+ *   https://developers.google.com/web/fundamentals/design-and-ui/responsive/images#use_relative_sizes_for_images
+ */
+img, embed, object, video {
+  max-width: 100%;
+}
