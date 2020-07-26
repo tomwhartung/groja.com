@@ -72,15 +72,15 @@
      <!-- Left links -->
      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
       <li class="nav-item">
-       <a class="nav-link active" href="/">Home</a>
+       <a class="nav-link {{ homeActive }}" href="/">Home</a>
       </li>
       <li class="nav-item">
-       <a class="nav-link" href="/your_portrait">Your Portrait</a>
+       <a class="nav-link {{ your_portraitActive }}" href="/your_portrait">Your Portrait</a>
       </li>
       <!-- Navbar About Dropdown -->
       <li class="nav-item dropdown">
        <a
-         class="nav-link dropdown-toggle"
+         class="nav-link dropdown-toggle {{ aboutActive }}"
          href="#"
          id="navbarAboutDropdown"
          role="button"
@@ -104,7 +104,7 @@
       <!-- Navbar Legal Dropdown -->
       <li class="nav-item dropdown">
        <a
-         class="nav-link dropdown-toggle"
+         class="nav-link dropdown-toggle {{ legalActive }}"
          href="#"
          id="navbarLegalDropdown"
          role="button"
