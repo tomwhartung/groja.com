@@ -10,40 +10,37 @@
        rel="stylesheet">
 {% endblock %}
 
-<div class="bg-image">
- <img src="{{ url_for('static', filename='images/home/Jefferson-background_1.jpg') }}" class="w-100" />
- <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
- </div>
-</div>
-
 {% block navbar %}
  {{ super() }}
  <div id="intro" class="view">
-
-   <div class="container-fluid d-flex align-items-center justify-content-center h-75">
-    <div class="row d-flex justify-content-center text-center">
-     <div class="col-md-10">
-      <!-- Heading -->
-      <h2 class="display-3 font-weight-bold white-text mt-5">
-       Groja.com</h2>
-      <h2 class="h2-responsive font-weight-bold white-text mt-4">
-       Visualizing Personalities Since 1989&trade;</h2>
-      <hr class="hr-light mt-4">
-      <h3 class="h3-responsive font-weight-bold white-text mt-4">
-       <small>Using color to represent personal preferences, the GROJA &copy; Program
-        draws images of personalities based on the results of a questionnaire.</small>
-      </h3>
-      <button type="button" onclick="location.href='/yourportrait'"
-              class="btn btn-lg btn-outline-white font-weight-bold btn-rounded waves-effect mt-4">
-       <i class="fa fa-user-circle-o mr-3" aria-hidden="true"></i>
-       Get Your Spiritual Portrait!
-       <i class="fa fa-user-circle ml-3" aria-hidden="true"></i>
-      </button>
-     </div><!-- .col-md-10 -->
-    </div><!-- .row -->
-   </div><!-- .container-fluid .d-flex -->
-
- </div><!-- .view -->
+  <div class="bg-image ripple">
+   <img src="{{ url_for('static', filename='images/home/Jefferson-background_1.jpg') }}" class="w-100" />
+   <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+    <div class="container-fluid d-flex align-items-center justify-content-center h-75">
+     <div class="row d-flex justify-content-center text-center">
+      <div class="col-md-10">
+       <!-- Heading -->
+       <h2 class="display-3 font-weight-bold text-white mt-5">
+        Groja.com</h2>
+       <h2 class="h2-responsive font-weight-bold text-white mt-4">
+        Visualizing Personalities Since 1989&trade;</h2>
+       <hr class="hr-light mt-4">
+       <h3 class="h3-responsive font-weight-bold text-white mt-4">
+        <small>Using color to represent personal preferences, the GROJA &copy; Program
+         draws images of personalities based on the results of a questionnaire.</small>
+       </h3>
+       <button type="button" onclick="location.href='/yourportrait'"
+               class="btn btn-lg btn-outline-white font-weight-bold btn-rounded waves-effect mt-4">
+        <i class="fa fa-user-circle-o mr-3" aria-hidden="true"></i>
+        Get Your Spiritual Portrait!
+        <i class="fa fa-user-circle ml-3" aria-hidden="true"></i>
+       </button>
+      </div><!-- .col-md-10 -->
+     </div><!-- .row -->
+    </div><!-- .container-fluid .d-flex -->
+   </div><!-- .mask -->
+  </div><!-- .bg-image -->
+ </div><!-- #intro .view -->
 {% endblock %}
 
 {% block content %}
