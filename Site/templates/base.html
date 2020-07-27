@@ -46,8 +46,6 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
    <!-- Container wrapper -->
    <div class="container-fluid">
-    <!-- Navbar brand -->
-    <a class="navbar-brand" href="/">Groja.com</a>
     {% if logo_height %}
      <a class="navbar-brand" href="/">
       <img
@@ -55,6 +53,8 @@
         src="{{ url_for('static', filename='images/site/estp-generic-scaled-81x81.gif') }}">
      </a>
     {% endif %}
+    <!-- Navbar brand and link to Home page -->
+    <a class="navbar-brand {{ homeActive }}" href="/">Groja.com</a>
     <!-- Toggle button -->
     <button
       class="navbar-toggler"
@@ -71,9 +71,6 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
      <!-- Left links -->
      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-      <li class="nav-item">
-       <a class="nav-link {{ homeActive }}" href="/">Home</a>
-      </li>
       <li class="nav-item">
        <a class="nav-link {{ your_portraitActive }}" href="/your_portrait">Your Portrait</a>
       </li>
