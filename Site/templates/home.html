@@ -10,10 +10,16 @@
        rel="stylesheet">
 {% endblock %}
 
+<div class="bg-image">
+ <img src="{{ url_for('static', filename='images/home/Jefferson-background_1.jpg') }}" class="w-100" />
+ <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+ </div>
+</div>
+
 {% block navbar %}
  {{ super() }}
  <div id="intro" class="view">
-  <div class="mask rgba-black-strong">
+
    <div class="container-fluid d-flex align-items-center justify-content-center h-75">
     <div class="row d-flex justify-content-center text-center">
      <div class="col-md-10">
@@ -36,8 +42,8 @@
      </div><!-- .col-md-10 -->
     </div><!-- .row -->
    </div><!-- .container-fluid .d-flex -->
-  </div><!-- .mask -->
- </div><!-- #intro -->
+
+ </div><!-- .view -->
 {% endblock %}
 
 {% block content %}
