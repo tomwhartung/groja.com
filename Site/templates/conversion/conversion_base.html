@@ -9,8 +9,8 @@
  <div class="jumbotron jumbotron-fluid">
   <div class="container">
    <div class="row align-items-center justify-content-around">
-    <div class="col-md-8 hoverable">
-     <h1 class="display-2 font-weight-bold text-center">
+    <div class="col-md-8 hover-shadow mt-4">
+     <h1 class="display-4 font-weight-bold text-center">
       {% block jumbotron_title %}
       {% endblock %}
      </h1>
@@ -21,7 +21,7 @@
    {% block form_errors_top %}
     {% if conv_form.errors %}
      <div class="row align-items-center justify-content-center">
-      <div class="col-md-10 col-lg-8 col-xl-6 hoverable my-4 py-4">
+      <div class="col-md-10 col-lg-8 col-xl-6 hover-shadow my-4 py-4">
        <h2 class="h2-responsive font-weight-bold text-center text-danger">
         The form contains errors:
        </h2>
@@ -47,7 +47,7 @@
    </div><!-- .row -->
    <div class="row align-items-center justify-content-around">
     <div class="col-sm-12 col-md-11 col-lg-10">
-     <form class="text-center border border-light hoverable m-2 p-5"
+     <form class="text-center border border-light hover-shadow m-2 p-5"
            action="" method="post" role="form">
       {{ conv_form.hidden_tag() }}
       {% block top_of_form %}
